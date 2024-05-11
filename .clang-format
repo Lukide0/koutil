@@ -1,0 +1,16 @@
+Standard: Auto
+BasedOnStyle: WebKit
+
+IndentWidth: 4
+BreakBeforeBraces: Attach
+
+IndentPPDirectives: BeforeHash
+ColumnLimit: 120
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Left
+AlignConsecutiveAssignments: Consecutive
+AlignEscapedNewlines: Left
+BinPackArguments: false
+BinPackParameters: false
+SortIncludes: CaseInsensitive
+SeparateDefinitionBlocks: Always

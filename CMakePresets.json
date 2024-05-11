@@ -1,0 +1,74 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 23,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "dev-base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            "warnings": {
+                "dev": true,
+                "deprecated": false,
+                "uninitialized": true,
+                "unusedCli": true,
+                "systemVars": false
+            },
+            "errors": {
+                "dev": true,
+                "deprecated": false
+            }
+        },
+        {
+            "name": "flags-gcc-clang",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_CXX_FLAGS": "-Wall -Wextra -Wformat -Wpedantic -Wshadow -Wunused -Wcast-qual -Wcast-align -Wdouble-promotion -Wimplicit-fallthrough -Wundef -Wfloat-equal -Wfloat-equal -Wnull-dereference -Wextra-semi -Woverloaded-virtual -Wnon-virtual-dtor -Wold-style-cast -Wpessimizing-move -Wredundant-move -Wself-move"
+            }
+        },
+        {
+            "name": "flags-msvc",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_CXX_FLAGS": "/W4 /permissive- /Zc:inline /Zc:preprocessor /Zc:enumTypes /Zc:externConstexpr /Zc:lambda /EHsc /w14165 /w44242 /w44254 /w44263 /w34265 /w34287 /w44296 /w44365 /w44388 /w44464 /w14545 /w14546 /w14547 /w14549 /w14555 /w34619 /w14928 /w45038"
+            }
+        },
+        {
+            "name": "clang-tidy",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_CXX_CLANG_TIDY": "clang-tidy;--header-filter=${sourceDir}/{src,include}"
+            }
+        },
+        {
+            "name": "ci-base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+        },
+        {
+            "name": "ci-linux",
+            "generator": "Ninja",
+            "inherits": ["flags-gcc-clang", "ci-base", "clang-tidy"]
+        },
+        {
+            "name": "ci-windows",
+            "inherits": ["flags-msvc", "ci-base"]
+        },
+        {
+            "name": "dev-linux",
+            "inherits": ["dev-base", "ci-linux"]
+        },
+        {
+            "name": "dev-windows",
+            "inherits": ["dev-base", "ci-windows"]
+        }
+    ]
+}
