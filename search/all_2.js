@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['channel_5ft_9',['channel_t',['../d7/d13/structkoutil_1_1Color.html#a1e7a40a3bd915ff99954b6c17f9afe3c',1,'koutil::Color']]],
+  ['codepage_5ffail_10',['CODEPAGE_FAIL',['../d7/de0/classkoutil_1_1terminal.html#abb24b99e927362616da89b701411c7eaa5fe22142a7f717810c3d2ad9a5511391',1,'koutil::terminal']]],
+  ['color_11',['Color',['../d7/d13/structkoutil_1_1Color.html#acefcc26a449a6775e89f9a02b17a5fdd',1,'koutil::Color::Color()'],['../d7/d13/structkoutil_1_1Color.html#a858d223057668d53df57b886cfc73aeb',1,'koutil::Color::Color(channel_t r, channel_t g, channel_t b)'],['../d7/d13/structkoutil_1_1Color.html#a94d9812f606d56aa198c943d72020d67',1,'koutil::Color::Color(std::uint8_t id)']]],
+  ['color_12',['color',['../d2/da4/structkoutil_1_1ColorBG.html#a12afa481a4abfc2fc0ec71b32e265737',1,'koutil::ColorBG::color()'],['../d4/d87/structkoutil_1_1ColorFG.html#aed9657c59a7870a4ef775142d08f2d45',1,'koutil::ColorFG::color()']]],
+  ['color_13',['Color',['../d7/d13/structkoutil_1_1Color.html',1,'koutil']]],
+  ['color_2eh_14',['color.h',['../da/dec/color_8h.html',1,'']]],
+  ['color16_15',['COLOR16',['../dd/dcf/namespacekoutil.html#ab25994346d54909e84b7767c83d3fdadad8a9e1dcc50d6664e9114ae9fa0035a5',1,'koutil']]],
+  ['color16_2eh_16',['color16.h',['../dc/da3/color16_8h.html',1,'']]],
+  ['color256_17',['COLOR256',['../dd/dcf/namespacekoutil.html#ab25994346d54909e84b7767c83d3fdadae4609883cd4da7dd5925b46ad4102468',1,'koutil']]],
+  ['color_5foperators_2eh_18',['color_operators.h',['../db/d15/color__operators_8h.html',1,'']]],
+  ['color_5fsupport_19',['color_support',['../d7/de0/classkoutil_1_1terminal.html#a3d2148f82e17c93ca1472f05340d833f',1,'koutil::terminal']]],
+  ['colorbg_20',['ColorBG',['../d2/da4/structkoutil_1_1ColorBG.html#a861bef70efab3be25dbf1a7fc099517a',1,'koutil::ColorBG::ColorBG()'],['../d2/da4/structkoutil_1_1ColorBG.html',1,'koutil::ColorBG']]],
+  ['colorfg_21',['ColorFG',['../d4/d87/structkoutil_1_1ColorFG.html#ab51bdccbc109fff272006239ea98a9d8',1,'koutil::ColorFG::ColorFG()'],['../d4/d87/structkoutil_1_1ColorFG.html',1,'koutil::ColorFG']]],
+  ['colorsupport_22',['ColorSupport',['../dd/dcf/namespacekoutil.html#ab25994346d54909e84b7767c83d3fdad',1,'koutil']]],
+  ['column_23',['column',['../d0/d9c/structkoutil_1_1CursorPos.html#aa6b29c3823c77ac42d6f0bbd96e228f2',1,'koutil::CursorPos']]],
+  ['commands_2eh_24',['commands.h',['../d5/d90/commands_8h.html',1,'']]],
+  ['convert_5fval_25',['convert_val',['../d7/d13/structkoutil_1_1Color.html#a422c715e5057df28161018cdad47ef86',1,'koutil::Color']]],
+  ['cursorcommand_26',['CursorCommand',['../dd/dcf/namespacekoutil.html#adcc56c9e4d36ca4453860921c957b35a',1,'koutil']]],
+  ['cursormove_27',['CursorMove',['../d7/d8c/structkoutil_1_1CursorMove.html',1,'koutil']]],
+  ['cursorpos_28',['CursorPos',['../d0/d9c/structkoutil_1_1CursorPos.html',1,'koutil']]],
+  ['cyan_29',['cyan',['../d3/dd1/namespacekoutil_1_1color.html#ab93561077a218250d53190c6792c6db6',1,'koutil::color']]],
+  ['cyan_5fbright_30',['cyan_bright',['../d3/dd1/namespacekoutil_1_1color.html#aad6c78641ba651d4e7b7bda094f4ca41',1,'koutil::color']]]
+];
