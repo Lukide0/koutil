@@ -1,24 +1,14 @@
-name: Doxygen Action
+name: Doxygen GitHub Pages Deploy Action
 
 on:
     push:
         branches:
-            - "main"
+            - main
 
 jobs:
-    build:
+    deploy:
         runs-on: ubuntu-latest
-
         steps:
-            - uses: actions/checkout@v4
-
-            - name: Doxygen action
-              uses: mattnotmitt/doxygen-action@1.9.8
-              with:
-                  doxyfile-path: "./config.ini"
-
-            - name: Deploy
-              uses: peaceiris/actions-gh-pages@v3
+            - uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./docs/html
