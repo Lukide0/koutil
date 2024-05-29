@@ -16,10 +16,12 @@ var searchData=
   ['colorsupport_22',['ColorSupport',['../dd/dcf/namespacekoutil.html#ab25994346d54909e84b7767c83d3fdad',1,'koutil']]],
   ['column_23',['column',['../d0/d9c/structkoutil_1_1CursorPos.html#aa6b29c3823c77ac42d6f0bbd96e228f2',1,'koutil::CursorPos']]],
   ['commands_2eh_24',['commands.h',['../d5/d90/commands_8h.html',1,'']]],
-  ['convert_5fval_25',['convert_val',['../d7/d13/structkoutil_1_1Color.html#a422c715e5057df28161018cdad47ef86',1,'koutil::Color']]],
-  ['cursorcommand_26',['CursorCommand',['../dd/dcf/namespacekoutil.html#adcc56c9e4d36ca4453860921c957b35a',1,'koutil']]],
-  ['cursormove_27',['CursorMove',['../d7/d8c/structkoutil_1_1CursorMove.html',1,'koutil']]],
-  ['cursorpos_28',['CursorPos',['../d0/d9c/structkoutil_1_1CursorPos.html',1,'koutil']]],
-  ['cyan_29',['cyan',['../d3/dd1/namespacekoutil_1_1color.html#ab93561077a218250d53190c6792c6db6',1,'koutil::color']]],
-  ['cyan_5fbright_30',['cyan_bright',['../d3/dd1/namespacekoutil_1_1color.html#aad6c78641ba651d4e7b7bda094f4ca41',1,'koutil::color']]]
+  ['container_25',['container',['../d1/d63/structkoutil_1_1type_1_1types__containers_1_1vector.html#aa67932ebdddd961f70242dd11df3ba3b',1,'koutil::type::types_containers::vector']]],
+  ['contains_5ftype_26',['contains_type',['../dc/d33/namespacekoutil_1_1type_1_1detail.html#a15ead99236487ba10fbefe28aac8511c',1,'koutil::type::detail']]],
+  ['convert_5fval_27',['convert_val',['../d7/d13/structkoutil_1_1Color.html#a422c715e5057df28161018cdad47ef86',1,'koutil::Color']]],
+  ['cursorcommand_28',['CursorCommand',['../dd/dcf/namespacekoutil.html#adcc56c9e4d36ca4453860921c957b35a',1,'koutil']]],
+  ['cursormove_29',['CursorMove',['../d7/d8c/structkoutil_1_1CursorMove.html',1,'koutil']]],
+  ['cursorpos_30',['CursorPos',['../d0/d9c/structkoutil_1_1CursorPos.html',1,'koutil']]],
+  ['cyan_31',['cyan',['../d3/dd1/namespacekoutil_1_1color.html#ab93561077a218250d53190c6792c6db6',1,'koutil::color']]],
+  ['cyan_5fbright_32',['cyan_bright',['../d3/dd1/namespacekoutil_1_1color.html#aad6c78641ba651d4e7b7bda094f4ca41',1,'koutil::color']]]
 ];

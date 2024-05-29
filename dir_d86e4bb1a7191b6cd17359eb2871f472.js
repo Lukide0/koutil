@@ -1,5 +1,6 @@
 var dir_d86e4bb1a7191b6cd17359eb2871f472 =
 [
+    [ "type", "dir_4ad071642eec2dadafafe5aa1b3d57a9.html", "dir_4ad071642eec2dadafafe5aa1b3d57a9" ],
     [ "util", "dir_9dacd1b6f1dbade732d7fe5c52563b80.html", "dir_9dacd1b6f1dbade732d7fe5c52563b80" ],
     [ "color.h", "da/dec/color_8h.html", [
       [ "Color", "d7/d13/structkoutil_1_1Color.html", "d7/d13/structkoutil_1_1Color" ],

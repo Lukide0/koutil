@@ -1,6 +1,7 @@
 <map id="include/koutil" name="include/koutil">
-<area shape="rect" id="node2" href="dir_9dacd1b6f1dbade732d7fe5c52563b80.html" title="util" alt="" coords="37,159,109,207"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000001_000002.html" title="4" alt="" coords="77,133,86,148"/>
-<area shape="rect" id="clust2" href="dir_d86e4bb1a7191b6cd17359eb2871f472.html" alt="" coords="27,52,120,217"/>
-<area shape="rect" id="clust1" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="16,16,131,228"/>
+<area shape="rect" id="node3" href="dir_9dacd1b6f1dbade732d7fe5c52563b80.html" title="util" alt="" coords="133,159,205,207"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000001_000003.html" title="4" alt="" coords="173,133,182,148"/>
+<area shape="rect" id="node2" href="dir_4ad071642eec2dadafafe5aa1b3d57a9.html" title="type" alt="" coords="37,63,109,111"/>
+<area shape="rect" id="clust2" href="dir_d86e4bb1a7191b6cd17359eb2871f472.html" alt="" coords="27,52,216,217"/>
+<area shape="rect" id="clust1" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="16,16,227,228"/>
 </map>
