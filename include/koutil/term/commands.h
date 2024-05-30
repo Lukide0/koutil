@@ -1,10 +1,10 @@
-#ifndef KOUTIL_COMMANDS_H
-#define KOUTIL_COMMANDS_H
+#ifndef KOUTIL_TERM_COMMANDS_H
+#define KOUTIL_TERM_COMMANDS_H
 
 #include "koutil/util/utils.h"
 #include <ostream>
 
-namespace koutil {
+namespace koutil::term {
 /**
  * @brief Represents a cursor movement command.
  */

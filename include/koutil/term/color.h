@@ -1,5 +1,5 @@
-#ifndef KOUTIL_COLOR_H
-#define KOUTIL_COLOR_H
+#ifndef KOUTIL_TERM_COLOR_H
+#define KOUTIL_TERM_COLOR_H
 
 #include <array>
 #include <cassert>
@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <string_view>
 
-namespace koutil {
+namespace koutil::term {
 
 struct ColorBG;
 struct ColorFG;
@@ -104,7 +104,7 @@ public:
      */
     static consteval Color from_hex(std::string_view hex) {
         if (!hex.starts_with('#')) {
-            throw "Invalid hex!";
+            assert(false);
         }
 
         if (hex.size() - 1 == 3) {
@@ -120,7 +120,7 @@ public:
                 static_cast<channel_t>(extract_value(hex[6]) | (extract_value(hex[5]) << 4)),
             };
         } else {
-            throw "Invalid hex!";
+            assert(false);
         }
     }
 
@@ -274,6 +274,6 @@ constexpr Color Color::from_hsv(std::uint16_t h, float s, float v) {
     return { convert_val(r), convert_val(g), convert_val(b) };
 }
 
-} // namespace koutil
+}
 
 #endif

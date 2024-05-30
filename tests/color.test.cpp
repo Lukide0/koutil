@@ -3,10 +3,9 @@
 #include <cstdint>
 #include <cstdlib>
 #include <doctest/doctest.h>
-#include <koutil/color.h>
-#include <string_view>
+#include <koutil/term.h>
 
-using koutil::Color;
+using koutil::term::Color;
 
 struct HSV {
     std::uint16_t h;

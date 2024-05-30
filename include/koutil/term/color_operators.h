@@ -1,13 +1,13 @@
-#ifndef KOUTIL_COLOR_OPERATORS_H
-#define KOUTIL_COLOR_OPERATORS_H
+#ifndef KOUTIL_TERM_COLOR_OPERATORS_H
+#define KOUTIL_TERM_COLOR_OPERATORS_H
 
-#include "koutil/color.h"
+#include "koutil/term/color.h"
 #include "koutil/util/utils.h"
 #include <cstddef>
 #include <ostream>
 #include <string_view>
 
-namespace koutil {
+namespace koutil::term {
 
 namespace color_literals {
 
