@@ -35,7 +35,7 @@ template <typename T, typename U> struct types_cat;
  * @tparam U The second types list.
  */
 template <typename... T, typename... U> struct types_cat<types<T...>, types<U...>> {
-    using types = types<T..., U...>;
+    using type = types<T..., U...>;
 };
 
 /**
@@ -44,7 +44,7 @@ template <typename... T, typename... U> struct types_cat<types<T...>, types<U...
  * @tparam T The first types list.
  * @tparam U The second types list.
  */
-template <typename T, typename U> using types_cat_t = types_cat<T, U>::types;
+template <typename T, typename U> using types_cat_t = types_cat<T, U>::type;
 
 /**
  * @brief Concept for a type that provides a `transform` template.
@@ -140,7 +140,7 @@ namespace detail {
      * @tparam T The type.
      */
     template <typename T> struct unique_types_impl<T> {
-        using types = types<T>;
+        using type = types<T>;
     };
 
     /**
@@ -150,8 +150,8 @@ namespace detail {
      * @tparam Other The other types.
      */
     template <typename T, typename... Other> struct unique_types_impl<T, Other...> {
-        using other_types = unique_types_impl<Other...>::types;
-        using types = std::conditional_t<contains_type<T, Other...>(), other_types, types_cat_t<types<T>, other_types>>;
+        using other_types = unique_types_impl<Other...>::type;
+        using type = std::conditional_t<contains_type<T, Other...>(), other_types, types_cat_t<types<T>, other_types>>;
     };
 
     /**
@@ -169,7 +169,7 @@ namespace detail {
      * @tparam Container The container type.
      */
     template <typename... Types, types_container Container> struct types_to_containers<types<Types...>, Container> {
-        using types = types<typename Container::template container<Types>...>;
+        using type = types<typename Container::template container<Types>...>;
     };
 
     /**
@@ -248,8 +248,14 @@ namespace detail {
      * @tparam Types The types in the list.
      * @tparam I The index.
      */
-    template <typename... Types, std::size_t I> struct types_get_impl<types<Types...>, I> {
+    template <typename... Types, std::size_t I>
+        requires(sizeof...(Types) > 0)
+    struct types_get_impl<types<Types...>, I> {
         using type = std::tuple_element_t<I, std::tuple<Types...>>;
+    };
+
+    template <std::size_t I> struct types_get_impl<types<>, I> {
+        using type = void;
     };
 
     /**
@@ -265,7 +271,7 @@ namespace detail {
      * @tparam Types The types in the list.
      */
     template <typename... Types> struct types_unique_impl<types<Types...>> {
-        using types = unique_types_impl<Types...>::types;
+        using type = unique_types_impl<Types...>::type;
     };
 
     /**
@@ -283,7 +289,7 @@ namespace detail {
      * @tparam Unique The unique types in the list.
      */
     template <typename... Types, typename... Unique> struct types_to_arrays<types<Types...>, types<Unique...>> {
-        using types = types<std::array<Unique, types_count<types<Types...>>::template value<Unique>>...>;
+        using type = types<std::array<Unique, types_count<types<Types...>>::template value<Unique>>...>;
     };
 
 }
@@ -301,14 +307,14 @@ template <typename Types, std::size_t I> using types_get_t = detail::types_get_i
  *
  * @tparam Types The types in the list.
  */
-template <typename... Types> using unique_types_t = detail::unique_types_impl<Types...>::types;
+template <typename... Types> using unique_types_t = detail::unique_types_impl<Types...>::type;
 
 /**
  * @brief Alias for creating a unique types list from a `types` list.
  *
  * @tparam Types The `types` list.
  */
-template <typename Types> using types_unique_t = detail::types_unique_impl<Types>::types;
+template <typename Types> using types_unique_t = detail::types_unique_impl<Types>::type;
 
 /**
  * @brief Alias for transforming a types list using a transform template.
@@ -326,7 +332,7 @@ using types_transform_t = detail::types_transform_impl<T, Transform>::type;
  * @tparam Container The container template.
  */
 template <typename T, types_container Container = types_containers::vector>
-using types_to_containers_t = detail::types_to_containers<T, Container>::types;
+using types_to_containers_t = detail::types_to_containers<T, Container>::type;
 
 /**
  * @brief Gets the index of a type in a types list.
@@ -343,7 +349,7 @@ inline constexpr std::size_t types_index_of_v = detail::types_index_of<T, Types,
  *
  * @tparam Types The types list.
  */
-template <typename Types> using types_to_arrays_t = detail::types_to_arrays<Types, types_unique_t<Types>>::types;
+template <typename Types> using types_to_arrays_t = detail::types_to_arrays<Types, types_unique_t<Types>>::type;
 
 }
 
