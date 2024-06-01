@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['line_278',['line',['../d0/d9c/structkoutil_1_1CursorPos.html#a8711fd7537ea2eb7345ba3de7da199f0',1,'koutil::CursorPos']]]
+  ['i_281',['I',['../dc/d33/namespacekoutil_1_1type_1_1detail.html#afc5939ff5c906091767cb7c0c8628963',1,'koutil::type::detail']]]
 ];

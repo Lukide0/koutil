@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['white_296',['white',['../d3/dd1/namespacekoutil_1_1color.html#acb260e3c4064f65af4759184bc26e01c',1,'koutil::color']]],
-  ['white_5fbright_297',['white_bright',['../d3/dd1/namespacekoutil_1_1color.html#a3a617cc0b8b7e6ce16f13e52cdf02446',1,'koutil::color']]],
-  ['width_298',['width',['../da/d82/structkoutil_1_1Dimensions.html#a16d4349cd3f1be6718d97adad14b073a',1,'koutil::Dimensions']]]
+  ['value_299',['value',['../d9/d27/structkoutil_1_1type_1_1types__count_3_01types_3_01Types_8_8_8_01_4_01_4.html#a660e9d065356aa086cb202fcf532231e',1,'koutil::type::types_count&lt; types&lt; Types... &gt; &gt;::value()'],['../d4/d41/structkoutil_1_1type_1_1detail_1_1types__index__of_3_01T_00_01types_3_01Types_8_8_8_01_4_00_01N_01_4.html#a4bf2dd252be399adb0e38e5dfa6bb676',1,'koutil::type::detail::types_index_of&lt; T, types&lt; Types... &gt;, N &gt;::value()']]]
 ];

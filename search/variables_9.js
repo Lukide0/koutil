@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['s_5finstance_288',['s_instance',['../d7/de0/classkoutil_1_1terminal.html#ab3efcb01a6cbc39177d609fd7972261f',1,'koutil::terminal']]],
-  ['size_289',['size',['../dd/d52/structkoutil_1_1type_1_1types.html#addfc0ab4614821156ea52eeb5367d653',1,'koutil::type::types']]]
+  ['red_290',['red',['../d7/d13/structkoutil_1_1Color.html#a6c8f7dcebd1a5fc7db99d65e23468232',1,'koutil::Color::red()'],['../d3/dd1/namespacekoutil_1_1color.html#a2dbb6e3cb0fe453d57ca8979123b7a26',1,'koutil::color::red()']]],
+  ['red_5fbright_291',['red_bright',['../d3/dd1/namespacekoutil_1_1color.html#a1d5b6a8e71ecc13b1bdd4e52718b0dc3',1,'koutil::color']]]
 ];
