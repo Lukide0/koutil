@@ -1,11 +1,11 @@
 var color__operators_8h =
 [
-    [ "operator\"\"_bg", "db/d15/color__operators_8h.html#a46efa4551014f6fcc40aed35066eff04", null ],
-    [ "operator\"\"_color", "db/d15/color__operators_8h.html#a4bbb2df4280962d6f2516a1dc5fef3f0", null ],
-    [ "operator\"\"_fg", "db/d15/color__operators_8h.html#a90e7b79cd70a5db9dcab93aceb1e65de", null ],
-    [ "operator<<", "db/d15/color__operators_8h.html#a68cb2531813c0266ab09c81eb593cbff", null ],
-    [ "operator<<", "db/d15/color__operators_8h.html#a077fe8bd73cfe181bb558d9c77f94b48", null ],
-    [ "reset_bg", "db/d15/color__operators_8h.html#ac31b7d3fc46b493a3ac28ccc51a33b59", null ],
-    [ "reset_color", "db/d15/color__operators_8h.html#a982752cb4b4705363760ec2954ecf332", null ],
-    [ "reset_fg", "db/d15/color__operators_8h.html#ada7170c56c1cff9eb66a1ce1558bd37a", null ]
+    [ "operator\"\"_bg", "db/d15/color__operators_8h.html#aebba7b1a96e2d99ea8a85dc6cdfbb773", null ],
+    [ "operator\"\"_color", "db/d15/color__operators_8h.html#a3358984e2761e02abfce5953d0d5c220", null ],
+    [ "operator\"\"_fg", "db/d15/color__operators_8h.html#a7c6538b6abe2b3d62d8614d3d481602d", null ],
+    [ "operator<<", "db/d15/color__operators_8h.html#a08a63749638f62a8605066c1efc59781", null ],
+    [ "operator<<", "db/d15/color__operators_8h.html#a41b88571d8bc029ae0b6a4d59a9f978e", null ],
+    [ "reset_bg", "db/d15/color__operators_8h.html#ad04d3d12d6fcb16918c1eaf4ebadfd84", null ],
+    [ "reset_color", "db/d15/color__operators_8h.html#a8e8f89ddef77f702684d82e09c3fde96", null ],
+    [ "reset_fg", "db/d15/color__operators_8h.html#ae0029f76693c4b7974430e9aef93d61e", null ]
 ];

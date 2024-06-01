@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['save_358',['SAVE',['../dd/dcf/namespacekoutil.html#adcc56c9e4d36ca4453860921c957b35aaf5cf47ab06d0d98b0d16d10c82d87953',1,'koutil']]],
-  ['setup_359',['SETUP',['../d7/de0/classkoutil_1_1terminal.html#abb24b99e927362616da89b701411c7eaaddbb81a9e3aab6cfa19ad8eb2389efd4',1,'koutil::terminal']]],
-  ['show_360',['SHOW',['../dd/dcf/namespacekoutil.html#adcc56c9e4d36ca4453860921c957b35aac34fbad9a5e2a1d0c8f7cf8d226808b9',1,'koutil']]],
-  ['strikethough_361',['STRIKETHOUGH',['../dd/dcf/namespacekoutil.html#ad8d3174bf78a73884420acb1d209b5a3a070cad4db782aee3ab04fd853cdb7298',1,'koutil']]]
+  ['save_560',['SAVE',['../d6/d7c/namespacekoutil_1_1term.html#a94b2a7e111e962b92e4ee2394ee7fa88af5cf47ab06d0d98b0d16d10c82d87953',1,'koutil::term']]],
+  ['setup_561',['SETUP',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad5b888cc614d56a533696451e59bf2c7addbb81a9e3aab6cfa19ad8eb2389efd4',1,'koutil::term::terminal']]],
+  ['show_562',['SHOW',['../d6/d7c/namespacekoutil_1_1term.html#a94b2a7e111e962b92e4ee2394ee7fa88ac34fbad9a5e2a1d0c8f7cf8d226808b9',1,'koutil::term']]],
+  ['strikethough_563',['STRIKETHOUGH',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a070cad4db782aee3ab04fd853cdb7298',1,'koutil::term']]]
 ];

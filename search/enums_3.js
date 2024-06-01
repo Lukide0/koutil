@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['style_322',['Style',['../dd/dcf/namespacekoutil.html#ad8d3174bf78a73884420acb1d209b5a3',1,'koutil']]]
+  ['parseresult_515',['ParseResult',['../d7/dfe/namespacekoutil_1_1argparser.html#a5615269d92ae1937d5e0e01832966684',1,'koutil::argparser']]]
 ];

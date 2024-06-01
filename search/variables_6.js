@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['i_281',['I',['../dc/d33/namespacekoutil_1_1type_1_1detail.html#afc5939ff5c906091767cb7c0c8628963',1,'koutil::type::detail']]]
+  ['height_450',['height',['../d6/dba/structkoutil_1_1term_1_1Dimensions.html#a53d5fe3fe56a1f06238a48b720e28b86',1,'koutil::term::Dimensions']]]
 ];

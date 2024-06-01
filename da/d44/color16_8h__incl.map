@@ -1,9 +1,9 @@
-<map id="include/koutil/color16.h" name="include/koutil/color16.h">
-<area shape="rect" id="node1" title=" " alt="" coords="124,5,297,32"/>
-<area shape="rect" id="node2" href="$da/dec/color_8h.html" title=" " alt="" coords="158,80,263,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,61,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="85,155,155,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,155,242,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="267,155,333,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="358,155,455,181"/>
+<map id="include/koutil/term/color16.h" name="include/koutil/term/color16.h">
+<area shape="rect" id="node1" title=" " alt="" coords="139,5,283,47"/>
+<area shape="rect" id="node2" href="$da/dec/color_8h.html" title=" " alt="" coords="141,95,281,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,61,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="85,169,155,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="179,169,242,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="267,169,333,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="358,169,455,196"/>
 </map>

@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['s_5finstance_116',['s_instance',['../d7/de0/classkoutil_1_1terminal.html#ab3efcb01a6cbc39177d609fd7972261f',1,'koutil::terminal']]],
-  ['safe_5fgetenv_117',['safe_getenv',['../d3/d72/namespacekoutil_1_1util.html#ae1a8fbc044a9fd6792f502c0dc90479d',1,'koutil::util']]],
-  ['save_118',['SAVE',['../dd/dcf/namespacekoutil.html#adcc56c9e4d36ca4453860921c957b35aaf5cf47ab06d0d98b0d16d10c82d87953',1,'koutil']]],
-  ['setup_119',['SETUP',['../d7/de0/classkoutil_1_1terminal.html#abb24b99e927362616da89b701411c7eaaddbb81a9e3aab6cfa19ad8eb2389efd4',1,'koutil::terminal']]],
-  ['show_120',['SHOW',['../dd/dcf/namespacekoutil.html#adcc56c9e4d36ca4453860921c957b35aac34fbad9a5e2a1d0c8f7cf8d226808b9',1,'koutil']]],
-  ['size_121',['size',['../dd/d52/structkoutil_1_1type_1_1types.html#addfc0ab4614821156ea52eeb5367d653',1,'koutil::type::types']]],
-  ['strikethough_122',['STRIKETHOUGH',['../dd/dcf/namespacekoutil.html#ad8d3174bf78a73884420acb1d209b5a3a070cad4db782aee3ab04fd853cdb7298',1,'koutil']]],
-  ['style_123',['Style',['../dd/dcf/namespacekoutil.html#ad8d3174bf78a73884420acb1d209b5a3',1,'koutil']]],
-  ['style_2eh_124',['style.h',['../de/d12/style_8h.html',1,'']]],
-  ['style_5fcontains_125',['style_contains',['../dd/dcf/namespacekoutil.html#afb7e0d108964108ca2085d75199a250f',1,'koutil']]]
+  ['red_184',['red',['../d8/d09/structkoutil_1_1term_1_1Color.html#a906a7a3454e5c64a1582c712f827f3d4',1,'koutil::term::Color::red()'],['../d1/df4/namespacekoutil_1_1term_1_1color.html#a91f89f14b4f7dff69f649f4789d6df98',1,'koutil::term::color::red()']]],
+  ['red_5fbright_185',['red_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a6a22cfa3cea1f3dfb4855f798f6c87f4',1,'koutil::term::color']]],
+  ['register_5fsignals_186',['register_signals',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad1ea7dc3551ca80353ce48d0667002a6',1,'koutil::term::terminal']]],
+  ['requires_187',['requires',['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a24f96ba7e44515fe9582d2a21eea681c',1,'koutil::argparser::Commands::requires(I&lt; count &amp;&amp;J&lt; count) const expr bool contains_duplicate_impl() const'],['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html#aaec52b248a960aefd3c7dd22536307f0',1,'koutil::argparser::Commands::requires(I &gt;=count||J &gt;=count) const expr bool contains_duplicate_impl() const'],['../dc/d33/namespacekoutil_1_1type_1_1detail.html#a3c79bc890732141f64637d1ed9d09bf7',1,'koutil::type::detail::requires()']]],
+  ['reset_5fall_188',['reset_all',['../d6/d7c/namespacekoutil_1_1term.html#a3824f4c765f16e4cdba16cd45acb3a25',1,'koutil::term']]],
+  ['reset_5fbg_189',['reset_bg',['../d6/d7c/namespacekoutil_1_1term.html#ad04d3d12d6fcb16918c1eaf4ebadfd84',1,'koutil::term']]],
+  ['reset_5fcolor_190',['reset_color',['../d6/d7c/namespacekoutil_1_1term.html#a8e8f89ddef77f702684d82e09c3fde96',1,'koutil::term']]],
+  ['reset_5ffg_191',['reset_fg',['../d6/d7c/namespacekoutil_1_1term.html#ae0029f76693c4b7974430e9aef93d61e',1,'koutil::term']]],
+  ['restore_192',['RESTORE',['../d6/d7c/namespacekoutil_1_1term.html#a94b2a7e111e962b92e4ee2394ee7fa88ac95fa04340c629ddfa2d38e285e59245',1,'koutil::term']]],
+  ['rgb_193',['RGB',['../d8/d09/structkoutil_1_1term_1_1Color.html#a75c3693db1e41e55d8ed3af28fb8cb0fa889574aebacda6bfd3e534e2b49b8028',1,'koutil::term::Color']]],
+  ['rollback_194',['rollback',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a940ea94c15d692b3c0e3de7fdba56e93',1,'koutil::term::terminal']]]
 ];

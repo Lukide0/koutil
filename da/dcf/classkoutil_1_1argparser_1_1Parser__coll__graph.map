@@ -1,0 +1,7 @@
+<map id="koutil::argparser::Parser&lt; Ctx, UParser, Args, Cmds &gt;" name="koutil::argparser::Parser&lt; Ctx, UParser, Args, Cmds &gt;">
+<area shape="rect" id="node1" title="Template class representing a parser." alt="" coords="203,109,365,165"/>
+<area shape="rect" id="node2" href="$de/d6c/classkoutil_1_1argparser_1_1CommandsBase.html" title="Base class for commands." alt="" coords="5,5,141,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="180,13,239,39"/>
+<area shape="rect" id="node4" href="$d6/d3f/classkoutil_1_1argparser_1_1ArgumentsBase.html" title=" " alt="" coords="292,5,428,47"/>
+<area shape="rect" id="node5" title=" " alt="" coords="471,13,521,39"/>
+</map>

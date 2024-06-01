@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['register_5fsignals_256',['register_signals',['../d7/de0/classkoutil_1_1terminal.html#a4602a5350d0040675b421e609220920a',1,'koutil::terminal']]],
-  ['requires_257',['requires',['../dc/d33/namespacekoutil_1_1type_1_1detail.html#a3c79bc890732141f64637d1ed9d09bf7',1,'koutil::type::detail']]],
-  ['reset_5fall_258',['reset_all',['../dd/dcf/namespacekoutil.html#affaafc98dc4e4a2e10ba096356a40e41',1,'koutil']]],
-  ['reset_5fbg_259',['reset_bg',['../dd/dcf/namespacekoutil.html#ac31b7d3fc46b493a3ac28ccc51a33b59',1,'koutil']]],
-  ['reset_5fcolor_260',['reset_color',['../dd/dcf/namespacekoutil.html#a982752cb4b4705363760ec2954ecf332',1,'koutil']]],
-  ['reset_5ffg_261',['reset_fg',['../dd/dcf/namespacekoutil.html#ada7170c56c1cff9eb66a1ce1558bd37a',1,'koutil']]],
-  ['rollback_262',['rollback',['../d7/de0/classkoutil_1_1terminal.html#a7d9081785d83fcf9585c835cbe19d279',1,'koutil::terminal']]]
+  ['parse_401',['parse',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a23558709718cf9ed3815a7509850ff83',1,'koutil::argparser::Parser']]],
+  ['parse_5fcommand_5for_5fargument_402',['parse_command_or_argument',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a7f7975ae8c9174216a6fb1463a5a7464',1,'koutil::argparser::Parser']]],
+  ['parse_5flong_5fopt_403',['parse_long_opt',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a6b4263e5441de42ab67f669b762bf9c0',1,'koutil::argparser::Parser']]],
+  ['parse_5fshort_5fopt_404',['parse_short_opt',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a235730efaa1ecb0837ff8234de6c68cd',1,'koutil::argparser::Parser']]],
+  ['parser_405',['Parser',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a3730eb8d83eea8b5690651e2741f3fe2',1,'koutil::argparser::Parser::Parser(Ctx &amp;ctx, Args &amp;&amp;args, Cmds &amp;&amp;commands)'],['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#aa833b10a9348327de741f8986f6e8232',1,'koutil::argparser::Parser::Parser(Ctx &amp;ctx, const Args &amp;args, const Cmds &amp;commands)']]],
+  ['process_5fargs_406',['process_args',['../d7/dfe/namespacekoutil_1_1argparser.html#a6ed181ae80f5e9727054f55d31c7f94b',1,'koutil::argparser']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['color_272',['color',['../d2/da4/structkoutil_1_1ColorBG.html#a12afa481a4abfc2fc0ec71b32e265737',1,'koutil::ColorBG::color()'],['../d4/d87/structkoutil_1_1ColorFG.html#aed9657c59a7870a4ef775142d08f2d45',1,'koutil::ColorFG::color()']]],
-  ['column_273',['column',['../d0/d9c/structkoutil_1_1CursorPos.html#aa6b29c3823c77ac42d6f0bbd96e228f2',1,'koutil::CursorPos']]],
-  ['cyan_274',['cyan',['../d3/dd1/namespacekoutil_1_1color.html#ab93561077a218250d53190c6792c6db6',1,'koutil::color']]],
-  ['cyan_5fbright_275',['cyan_bright',['../d3/dd1/namespacekoutil_1_1color.html#aad6c78641ba651d4e7b7bda094f4ca41',1,'koutil::color']]]
+  ['black_435',['black',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a2798a15d196ec5f7b3fd5c3ee1882553',1,'koutil::term::color']]],
+  ['black_5fbright_436',['black_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a7ba535a4730468c8e019b318d8adcaf8',1,'koutil::term::color']]],
+  ['blue_437',['blue',['../d8/d09/structkoutil_1_1term_1_1Color.html#aa6181a0423d0f88bef10342f96f9547e',1,'koutil::term::Color::blue()'],['../d1/df4/namespacekoutil_1_1term_1_1color.html#afe37fabd4ceee70c72db5113fee32d59',1,'koutil::term::color::blue()']]],
+  ['blue_5fbright_438',['blue_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a20f321a24a6ce9734954af9c38425e9e',1,'koutil::term::color']]]
 ];

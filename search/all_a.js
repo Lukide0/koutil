@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['line_77',['line',['../d0/d9c/structkoutil_1_1CursorPos.html#a8711fd7537ea2eb7345ba3de7da199f0',1,'koutil::CursorPos']]]
+  ['line_121',['line',['../d4/d5d/structkoutil_1_1term_1_1CursorPos.html#a9864abed900cc3fef7c683a15926dc72',1,'koutil::term::CursorPos']]],
+  ['long_5fname_122',['long_name',['../dd/db6/structkoutil_1_1argparser_1_1Arg.html#a0e5ff904c987b640340b6b721883dca6',1,'koutil::argparser::Arg']]]
 ];

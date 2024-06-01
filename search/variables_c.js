@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_299',['value',['../d9/d27/structkoutil_1_1type_1_1types__count_3_01types_3_01Types_8_8_8_01_4_01_4.html#a660e9d065356aa086cb202fcf532231e',1,'koutil::type::types_count&lt; types&lt; Types... &gt; &gt;::value()'],['../d4/d41/structkoutil_1_1type_1_1detail_1_1types__index__of_3_01T_00_01types_3_01Types_8_8_8_01_4_00_01N_01_4.html#a4bf2dd252be399adb0e38e5dfa6bb676',1,'koutil::type::detail::types_index_of&lt; T, types&lt; Types... &gt;, N &gt;::value()']]]
+  ['red_477',['red',['../d8/d09/structkoutil_1_1term_1_1Color.html#a906a7a3454e5c64a1582c712f827f3d4',1,'koutil::term::Color::red()'],['../d1/df4/namespacekoutil_1_1term_1_1color.html#a91f89f14b4f7dff69f649f4789d6df98',1,'koutil::term::color::red()']]],
+  ['red_5fbright_478',['red_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a6a22cfa3cea1f3dfb4855f798f6c87f4',1,'koutil::term::color']]]
 ];

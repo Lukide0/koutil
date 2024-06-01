@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['white_300',['white',['../d3/dd1/namespacekoutil_1_1color.html#acb260e3c4064f65af4759184bc26e01c',1,'koutil::color']]],
-  ['white_5fbright_301',['white_bright',['../d3/dd1/namespacekoutil_1_1color.html#a3a617cc0b8b7e6ce16f13e52cdf02446',1,'koutil::color']]],
-  ['width_302',['width',['../da/d82/structkoutil_1_1Dimensions.html#a16d4349cd3f1be6718d97adad14b073a',1,'koutil::Dimensions']]]
+  ['s_5finstance_479',['s_instance',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a110df94c9c7413d6e2f77d59b641a21d',1,'koutil::term::terminal']]],
+  ['short_5fname_480',['short_name',['../dd/db6/structkoutil_1_1argparser_1_1Arg.html#a5fbc374a65797a27e63c1ee601a451a4',1,'koutil::argparser::Arg']]],
+  ['size_481',['size',['../dd/d52/structkoutil_1_1type_1_1types.html#addfc0ab4614821156ea52eeb5367d653',1,'koutil::type::types']]]
 ];

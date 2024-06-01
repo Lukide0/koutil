@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['enable_5falternative_5fbuffer_333',['ENABLE_ALTERNATIVE_BUFFER',['../dd/dcf/namespacekoutil.html#ac8dafb14fb8ac56abc3001e95de50d54a5c4c594107462f361f081a7257bdfbf3',1,'koutil']]],
-  ['erase_5fcursor_5fbegin_334',['ERASE_CURSOR_BEGIN',['../dd/dcf/namespacekoutil.html#a5fcd7898f2ae75ecc5511c6631d7d713af76a9cba6707454f1235822351afc5cd',1,'koutil']]],
-  ['erase_5fcursor_5fend_335',['ERASE_CURSOR_END',['../dd/dcf/namespacekoutil.html#a5fcd7898f2ae75ecc5511c6631d7d713aa74029c82f185f4390a82e3d1da8f9fa',1,'koutil']]],
-  ['erase_5fline_336',['ERASE_LINE',['../dd/dcf/namespacekoutil.html#a5fcd7898f2ae75ecc5511c6631d7d713a46d0768b7a431ea998d09fd3c63f72ed',1,'koutil']]],
-  ['erase_5fline_5fcursor_5fbegin_337',['ERASE_LINE_CURSOR_BEGIN',['../dd/dcf/namespacekoutil.html#a5fcd7898f2ae75ecc5511c6631d7d713ae132cdd624e2c4c3ad63afb2bce57131',1,'koutil']]],
-  ['erase_5fline_5fcursor_5fend_338',['ERASE_LINE_CURSOR_END',['../dd/dcf/namespacekoutil.html#a5fcd7898f2ae75ecc5511c6631d7d713ac585429cd93e8b36d0073182870d8568',1,'koutil']]],
-  ['erase_5fscreen_339',['ERASE_SCREEN',['../dd/dcf/namespacekoutil.html#a5fcd7898f2ae75ecc5511c6631d7d713ab6589db30dfee99c0ed04554cae3fd07',1,'koutil']]]
+  ['enable_5falternative_5fbuffer_527',['ENABLE_ALTERNATIVE_BUFFER',['../d6/d7c/namespacekoutil_1_1term.html#addd55ce6a3bc95576fd4aebcc76d99f2a5c4c594107462f361f081a7257bdfbf3',1,'koutil::term']]],
+  ['erase_5fcursor_5fbegin_528',['ERASE_CURSOR_BEGIN',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225faf76a9cba6707454f1235822351afc5cd',1,'koutil::term']]],
+  ['erase_5fcursor_5fend_529',['ERASE_CURSOR_END',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225faa74029c82f185f4390a82e3d1da8f9fa',1,'koutil::term']]],
+  ['erase_5fline_530',['ERASE_LINE',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225fa46d0768b7a431ea998d09fd3c63f72ed',1,'koutil::term']]],
+  ['erase_5fline_5fcursor_5fbegin_531',['ERASE_LINE_CURSOR_BEGIN',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225fae132cdd624e2c4c3ad63afb2bce57131',1,'koutil::term']]],
+  ['erase_5fline_5fcursor_5fend_532',['ERASE_LINE_CURSOR_END',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225fac585429cd93e8b36d0073182870d8568',1,'koutil::term']]],
+  ['erase_5fscreen_533',['ERASE_SCREEN',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225fab6589db30dfee99c0ed04554cae3fd07',1,'koutil::term']]],
+  ['err_534',['ERR',['../d7/dfe/namespacekoutil_1_1argparser.html#a5615269d92ae1937d5e0e01832966684acd22bad976363fdd1bfbf6759fede482',1,'koutil::argparser']]],
+  ['err_5fempty_5foption_535',['ERR_EMPTY_OPTION',['../d7/dfe/namespacekoutil_1_1argparser.html#a5615269d92ae1937d5e0e01832966684a6c5a7999d7924f7a2ff1c06b4d4d45a9',1,'koutil::argparser']]],
+  ['err_5finvalid_5fvalue_536',['ERR_INVALID_VALUE',['../d7/dfe/namespacekoutil_1_1argparser.html#a5615269d92ae1937d5e0e01832966684a1fc87cf17dcf5bb6dcb4d6c35e50469d',1,'koutil::argparser']]],
+  ['err_5fmissing_5fvalue_537',['ERR_MISSING_VALUE',['../d7/dfe/namespacekoutil_1_1argparser.html#a5615269d92ae1937d5e0e01832966684aea609c6ae50d660f05e4280422771580',1,'koutil::argparser']]],
+  ['err_5funknown_538',['ERR_UNKNOWN',['../d7/dfe/namespacekoutil_1_1argparser.html#a5615269d92ae1937d5e0e01832966684a7639848a66f75216782096fa051919e5',1,'koutil::argparser']]]
 ];

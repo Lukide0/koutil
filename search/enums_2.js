@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['erasecommand_320',['EraseCommand',['../dd/dcf/namespacekoutil.html#a5fcd7898f2ae75ecc5511c6631d7d713',1,'koutil']]],
-  ['error_321',['Error',['../d7/de0/classkoutil_1_1terminal.html#abb24b99e927362616da89b701411c7ea',1,'koutil::terminal']]]
+  ['erasecommand_513',['EraseCommand',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225f',1,'koutil::term']]],
+  ['error_514',['Error',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad5b888cc614d56a533696451e59bf2c7',1,'koutil::term::terminal']]]
 ];

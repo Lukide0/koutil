@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['blink_325',['BLINK',['../dd/dcf/namespacekoutil.html#ad8d3174bf78a73884420acb1d209b5a3ad810ed8e97088a3c987f179dfb88cefc',1,'koutil']]],
-  ['bold_326',['BOLD',['../dd/dcf/namespacekoutil.html#ad8d3174bf78a73884420acb1d209b5a3a2909dd0e0336f10b6da9735b859a3d19',1,'koutil']]]
+  ['blink_519',['BLINK',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83ad810ed8e97088a3c987f179dfb88cefc',1,'koutil::term']]],
+  ['bold_520',['BOLD',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a2909dd0e0336f10b6da9735b859a3d19',1,'koutil::term']]]
 ];

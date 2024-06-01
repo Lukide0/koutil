@@ -1,6 +1,30 @@
 var annotated_dup =
 [
     [ "koutil", "dd/dcf/namespacekoutil.html", [
+      [ "argparser", "d7/dfe/namespacekoutil_1_1argparser.html", [
+        [ "Arg", "dd/db6/structkoutil_1_1argparser_1_1Arg.html", "dd/db6/structkoutil_1_1argparser_1_1Arg" ],
+        [ "ArgumentsBase", "d6/d3f/classkoutil_1_1argparser_1_1ArgumentsBase.html", "d6/d3f/classkoutil_1_1argparser_1_1ArgumentsBase" ],
+        [ "Arguments", "df/d51/classkoutil_1_1argparser_1_1Arguments.html", "df/d51/classkoutil_1_1argparser_1_1Arguments" ],
+        [ "Parser", "df/dbb/classkoutil_1_1argparser_1_1Parser.html", "df/dbb/classkoutil_1_1argparser_1_1Parser" ],
+        [ "SubcommandBase", "dd/d41/structkoutil_1_1argparser_1_1SubcommandBase.html", "dd/d41/structkoutil_1_1argparser_1_1SubcommandBase" ],
+        [ "CommandsBase", "de/d6c/classkoutil_1_1argparser_1_1CommandsBase.html", "de/d6c/classkoutil_1_1argparser_1_1CommandsBase" ],
+        [ "Commands", "d5/d8b/classkoutil_1_1argparser_1_1Commands.html", "d5/d8b/classkoutil_1_1argparser_1_1Commands" ],
+        [ "Commands< Cmd >", "df/d8d/classkoutil_1_1argparser_1_1Commands_3_01Cmd_01_4.html", "df/d8d/classkoutil_1_1argparser_1_1Commands_3_01Cmd_01_4" ],
+        [ "Subcommand", "d9/d8f/structkoutil_1_1argparser_1_1Subcommand.html", null ],
+        [ "Subcommand< type::types< Args... >, type::types< Cmd... > >", "d2/d47/structkoutil_1_1argparser_1_1Subcommand_3_01type_1_1types_3_01Args_8_8_8_01_4_00_01type_1_1types_3_01Cmd_8_8_8_01_4_01_4.html", "d2/d47/structkoutil_1_1argparser_1_1Subcommand_3_01type_1_1types_3_01Args_8_8_8_01_4_00_01type_1_1types_3_01Cmd_8_8_8_01_4_01_4" ]
+      ] ],
+      [ "container", "d8/d14/namespacekoutil_1_1container.html", [
+        [ "ComptimeMap", "d1/d56/classkoutil_1_1container_1_1ComptimeMap.html", "d1/d56/classkoutil_1_1container_1_1ComptimeMap" ]
+      ] ],
+      [ "term", "d6/d7c/namespacekoutil_1_1term.html", [
+        [ "Color", "d8/d09/structkoutil_1_1term_1_1Color.html", "d8/d09/structkoutil_1_1term_1_1Color" ],
+        [ "ColorBG", "d2/d2a/structkoutil_1_1term_1_1ColorBG.html", "d2/d2a/structkoutil_1_1term_1_1ColorBG" ],
+        [ "ColorFG", "db/ddc/structkoutil_1_1term_1_1ColorFG.html", "db/ddc/structkoutil_1_1term_1_1ColorFG" ],
+        [ "CursorPos", "d4/d5d/structkoutil_1_1term_1_1CursorPos.html", "d4/d5d/structkoutil_1_1term_1_1CursorPos" ],
+        [ "CursorMove", "d2/df8/structkoutil_1_1term_1_1CursorMove.html", "d2/df8/structkoutil_1_1term_1_1CursorMove" ],
+        [ "Dimensions", "d6/dba/structkoutil_1_1term_1_1Dimensions.html", "d6/dba/structkoutil_1_1term_1_1Dimensions" ],
+        [ "terminal", "d8/d3d/classkoutil_1_1term_1_1terminal.html", "d8/d3d/classkoutil_1_1term_1_1terminal" ]
+      ] ],
       [ "type", "d0/d19/namespacekoutil_1_1type.html", [
         [ "detail", "dc/d33/namespacekoutil_1_1type_1_1detail.html", [
           [ "unique_types_impl", "d4/d59/structkoutil_1_1type_1_1detail_1_1unique__types__impl.html", null ],
@@ -31,13 +55,6 @@ var annotated_dup =
         ] ],
         [ "types_count", "d3/d40/structkoutil_1_1type_1_1types__count.html", null ],
         [ "types_count< types< Types... > >", "d9/d27/structkoutil_1_1type_1_1types__count_3_01types_3_01Types_8_8_8_01_4_01_4.html", "d9/d27/structkoutil_1_1type_1_1types__count_3_01types_3_01Types_8_8_8_01_4_01_4" ]
-      ] ],
-      [ "Color", "d7/d13/structkoutil_1_1Color.html", "d7/d13/structkoutil_1_1Color" ],
-      [ "ColorBG", "d2/da4/structkoutil_1_1ColorBG.html", "d2/da4/structkoutil_1_1ColorBG" ],
-      [ "ColorFG", "d4/d87/structkoutil_1_1ColorFG.html", "d4/d87/structkoutil_1_1ColorFG" ],
-      [ "CursorPos", "d0/d9c/structkoutil_1_1CursorPos.html", "d0/d9c/structkoutil_1_1CursorPos" ],
-      [ "CursorMove", "d7/d8c/structkoutil_1_1CursorMove.html", "d7/d8c/structkoutil_1_1CursorMove" ],
-      [ "Dimensions", "da/d82/structkoutil_1_1Dimensions.html", "da/d82/structkoutil_1_1Dimensions" ],
-      [ "terminal", "d7/de0/classkoutil_1_1terminal.html", "d7/de0/classkoutil_1_1terminal" ]
+      ] ]
     ] ]
 ];
