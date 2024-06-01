@@ -1,7 +1,7 @@
-#ifndef KOUTIL_TERMINAL_H
-#define KOUTIL_TERMINAL_H
+#ifndef KOUTIL_TERM_TERMINAL_H
+#define KOUTIL_TERM_TERMINAL_H
 
-#include "koutil/style.h"
+#include "koutil/term/style.h"
 #include "koutil/util/utils.h"
 #include <cassert>
 #include <csignal>
@@ -11,7 +11,6 @@
 #include <iostream>
 #include <memory>
 #include <stack>
-#include <string>
 #include <string_view>
 
 #if defined(OS_LINUX)
@@ -30,7 +29,7 @@
     #include <Windows.h>
 #endif
 
-namespace koutil {
+namespace koutil::term {
 
 /**
  * @brief Enumerates the levels of color support for the terminal.

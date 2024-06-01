@@ -1,17 +1,17 @@
 #include <iostream>
-#include <koutil/koutil.h>
+#include <koutil/term.h>
 
 int main() {
-    using koutil::Style;
+    using koutil::term::Style;
 
-    if (!koutil::terminal::init()) {
-        std::cout << "ERROR CODE: " << static_cast<int>(koutil::terminal::error()) << std::endl;
+    if (!koutil::term::terminal::init()) {
+        std::cout << "ERROR CODE: " << static_cast<int>(koutil::term::terminal::error()) << std::endl;
         return 1;
     }
 
     constexpr auto my_style = Style::BOLD + Style::UNDERLINE;
 
-    std::cout << "Hello " << my_style << "world" << koutil::reset_all << "!!!" << std::endl;
+    std::cout << "Hello " << my_style << "world" << koutil::term::reset_all << "!!!" << std::endl;
 
     return 0;
 }

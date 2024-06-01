@@ -1,12 +1,12 @@
 #include <iostream>
-#include <koutil/koutil.h>
+#include <koutil/term.h>
 
 int main() {
-    using koutil::BufferCommand;
-    using koutil::CursorCommand;
+    using koutil::term::BufferCommand;
+    using koutil::term::CursorCommand;
 
-    if (!koutil::terminal::init()) {
-        std::cout << "ERROR CODE: " << static_cast<int>(koutil::terminal::error()) << std::endl;
+    if (!koutil::term::terminal::init()) {
+        std::cout << "ERROR CODE: " << static_cast<int>(koutil::term::terminal::error()) << std::endl;
         return 1;
     }
 

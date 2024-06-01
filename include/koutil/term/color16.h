@@ -1,9 +1,9 @@
-#ifndef KOUTIL_COLOR16_H
-#define KOUTIL_COLOR16_H
+#ifndef KOUTIL_TERM_COLOR16_H
+#define KOUTIL_TERM_COLOR16_H
 
-#include "koutil/color.h"
+#include "koutil/term/color.h"
 
-namespace koutil::color {
+namespace koutil::term::color {
 
 constexpr auto black         = Color::from_id(30); /**< Black color */
 constexpr auto red           = Color::from_id(31); /**< Red color */

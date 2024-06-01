@@ -1,5 +1,5 @@
-#ifndef KOUTIL_STYLE_H
-#define KOUTIL_STYLE_H
+#ifndef KOUTIL_TERM_STYLE_H
+#define KOUTIL_TERM_STYLE_H
 
 #include "koutil/util/utils.h"
 #include <array>
@@ -8,7 +8,7 @@
 #include <string_view>
 #include <utility>
 
-namespace koutil {
+namespace koutil::term {
 
 enum class Style : std::uint8_t {
     NONE         = 0, /**< No style. */
