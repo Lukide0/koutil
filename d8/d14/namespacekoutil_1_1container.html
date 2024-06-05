@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('d8/d14/namespacekoutil_1_1container.ht
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">koutil::container Namespace Reference</div>  </div>
 </div><!--header-->
@@ -106,8 +107,389 @@ Functions</h2></td></tr>
 <tr class="memitem:a7aebb25e6bab388e0fd5cde7016d4cad"><td class="memTemplItemLeft" align="right" valign="top">consteval <a class="el" href="../../d1/d56/classkoutil_1_1container_1_1ComptimeMap.html">ComptimeMap</a>&lt; Key, Value, Size &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html#a7aebb25e6bab388e0fd5cde7016d4cad">to_map</a> (std::pair&lt; Key, Value &gt;(&amp;&amp;pairs)[Size])</td></tr>
 <tr class="memdesc:a7aebb25e6bab388e0fd5cde7016d4cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an array of pairs to a compile-time map.  <a href="../../d8/d14/namespacekoutil_1_1container.html#a7aebb25e6bab388e0fd5cde7016d4cad">More...</a><br /></td></tr>
 <tr class="separator:a7aebb25e6bab388e0fd5cde7016d4cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403379898e376d6c95bad2360825e0e5"><td class="memTemplParams" colspan="2">template&lt;is_multi_vector_element... Types&gt; </td></tr>
+<tr class="memitem:a403379898e376d6c95bad2360825e0e5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html#a403379898e376d6c95bad2360825e0e5">requires</a> (sizeof...(Types) &gt; 0) class multi_vector</td></tr>
+<tr class="memdesc:a403379898e376d6c95bad2360825e0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class representing a multi_vector.  <a href="../../d8/d14/namespacekoutil_1_1container.html#a403379898e376d6c95bad2360825e0e5">More...</a><br /></td></tr>
+<tr class="separator:a403379898e376d6c95bad2360825e0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a280d9e064fd8191deacc2f6baa734a60"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a280d9e064fd8191deacc2f6baa734a60"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html#a280d9e064fd8191deacc2f6baa734a60">is_multi_vector_element</a> = !std::is_reference_v&lt;T&gt; &amp;&amp; !std::is_void_v&lt;T&gt;</td></tr>
+<tr class="memdesc:a280d9e064fd8191deacc2f6baa734a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concept to check if a type is a valid multi_vector element.  <a href="../../d8/d14/namespacekoutil_1_1container.html#a280d9e064fd8191deacc2f6baa734a60">More...</a><br /></td></tr>
+<tr class="separator:a280d9e064fd8191deacc2f6baa734a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a403379898e376d6c95bad2360825e0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403379898e376d6c95bad2360825e0e5">&#9670;&nbsp;</a></span>requires()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;is_multi_vector_element... Types&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">koutil::container::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...&#160;</td>
+          <td class="paramname">Types, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class representing a multi_vector. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Types</td><td>The types of elements stored in the multi_vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Nested iterator class for multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">is_const</td><td>Whether the iterator is const.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Constructs a multi_vector with a specified size and initial value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>The number of elements. </td></tr>
+    <tr><td class="paramname">value</td><td>The initial value for the elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Constructs a multi_vector with a specified size and default-initialized elements.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>The number of elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Returns a reference to the first element.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the first element.</dd></dl>
+<p>Returns a const reference to the first element.</p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the first element.</dd></dl>
+<p>Returns a reference to the last element.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the last element.</dd></dl>
+<p>Returns a const reference to the last element.</p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the last element.</dd></dl>
+<p>Returns a reference to the element at a specified position.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the element.</dd></dl>
+<p>Returns a const reference to the element at a specified position.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the element.</dd></dl>
+<p>Returns a reference to the element at a specified position.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the element.</dd></dl>
+<p>Returns a const reference to the element at a specified position.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the element.</dd></dl>
+<p>Returns the number of elements in the multi_vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>The number of elements.</dd></dl>
+<p>Checks if the multi_vector is empty.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the multi_vector is empty, false otherwise.</dd></dl>
+<p>Clears the multi_vector.</p>
+<p>Swaps the contents of two multi_vectors.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other multi_vector.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Resizes the multi_vector to a specified size.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The new size.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Resizes the multi_vector to a specified size and initializes new elements with a specified value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The new size. </td></tr>
+    <tr><td class="paramname">value</td><td>The value for new elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Reserves storage for the multi_vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The amount of storage to reserve.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Removes the last element from the multi_vector.</p>
+<p>Adds a new element to the end of the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>The types of the arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The arguments to construct the new element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple of references to the newly added elements.</dd></dl>
+<p>Adds a new element to the end of the multi_vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Adds a new element to the end of the multi_vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Shrinks the capacity of the multi_vector to fit its size.</p>
+<p>Erases an element at a specified position.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element to erase. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An iterator to the element following the erased element.</dd></dl>
+<p>Returns an iterator to the beginning of the multi_vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>An iterator to the beginning of the multi_vector.</dd></dl>
+<p>Returns a const iterator to the beginning of the multi_vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>A const iterator to the beginning of the multi_vector.</dd></dl>
+<p>Returns a const iterator to the beginning of the multi_vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>A const iterator to the beginning of the multi_vector.</dd></dl>
+<p>Returns an iterator to the end of the multi_vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>An iterator to the end of the multi_vector.</dd></dl>
+<p>Returns a const iterator to the end of the multi_vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>A const iterator to the end of the multi_vector.</dd></dl>
+<p>Returns a const iterator to the end of the multi_vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>A const iterator to the end of the multi_vector.</dd></dl>
+<p>Initializes the multi_vector with a specified size and value.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The index of the type to initialize. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>The number of elements. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to initialize the elements with.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Initializes the multi_vector with a specified size and default values.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The index of the type to initialize. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>The number of elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Returns a reference to a single element at a specified position.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The index of the type to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the element.</dd></dl>
+<p>Returns a const reference to a single element at a specified position.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The index of the type to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the element.</dd></dl>
+<p>Returns a tuple of references to all elements at a specified position.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Tuple of references to the elements.</dd></dl>
+<p>Returns a tuple of const references to all elements at a specified position.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Tuple of const references to the elements.</dd></dl>
+<p>Clears all containers in the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to clear.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Resizes all containers in the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to resize. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The new size.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Resizes all containers in the multi_vector and initializes new elements with a specified value.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to resize. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The new size. </td></tr>
+    <tr><td class="paramname">value</td><td>The value for new elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Removes the last element from all containers in the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to pop back.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Adds a new element to the end of all containers in the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Value</td><td>The type of the value to add. </td></tr>
+    <tr><td class="paramname">I</td><td>The indices of the types to push back. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Adds a new element to the end of all containers in the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>The types of the arguments. </td></tr>
+    <tr><td class="paramname">I</td><td>The indices of the types to emplace back. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The arguments to construct the new elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple of references to the newly added elements.</dd></dl>
+<p>Shrinks the capacity of all containers in the multi_vector to fit their size.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to shrink to fit.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Reserves storage for all containers in the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The indices of the types to reserve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The amount of storage to reserve.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Erases an element at a specified position from all containers in the multi_vector.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>The index of the type to erase. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position of the element to erase.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa7f3aa29b4c594e8fc85b5fcadf49a2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7f3aa29b4c594e8fc85b5fcadf49a2a">&#9670;&nbsp;</a></span>to_map() <span class="overload">[1/2]</span></h2>
 
@@ -179,6 +561,31 @@ template&lt;typename Key , typename Value , std::size_t Size&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The compile-time map. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a280d9e064fd8191deacc2f6baa734a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a280d9e064fd8191deacc2f6baa734a60">&#9670;&nbsp;</a></span>is_multi_vector_element</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">concept koutil::container::is_multi_vector_element = !std::is_reference_v&lt;T&gt; &amp;&amp; !std::is_void_v&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concept to check if a type is a valid multi_vector element. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to check. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

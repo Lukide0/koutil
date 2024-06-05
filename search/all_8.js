@@ -7,6 +7,7 @@ var searchData=
   ['input_5fhandle_5ferr_107',['INPUT_HANDLE_ERR',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad5b888cc614d56a533696451e59bf2c7a4025dbce423ea24c195c032362c7a6c1',1,'koutil::term::terminal']]],
   ['inverse_108',['INVERSE',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a1955bdc302911f376074eb9b02e56639',1,'koutil::term']]],
   ['is_5farg_109',['is_arg',['../d7/dfe/namespacekoutil_1_1argparser.html#a6ac73fd7356935b6eb5ca91657f43f3d',1,'koutil::argparser']]],
-  ['is_5fsubcommand_110',['is_subcommand',['../d7/dfe/namespacekoutil_1_1argparser.html#a489e4539fab27f3b4492665f075c0da0',1,'koutil::argparser']]],
-  ['italic_111',['ITALIC',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a25093123b8943308104129e1d762f3b7',1,'koutil::term']]]
+  ['is_5fmulti_5fvector_5felement_110',['is_multi_vector_element',['../d8/d14/namespacekoutil_1_1container.html#a280d9e064fd8191deacc2f6baa734a60',1,'koutil::container']]],
+  ['is_5fsubcommand_111',['is_subcommand',['../d7/dfe/namespacekoutil_1_1argparser.html#a489e4539fab27f3b4492665f075c0da0',1,'koutil::argparser']]],
+  ['italic_112',['ITALIC',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a25093123b8943308104129e1d762f3b7',1,'koutil::term']]]
 ];

@@ -501,11 +501,11 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="../../dc/d33/namespacekoutil_1_1type_1_1detail.html#a3c79bc890732141f64637d1ed9d09bf7">requires</a>(T t) {</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="../../d8/d14/namespacekoutil_1_1container.html#a403379898e376d6c95bad2360825e0e5">requires</a>(T t) {</div>
 <div class="line">    std::is_base_of_v&lt;SubcommandBase, T&gt;;</div>
-<div class="line">    <a class="code" href="../../dc/d33/namespacekoutil_1_1type_1_1detail.html#a3c79bc890732141f64637d1ed9d09bf7">requires</a> std::same_as&lt;std::decay_t&lt;decltype(t.name)&gt;, std::string_view&gt;;</div>
+<div class="line">    <a class="code" href="../../d8/d14/namespacekoutil_1_1container.html#a403379898e376d6c95bad2360825e0e5">requires</a> std::same_as&lt;std::decay_t&lt;decltype(t.name)&gt;, std::string_view&gt;;</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacekoutil_1_1type_1_1detail_html_a3c79bc890732141f64637d1ed9d09bf7"><div class="ttname"><a href="../../dc/d33/namespacekoutil_1_1type_1_1detail.html#a3c79bc890732141f64637d1ed9d09bf7">koutil::type::detail::requires</a></div><div class="ttdeci">requires(sizeof...(Types) &gt; 0) struct types_get_impl&lt; types&lt; Types... &gt;</div><div class="ttdoc">Specialization for getting a type by index in a types list.</div></div>
+<div class="ttc" id="anamespacekoutil_1_1container_html_a403379898e376d6c95bad2360825e0e5"><div class="ttname"><a href="../../d8/d14/namespacekoutil_1_1container.html#a403379898e376d6c95bad2360825e0e5">koutil::container::requires</a></div><div class="ttdeci">requires(sizeof...(Types) &gt; 0) class multi_vector</div><div class="ttdoc">Class representing a multi_vector.</div><div class="ttdef"><b>Definition:</b> multi_vector.h:29</div></div>
 </div><!-- fragment -->
 <p>Concept to check if a type satisfies the requirements of a subcommand. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -530,7 +530,7 @@ template&lt;typename T , typename Ctx &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="../../dc/d33/namespacekoutil_1_1type_1_1detail.html#a3c79bc890732141f64637d1ed9d09bf7">requires</a>(Ctx&amp; ctx, <span class="keyword">const</span> Arg&amp; arg, std::string_view value, <span class="keyword">const</span> SubcommandBase&amp; cmd) {</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="../../d8/d14/namespacekoutil_1_1container.html#a403379898e376d6c95bad2360825e0e5">requires</a>(Ctx&amp; ctx, <span class="keyword">const</span> Arg&amp; arg, std::string_view value, <span class="keyword">const</span> SubcommandBase&amp; cmd) {</div>
 <div class="line">    { T::parse_argument(ctx, value) } -&gt; std::same_as&lt;ParseResult&gt;;</div>
 <div class="line">    { T::parse_option_flag(ctx, arg) } -&gt; std::same_as&lt;ParseResult&gt;;</div>
 <div class="line">    { T::parse_option_value(ctx, arg, value) } -&gt; std::same_as&lt;ParseResult&gt;;</div>
