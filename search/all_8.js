@@ -1,13 +1,15 @@
 var searchData=
 [
-  ['i_103',['I',['../dc/d33/namespacekoutil_1_1type_1_1detail.html#afc5939ff5c906091767cb7c0c8628963',1,'koutil::type::detail']]],
-  ['id_104',['ID',['../d8/d09/structkoutil_1_1term_1_1Color.html#a75c3693db1e41e55d8ed3af28fb8cb0fab718adec73e04ce3ec720dd11a06a308',1,'koutil::term::Color']]],
-  ['id_105',['id',['../d8/d09/structkoutil_1_1term_1_1Color.html#a21e385f1d31fdc9bc80a81144093a88b',1,'koutil::term::Color']]],
-  ['init_106',['init',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a9fe4835dae20f0d9522691d92aecbfda',1,'koutil::term::terminal']]],
-  ['input_5fhandle_5ferr_107',['INPUT_HANDLE_ERR',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad5b888cc614d56a533696451e59bf2c7a4025dbce423ea24c195c032362c7a6c1',1,'koutil::term::terminal']]],
-  ['inverse_108',['INVERSE',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a1955bdc302911f376074eb9b02e56639',1,'koutil::term']]],
-  ['is_5farg_109',['is_arg',['../d7/dfe/namespacekoutil_1_1argparser.html#a6ac73fd7356935b6eb5ca91657f43f3d',1,'koutil::argparser']]],
-  ['is_5fmulti_5fvector_5felement_110',['is_multi_vector_element',['../d8/d14/namespacekoutil_1_1container.html#a280d9e064fd8191deacc2f6baa734a60',1,'koutil::container']]],
-  ['is_5fsubcommand_111',['is_subcommand',['../d7/dfe/namespacekoutil_1_1argparser.html#a489e4539fab27f3b4492665f075c0da0',1,'koutil::argparser']]],
-  ['italic_112',['ITALIC',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a25093123b8943308104129e1d762f3b7',1,'koutil::term']]]
+  ['id_0',['ID',['../d8/d09/structkoutil_1_1term_1_1Color.html#a75c3693db1e41e55d8ed3af28fb8cb0fab718adec73e04ce3ec720dd11a06a308',1,'koutil::term::Color']]],
+  ['id_1',['id',['../d8/d09/structkoutil_1_1term_1_1Color.html#a21e385f1d31fdc9bc80a81144093a88b',1,'koutil::term::Color']]],
+  ['init_2',['init',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a9fe4835dae20f0d9522691d92aecbfda',1,'koutil::term::terminal']]],
+  ['init_5fvector_3',['init_vector',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a6022f90b69ce720a13359e3f73a3d23e',1,'koutil::container::multi_vector']]],
+  ['init_5fvector_5fdefault_4',['init_vector_default',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a9638c4f2bf48894b6aa26d846d6d11bb',1,'koutil::container::multi_vector']]],
+  ['input_5fhandle_5ferr_5',['INPUT_HANDLE_ERR',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad5b888cc614d56a533696451e59bf2c7a4025dbce423ea24c195c032362c7a6c1',1,'koutil::term::terminal']]],
+  ['inverse_6',['INVERSE',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a1955bdc302911f376074eb9b02e56639',1,'koutil::term']]],
+  ['italic_7',['ITALIC',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a25093123b8943308104129e1d762f3b7',1,'koutil::term']]],
+  ['iterator_8',['iterator',['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html',1,'koutil::container::multi_vector&lt; Types &gt;::iterator&lt; is_const &gt;'],['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#a4b4a171f233b09df66aa2481d97d88b8',1,'koutil::container::multi_vector::iterator::iterator()=default'],['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#adf7927a919630ffb039fd5c9a4e4693a',1,'koutil::container::multi_vector::iterator::iterator(const iterator &amp;)=default'],['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#a21b3d2998aba2df27850c9ab3d478ad5',1,'koutil::container::multi_vector::iterator::iterator(iterator &amp;&amp;)=default'],['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#a1a864fc2dd75b880c601cb96320932b6',1,'koutil::container::multi_vector::iterator::iterator(multi_vector *vec, std::size_t index)']]],
+  ['iterator_3c_20true_20_3e_9',['iterator&lt; true &gt;',['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#a12cc91bb1f19ebeaa844c77d67f8447f',1,'koutil::container::multi_vector::iterator']]],
+  ['iterator_5fcategory_10',['iterator_category',['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#a9e29d9e85eaed0406d94d127be5d83ae',1,'koutil::container::multi_vector::iterator']]],
+  ['iterator_5ft_11',['iterator_t',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a6e6ea2852bf1a7c78fae4f9524d4197a',1,'koutil::container::multi_vector']]]
 ];

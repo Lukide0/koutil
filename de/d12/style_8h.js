@@ -14,7 +14,7 @@ var style_8h =
     [ "operator&", "de/d12/style_8h.html#af07914bd93f9be13bce1f61ac1efe234", null ],
     [ "operator+", "de/d12/style_8h.html#a89a69247dda770d78f815a77bed36a14", null ],
     [ "operator-", "de/d12/style_8h.html#ad81eb1f01e95cd64598e594f4e59ec71", null ],
-    [ "operator<<", "de/d12/style_8h.html#a07c7e811aca6f6fb7f9dbfc1c03c27ea", null ],
-    [ "reset_all", "de/d12/style_8h.html#a3824f4c765f16e4cdba16cd45acb3a25", null ],
+    [ "operator<<", "de/d12/style_8h.html#a35c9400805bd76a2f1d00ec2df6fe0bf", null ],
+    [ "reset_all", "de/d12/style_8h.html#a2b681e21fe25530fd31f312400a5291f", null ],
     [ "style_contains", "de/d12/style_8h.html#a3408231d9d1b28082b30bd35509e94ff", null ]
 ];
