@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"d5/d8b/classkoutil_1_1argparser_1_1Commands.html":[2,0,0,0,3],
+"d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a0621ff8b7dc25fcf697b3c8ca73237d1":[0,0,0,0,3,6],
+"d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a0621ff8b7dc25fcf697b3c8ca73237d1":[2,0,0,0,3,6],
+"d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a21ba21336ec744688e25df0bb63094da":[0,0,0,0,3,0],
 "d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a21ba21336ec744688e25df0bb63094da":[2,0,0,0,3,0],
 "d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a21ea131f8cf73ec85f06ebe0ab69482f":[0,0,0,0,3,3],
 "d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a21ea131f8cf73ec85f06ebe0ab69482f":[2,0,0,0,3,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "d9/d49/types_8h.html#af61525017852023523554add52c0ac8d":[3,0,0,0,3,0,19],
 "d9/d49/types_8h.html#afa4e756f64619885da337c0d1561a023":[3,0,0,0,3,0,28],
 "d9/d49/types_8h_source.html":[3,0,0,0,3,0],
-"d9/d8f/structkoutil_1_1argparser_1_1Subcommand.html":[0,0,0,0,7],
-"d9/d8f/structkoutil_1_1argparser_1_1Subcommand.html":[2,0,0,0,7],
-"da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html":[0,0,0,3,0,2],
-"da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html":[2,0,0,3,0,2],
-"da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html#a888600f88d344f3025596f353f0fa9d4":[0,0,0,3,0,2,0]
+"d9/d8f/structkoutil_1_1argparser_1_1Subcommand.html":[0,0,0,0,7]
 };

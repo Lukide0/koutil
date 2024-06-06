@@ -5,5 +5,6 @@ var searchData=
   ['value_5ft_2',['value_t',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#aed01df0533f5e8d105a4c9503f11ecff',1,'koutil::container::multi_vector']]],
   ['value_5ftype_3',['value_type',['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#a7d64e308b83ce966ae887574a94a1d6e',1,'koutil::container::multi_vector::iterator']]],
   ['variant_4',['variant',['../db/de5/structkoutil_1_1type_1_1types__transforms_1_1variant.html',1,'koutil::type::types_transforms']]],
-  ['vector_5',['vector',['../d1/d63/structkoutil_1_1type_1_1types__containers_1_1vector.html',1,'koutil::type::types_containers']]]
+  ['vec_5fptr_5ft_5',['vec_ptr_t',['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#abb4d5cdbe02b4246984dab73e87c0d9e',1,'koutil::container::multi_vector::iterator']]],
+  ['vector_6',['vector',['../d1/d63/structkoutil_1_1type_1_1types__containers_1_1vector.html',1,'koutil::type::types_containers']]]
 ];

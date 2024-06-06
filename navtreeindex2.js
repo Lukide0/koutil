@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"d9/d8f/structkoutil_1_1argparser_1_1Subcommand.html":[2,0,0,0,7],
+"da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html":[0,0,0,3,0,2],
+"da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html":[2,0,0,3,0,2],
+"da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html#a888600f88d344f3025596f353f0fa9d4":[0,0,0,3,0,2,0],
 "da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html#a888600f88d344f3025596f353f0fa9d4":[2,0,0,3,0,2,0],
 "da/d6d/multi__vector_8h.html":[3,0,0,0,1,1],
 "da/d6d/multi__vector_8h_source.html":[3,0,0,0,1,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "dd/db6/structkoutil_1_1argparser_1_1Arg.html#a932405e1a267a83d6aababd8b3d45b2b":[2,0,0,0,0,10],
 "dd/db6/structkoutil_1_1argparser_1_1Arg.html#ac5bff15995696b87b08b7b3ef04db432":[0,0,0,0,0,11],
 "dd/db6/structkoutil_1_1argparser_1_1Arg.html#ac5bff15995696b87b08b7b3ef04db432":[2,0,0,0,0,11],
-"dd/db6/structkoutil_1_1argparser_1_1Arg.html#ac9ea4e1b7cd32c9d5d9c7955f6d52d4a":[0,0,0,0,0,2],
-"dd/db6/structkoutil_1_1argparser_1_1Arg.html#ac9ea4e1b7cd32c9d5d9c7955f6d52d4a":[2,0,0,0,0,2],
-"dd/db6/structkoutil_1_1argparser_1_1Arg.html#adeae611ed189287fa04142a4870094cc":[0,0,0,0,0,0],
-"dd/db6/structkoutil_1_1argparser_1_1Arg.html#adeae611ed189287fa04142a4870094cc":[2,0,0,0,0,0],
-"dd/db6/structkoutil_1_1argparser_1_1Arg.html#adeae611ed189287fa04142a4870094cca2084a2e9babe770f327197bcefa34e29":[0,0,0,0,0,0,0]
+"dd/db6/structkoutil_1_1argparser_1_1Arg.html#ac9ea4e1b7cd32c9d5d9c7955f6d52d4a":[0,0,0,0,0,2]
 };
