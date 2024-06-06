@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['storage_5ft_504',['storage_t',['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html#ad591b6aa3ab063443c38c1d4c5524a95',1,'koutil::argparser::Commands']]]
+  ['other_5ftypes_0',['other_types',['../d4/d07/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_00_01Other_8_8_8_01_4.html#af7d3cea49224a33deb949c248dcfb0ce',1,'koutil::type::detail::unique_types_impl&lt; T, Other... &gt;']]]
 ];

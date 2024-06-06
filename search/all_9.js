@@ -1,12 +1,20 @@
 var searchData=
 [
-  ['argparser_113',['argparser',['../d7/dfe/namespacekoutil_1_1argparser.html',1,'koutil']]],
-  ['color_114',['color',['../d1/df4/namespacekoutil_1_1term_1_1color.html',1,'koutil::term']]],
-  ['color_5fliterals_115',['color_literals',['../d6/dac/namespacekoutil_1_1term_1_1color__literals.html',1,'koutil::term']]],
-  ['container_116',['container',['../d8/d14/namespacekoutil_1_1container.html',1,'koutil']]],
-  ['detail_117',['detail',['../dc/d33/namespacekoutil_1_1type_1_1detail.html',1,'koutil::type']]],
-  ['koutil_118',['koutil',['../dd/dcf/namespacekoutil.html',1,'']]],
-  ['term_119',['term',['../d6/d7c/namespacekoutil_1_1term.html',1,'koutil']]],
-  ['type_120',['type',['../d0/d19/namespacekoutil_1_1type.html',1,'koutil']]],
-  ['util_121',['util',['../d3/d72/namespacekoutil_1_1util.html',1,'koutil']]]
+  ['koutil_0',['koutil',['../dd/dcf/namespacekoutil.html',1,'']]],
+  ['koutil_3a_3aargparser_1',['argparser',['../d7/dfe/namespacekoutil_1_1argparser.html',1,'koutil']]],
+  ['koutil_3a_3aargparser_3a_3aare_5farguments_2',['are_arguments',['../d0/d12/conceptkoutil_1_1argparser_1_1are__arguments.html',1,'koutil::argparser']]],
+  ['koutil_3a_3aargparser_3a_3aare_5fcommands_3',['are_commands',['../d0/df3/conceptkoutil_1_1argparser_1_1are__commands.html',1,'koutil::argparser']]],
+  ['koutil_3a_3aargparser_3a_3ais_5farg_4',['is_arg',['../d5/d44/conceptkoutil_1_1argparser_1_1is__arg.html',1,'koutil::argparser']]],
+  ['koutil_3a_3aargparser_3a_3ais_5fsubcommand_5',['is_subcommand',['../d2/d34/conceptkoutil_1_1argparser_1_1is__subcommand.html',1,'koutil::argparser']]],
+  ['koutil_3a_3aargparser_3a_3aparser_6',['parser',['../d5/db2/conceptkoutil_1_1argparser_1_1parser.html',1,'koutil::argparser']]],
+  ['koutil_3a_3acontainer_7',['container',['../d8/d14/namespacekoutil_1_1container.html',1,'koutil']]],
+  ['koutil_3a_3acontainer_3a_3ais_5fmulti_5fvector_5felement_8',['is_multi_vector_element',['../db/d96/conceptkoutil_1_1container_1_1is__multi__vector__element.html',1,'koutil::container']]],
+  ['koutil_3a_3aterm_9',['term',['../d6/d7c/namespacekoutil_1_1term.html',1,'koutil']]],
+  ['koutil_3a_3aterm_3a_3acolor_10',['color',['../d1/df4/namespacekoutil_1_1term_1_1color.html',1,'koutil::term']]],
+  ['koutil_3a_3aterm_3a_3acolor_5fliterals_11',['color_literals',['../d6/dac/namespacekoutil_1_1term_1_1color__literals.html',1,'koutil::term']]],
+  ['koutil_3a_3atype_12',['type',['../d0/d19/namespacekoutil_1_1type.html',1,'koutil']]],
+  ['koutil_3a_3atype_3a_3adetail_13',['detail',['../dc/d33/namespacekoutil_1_1type_1_1detail.html',1,'koutil::type']]],
+  ['koutil_3a_3atype_3a_3atypes_5fcontainer_14',['types_container',['../d2/d81/conceptkoutil_1_1type_1_1types__container.html',1,'koutil::type']]],
+  ['koutil_3a_3atype_3a_3atypes_5ftransform_15',['types_transform',['../dd/dc7/conceptkoutil_1_1type_1_1types__transform.html',1,'koutil::type']]],
+  ['koutil_3a_3autil_16',['util',['../d3/d72/namespacekoutil_1_1util.html',1,'koutil']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['red_481',['red',['../d8/d09/structkoutil_1_1term_1_1Color.html#a906a7a3454e5c64a1582c712f827f3d4',1,'koutil::term::Color::red()'],['../d1/df4/namespacekoutil_1_1term_1_1color.html#a91f89f14b4f7dff69f649f4789d6df98',1,'koutil::term::color::red()']]],
-  ['red_5fbright_482',['red_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a6a22cfa3cea1f3dfb4855f798f6c87f4',1,'koutil::term::color']]]
+  ['tag_0',['tag',['../d8/d09/structkoutil_1_1term_1_1Color.html#a9b306d686723bdc1e4615ceb9a873593',1,'koutil::term::Color']]],
+  ['type_1',['type',['../dd/db6/structkoutil_1_1argparser_1_1Arg.html#a2f55202dacfba407e4c53aca535cac9e',1,'koutil::argparser::Arg::type'],['../d2/df8/structkoutil_1_1term_1_1CursorMove.html#a448dae724be75c49f384c72c33cce620',1,'koutil::term::CursorMove::type']]],
+  ['types_5findex_5fof_5fv_2',['types_index_of_v',['../d0/d19/namespacekoutil_1_1type.html#afa4e756f64619885da337c0d1561a023',1,'koutil::type']]]
 ];
