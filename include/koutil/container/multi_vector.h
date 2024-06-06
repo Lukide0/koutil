@@ -480,8 +480,12 @@ template <is_multi_vector_element... T>
     requires(sizeof...(T) > 0)
 template <bool is_const>
 class multi_vector<T...>::iterator {
+private:
+    using vec_ptr_t = std::conditional_t<is_const, const multi_vector*, multi_vector*>;
+
 public:
     using value_type        = std::conditional_t<is_const, const_value_ref_t, value_ref_t>;
+    using const_value_type  = const_value_ref_t;
     using reference         = value_type;
     using difference_type   = std::ptrdiff_t;
     using iterator_category = std::random_access_iterator_tag;
@@ -492,9 +496,13 @@ public:
     iterator& operator=(const iterator&) = default;
     iterator& operator=(iterator&&)      = default;
 
-    value_type operator*() const { return m_ref->at(m_index); }
+    const_value_type operator*() const { return m_ref->at(m_index); }
 
-    value_type operator*() { return m_ref->at(m_index); }
+    value_type operator*()
+        requires(!is_const)
+    {
+        return m_ref->at(m_index);
+    }
 
     iterator& operator++() {
         m_index++;
@@ -538,9 +546,13 @@ public:
 
     iterator operator-(difference_type n) const { return { m_ref, m_index - n }; }
 
-    value_type operator[](difference_type n) const { return m_ref->at(m_index + n); }
+    const_value_type operator[](difference_type n) const { return m_ref->at(m_index + n); }
 
-    value_type operator[](difference_type n) { return m_ref->at(m_index + n); }
+    value_type operator[](difference_type n)
+        requires(!is_const)
+    {
+        return m_ref->at(m_index + n);
+    }
 
     bool operator==(const iterator& other) const = default;
     bool operator!=(const iterator& other) const = default;
@@ -554,10 +566,10 @@ public:
     bool operator>=(const iterator& other) const { return m_index >= other.m_index; }
 
 private:
-    multi_vector* m_ref = nullptr;
+    vec_ptr_t m_ref     = nullptr;
     std::size_t m_index = 0;
 
-    iterator(multi_vector* vec, std::size_t index)
+    iterator(vec_ptr_t vec, std::size_t index)
         : m_ref(vec)
         , m_index(index) { }
 
