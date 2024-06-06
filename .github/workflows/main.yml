@@ -15,12 +15,14 @@ jobs:
               with:
                   submodules: true
 
+            - name: Install Doxygen
+              run: sudo apt install doxygen graphviz -y
+
             - name: Generate Doxygen Documentation
-              uses: mattnotmitt/doxygen-action@v1.9.8
+              run: doxygen ./Doxyfile
 
             - name: Deploy to Github Pages
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
                   branch: gh-pages
                   folder: docs/html
