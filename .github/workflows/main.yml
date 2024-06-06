@@ -4,6 +4,7 @@ on:
     push:
         branches:
             - main
+
 permissions:
     contents: write
 jobs:
@@ -16,7 +17,14 @@ jobs:
                   submodules: true
 
             - name: Install Doxygen
-              run: sudo apt install doxygen graphviz -y
+              run: |
+                  sudo apt install graphviz -y
+                  wget https://github.com/doxygen/doxygen/releases/download/Release_1_11_0/doxygen-1.11.0.linux.bin.tar.gz
+                  tar xzvf doxygen-1.11.0.linux.bin.tar.gz
+                  cd doxygen-1.11.0
+                  sudo make install
+                  cd ..
+                  rm -rf doxygen-1.11.0* # Clean up
 
             - name: Generate Doxygen Documentation
               run: doxygen ./Doxyfile
