@@ -4,13 +4,16 @@ on:
     push:
         branches:
             - main
-
+permissions:
+    contents: write
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
+              with:
+                  submodules: true
 
             - name: Generate Doxygen Documentation
               uses: mattnotmitt/doxygen-action@v1.9.8
