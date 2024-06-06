@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['register_5fsignals_0',['register_signals',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad1ea7dc3551ca80353ce48d0667002a6',1,'koutil::term::terminal']]],
-  ['reserve_1',['reserve',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a8e22e9dc82dcaa9ab5df961a4619933b',1,'koutil::container::multi_vector']]],
-  ['reserve_5fimpl_2',['reserve_impl',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a3fe56af27a9568c5e48e7d7208614274',1,'koutil::container::multi_vector']]],
-  ['reset_5fall_3',['reset_all',['../d6/d7c/namespacekoutil_1_1term.html#a2b681e21fe25530fd31f312400a5291f',1,'koutil::term']]],
-  ['reset_5fbg_4',['reset_bg',['../d6/d7c/namespacekoutil_1_1term.html#afce441be81651c222a79913f8363fed1',1,'koutil::term']]],
-  ['reset_5fcolor_5',['reset_color',['../d6/d7c/namespacekoutil_1_1term.html#ad622e3c1541c80d7bb046a58bc6176ec',1,'koutil::term']]],
-  ['reset_5ffg_6',['reset_fg',['../d6/d7c/namespacekoutil_1_1term.html#aa7d79d8fad08daeb6d5eff4053a5b281',1,'koutil::term']]],
-  ['resize_7',['resize',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a220676ee728658a09c0cbc07dd4ad3eb',1,'koutil::container::multi_vector::resize(std::size_t size)'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a7dadb2786e6f9cf8dc11930b9b0ca539',1,'koutil::container::multi_vector::resize(std::size_t size, const value_t &amp;value)']]],
-  ['resize_5fall_8',['resize_all',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#ac460d92f460b90c7f9b0e359f2385ef9',1,'koutil::container::multi_vector']]],
-  ['resize_5fall_5fwith_9',['resize_all_with',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a9eff49dc26c1c0797ccc71a3c2dafd34',1,'koutil::container::multi_vector']]],
-  ['rollback_10',['rollback',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a940ea94c15d692b3c0e3de7fdba56e93',1,'koutil::term::terminal']]]
+  ['safe_5fat_418',['safe_at',['../d1/d56/classkoutil_1_1container_1_1ComptimeMap.html#a21e30e7f656e384223e3b187a3e8d1d4',1,'koutil::container::ComptimeMap']]],
+  ['safe_5fgetenv_419',['safe_getenv',['../d3/d72/namespacekoutil_1_1util.html#ae1a8fbc044a9fd6792f502c0dc90479d',1,'koutil::util']]],
+  ['size_420',['size',['../d6/d3f/classkoutil_1_1argparser_1_1ArgumentsBase.html#a0734b9cb598f693a1e5ca07cfe08da7e',1,'koutil::argparser::ArgumentsBase::size()'],['../df/d51/classkoutil_1_1argparser_1_1Arguments.html#a1f4d16edf9c78bec72d169734083a17a',1,'koutil::argparser::Arguments::size()'],['../de/d6c/classkoutil_1_1argparser_1_1CommandsBase.html#a801cf6805c2faa64534ec864ae27f1f3',1,'koutil::argparser::CommandsBase::size()'],['../df/d8d/classkoutil_1_1argparser_1_1Commands_3_01Cmd_01_4.html#a8d43e0841f4399de44dad39b5d0fd4c3',1,'koutil::argparser::Commands&lt; Cmd &gt;::size()']]],
+  ['style_5fcontains_421',['style_contains',['../d6/d7c/namespacekoutil_1_1term.html#a3408231d9d1b28082b30bd35509e94ff',1,'koutil::term']]],
+  ['subcommand_422',['Subcommand',['../d2/d47/structkoutil_1_1argparser_1_1Subcommand_3_01type_1_1types_3_01Args_8_8_8_01_4_00_01type_1_1types_3_01Cmd_8_8_8_01_4_01_4.html#a277f111845d77e1dbfa758aeb5bbb21a',1,'koutil::argparser::Subcommand&lt; type::types&lt; Args... &gt;, type::types&lt; Cmd... &gt; &gt;']]],
+  ['subcommandbase_423',['SubcommandBase',['../dd/d41/structkoutil_1_1argparser_1_1SubcommandBase.html#a5327249410918fcf0b8005b47c17ed1a',1,'koutil::argparser::SubcommandBase']]]
 ];

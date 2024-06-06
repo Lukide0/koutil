@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reference_0',['reference',['../d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html#ad87c80034699d95aea47549c25a431f4',1,'koutil::container::multi_vector::iterator']]]
+  ['unique_5ftypes_5ft_513',['unique_types_t',['../d0/d19/namespacekoutil_1_1type.html#ad319132ce148b7f09ca8beae243f4de6',1,'koutil::type']]]
 ];

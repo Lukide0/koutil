@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['yellow_0',['yellow',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a77c284238ce8c70a48ffa24c5a2dc2d2',1,'koutil::term::color']]],
-  ['yellow_5fbright_1',['yellow_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#aedcd8be2af8ed1faf017ce046baa3963',1,'koutil::term::color']]]
+  ['yellow_273',['yellow',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a77c284238ce8c70a48ffa24c5a2dc2d2',1,'koutil::term::color']]],
+  ['yellow_5fbright_274',['yellow_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#aedcd8be2af8ed1faf017ce046baa3963',1,'koutil::term::color']]]
 ];

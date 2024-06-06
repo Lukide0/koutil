@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['yellow_0',['yellow',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a77c284238ce8c70a48ffa24c5a2dc2d2',1,'koutil::term::color']]],
-  ['yellow_5fbright_1',['yellow_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#aedcd8be2af8ed1faf017ce046baa3963',1,'koutil::term::color']]]
+  ['value_491',['value',['../d9/d27/structkoutil_1_1type_1_1types__count_3_01types_3_01Types_8_8_8_01_4_01_4.html#a660e9d065356aa086cb202fcf532231e',1,'koutil::type::types_count&lt; types&lt; Types... &gt; &gt;::value()'],['../d4/d41/structkoutil_1_1type_1_1detail_1_1types__index__of_3_01T_00_01types_3_01Types_8_8_8_01_4_00_01N_01_4.html#a4bf2dd252be399adb0e38e5dfa6bb676',1,'koutil::type::detail::types_index_of&lt; T, types&lt; Types... &gt;, N &gt;::value()']]]
 ];

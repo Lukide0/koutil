@@ -17,8 +17,6 @@ var hierarchy =
     [ "koutil::term::CursorMove", "d2/df8/structkoutil_1_1term_1_1CursorMove.html", null ],
     [ "koutil::term::CursorPos", "d4/d5d/structkoutil_1_1term_1_1CursorPos.html", null ],
     [ "koutil::term::Dimensions", "d6/dba/structkoutil_1_1term_1_1Dimensions.html", null ],
-    [ "koutil::container::multi_vector< Types >::iterator< is_const >", "d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html", null ],
-    [ "koutil::container::multi_vector< Types >", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", null ],
     [ "koutil::argparser::Parser< Ctx, UParser, Args, Cmds >", "df/dbb/classkoutil_1_1argparser_1_1Parser.html", null ],
     [ "koutil::argparser::Subcommand< Args, Cmd >", "d9/d8f/structkoutil_1_1argparser_1_1Subcommand.html", null ],
     [ "koutil::argparser::SubcommandBase", "dd/d41/structkoutil_1_1argparser_1_1SubcommandBase.html", [
@@ -33,7 +31,6 @@ var hierarchy =
     [ "koutil::type::types_count< Types >", "d3/d40/structkoutil_1_1type_1_1types__count.html", null ],
     [ "koutil::type::types_count< types< Types... > >", "d9/d27/structkoutil_1_1type_1_1types__count_3_01types_3_01Types_8_8_8_01_4_01_4.html", null ],
     [ "koutil::type::detail::types_get_impl< Types, I >", "db/d93/structkoutil_1_1type_1_1detail_1_1types__get__impl.html", null ],
-    [ "koutil::type::detail::types_get_impl< types< Types... >, I >", "d4/d9e/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_01Types_8_8_8_01_4_00_01I_01_4.html", null ],
     [ "koutil::type::detail::types_get_impl< types<>, I >", "da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html", null ],
     [ "koutil::type::detail::types_index_of< T, Types, N >", "da/d92/structkoutil_1_1type_1_1detail_1_1types__index__of.html", null ],
     [ "koutil::type::detail::types_index_of< T, types< Types... >, N >", "d4/d41/structkoutil_1_1type_1_1detail_1_1types__index__of_3_01T_00_01types_3_01Types_8_8_8_01_4_00_01N_01_4.html", null ],

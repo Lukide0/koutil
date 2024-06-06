@@ -16,7 +16,7 @@ var structkoutil_1_1term_1_1Color =
     [ "from_hsv", "d8/d09/structkoutil_1_1term_1_1Color.html#ae518d148d79d7af35cb0855c693561ce", null ],
     [ "from_id", "d8/d09/structkoutil_1_1term_1_1Color.html#a252544beec0aee3328855993fde815e5", null ],
     [ "from_rgb", "d8/d09/structkoutil_1_1term_1_1Color.html#a98d96b91d8f8b669914eb7d4f300033c", null ],
-    [ "get_channels", "d8/d09/structkoutil_1_1term_1_1Color.html#ada59598cd561b5cd249e7ec66d09ce4b", null ],
+    [ "get_channels", "d8/d09/structkoutil_1_1term_1_1Color.html#a930e63d466a43fde05b33735ff4184d0", null ],
     [ "id", "d8/d09/structkoutil_1_1term_1_1Color.html#a21e385f1d31fdc9bc80a81144093a88b", null ],
     [ "operator==", "d8/d09/structkoutil_1_1term_1_1Color.html#a46330dacb11053143bb8f17715241867", null ],
     [ "blue", "d8/d09/structkoutil_1_1term_1_1Color.html#aa6181a0423d0f88bef10342f96f9547e", null ],

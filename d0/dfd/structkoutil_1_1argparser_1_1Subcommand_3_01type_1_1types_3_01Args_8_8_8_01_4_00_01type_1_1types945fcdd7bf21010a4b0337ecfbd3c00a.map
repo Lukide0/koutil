@@ -1,0 +1,8 @@
+<map id="koutil::argparser::Subcommand&lt; type::types&lt; Args... &gt;, type::types&lt; Cmd... &gt; &gt;" name="koutil::argparser::Subcommand&lt; type::types&lt; Args... &gt;, type::types&lt; Cmd... &gt; &gt;">
+<area shape="rect" id="node1" title="Specialization of Subcommand for argument and subcommand types." alt="" coords="447,56,645,127"/>
+<area shape="rect" id="node2" href="$dd/d41/structkoutil_1_1argparser_1_1SubcommandBase.html" title="Base class for subcommands." alt="" coords="203,5,346,47"/>
+<area shape="rect" id="node3" href="$df/d51/classkoutil_1_1argparser_1_1Arguments.html" title=" " alt="" coords="193,71,357,112"/>
+<area shape="rect" id="node4" href="$d6/d3f/classkoutil_1_1argparser_1_1ArgumentsBase.html" title=" " alt="" coords="5,71,141,112"/>
+<area shape="rect" id="node5" href="$d5/d8b/classkoutil_1_1argparser_1_1Commands.html" title=" " alt="" coords="191,136,359,177"/>
+<area shape="rect" id="node6" href="$de/d6c/classkoutil_1_1argparser_1_1CommandsBase.html" title="Base class for commands." alt="" coords="5,136,141,177"/>
+</map>
