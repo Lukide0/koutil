@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['storage_5ft_0',['storage_t',['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a21ba21336ec744688e25df0bb63094da',1,'koutil::argparser::Commands::storage_t'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a7890832426ce132a363e22b54e28865a',1,'koutil::container::multi_vector::storage_t']]]
+  ['other_5ftypes_0',['other_types',['../d4/d07/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_00_01Other_8_8_8_01_4.html#af7d3cea49224a33deb949c248dcfb0ce',1,'koutil::type::detail::unique_types_impl&lt; T, Other... &gt;']]]
 ];

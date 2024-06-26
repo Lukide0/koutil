@@ -116,9 +116,9 @@ $(function(){initNavTree('d1/daa/classkoutil_1_1container_1_1multi__vector_1_1it
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7d64e308b83ce966ae887574a94a1d6e" id="r_a7d64e308b83ce966ae887574a94a1d6e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d64e308b83ce966ae887574a94a1d6e">value_type</a> = std::conditional_t&lt;is_const, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a5f755bcad42bef8d603f7246b3c7c50c">const_value_ref_t</a>, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a33fdc86b150f644813b49f078b5f1146">value_ref_t</a>&gt;</td></tr>
+<tr class="memitem:a7d64e308b83ce966ae887574a94a1d6e" id="r_a7d64e308b83ce966ae887574a94a1d6e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d64e308b83ce966ae887574a94a1d6e">value_type</a> = std::conditional_t&lt;is_const, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a6bb3fd3bc7879dd4b875342a1b3223a6">const_value_ref_t</a>, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a38371f1493ab408a222c2733e36d9a1a">value_ref_t</a>&gt;</td></tr>
 <tr class="separator:a7d64e308b83ce966ae887574a94a1d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa307b53973f128edea0aef8ebe5b3e0c" id="r_aa307b53973f128edea0aef8ebe5b3e0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa307b53973f128edea0aef8ebe5b3e0c">const_value_type</a> = <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a5f755bcad42bef8d603f7246b3c7c50c">const_value_ref_t</a></td></tr>
+<tr class="memitem:aa307b53973f128edea0aef8ebe5b3e0c" id="r_aa307b53973f128edea0aef8ebe5b3e0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa307b53973f128edea0aef8ebe5b3e0c">const_value_type</a> = <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a6bb3fd3bc7879dd4b875342a1b3223a6">const_value_ref_t</a></td></tr>
 <tr class="separator:aa307b53973f128edea0aef8ebe5b3e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad87c80034699d95aea47549c25a431f4" id="r_ad87c80034699d95aea47549c25a431f4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad87c80034699d95aea47549c25a431f4">reference</a> = <a class="el" href="#a7d64e308b83ce966ae887574a94a1d6e">value_type</a></td></tr>
 <tr class="separator:ad87c80034699d95aea47549c25a431f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,7 +207,7 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;is_multi_vector_element... Types&gt;<br />
 template&lt;bool is_const&gt;<br />
-requires (sizeof...(T) &gt; 0)<br />
+requires (<a class="el" href="../../d0/d19/namespacekoutil_1_1type.html#adb1d837e4966d5e70544545a4b223bf3">type::types_remove_t</a>&lt;<a class="el" href="../../dd/d52/structkoutil_1_1type_1_1types.html">type::types</a>&lt;T...&gt;, void&gt;<a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#adc413043836ccc0ec735dad5e5a2f7e2">::size</a> != 0)<br />
 class koutil::container::multi_vector&lt; Types &gt;::iterator&lt; is_const &gt;</div><p>Nested iterator class for <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html" title="Class representing a multi_vector.">multi_vector</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -229,7 +229,7 @@ template&lt;is_multi_vector_element... Types&gt; </div>
 template&lt;bool is_const&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html">koutil::container::multi_vector</a>&lt; Types &gt;<a class="el" href="#a4b4a171f233b09df66aa2481d97d88b8">::iterator</a>&lt; is_const &gt;::const_value_type = <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a5f755bcad42bef8d603f7246b3c7c50c">const_value_ref_t</a></td>
+          <td class="memname">using <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html">koutil::container::multi_vector</a>&lt; Types &gt;<a class="el" href="#a4b4a171f233b09df66aa2481d97d88b8">::iterator</a>&lt; is_const &gt;::const_value_type = <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a6bb3fd3bc7879dd4b875342a1b3223a6">const_value_ref_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -301,7 +301,7 @@ template&lt;is_multi_vector_element... Types&gt; </div>
 template&lt;bool is_const&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html">koutil::container::multi_vector</a>&lt; Types &gt;<a class="el" href="#a4b4a171f233b09df66aa2481d97d88b8">::iterator</a>&lt; is_const &gt;::value_type = std::conditional_t&lt;is_const, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a5f755bcad42bef8d603f7246b3c7c50c">const_value_ref_t</a>, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a33fdc86b150f644813b49f078b5f1146">value_ref_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html">koutil::container::multi_vector</a>&lt; Types &gt;<a class="el" href="#a4b4a171f233b09df66aa2481d97d88b8">::iterator</a>&lt; is_const &gt;::value_type = std::conditional_t&lt;is_const, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a6bb3fd3bc7879dd4b875342a1b3223a6">const_value_ref_t</a>, <a class="el" href="../../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a38371f1493ab408a222c2733e36d9a1a">value_ref_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

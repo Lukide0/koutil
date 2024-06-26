@@ -1,14 +1,13 @@
 var searchData=
 [
-  ['register_5fsignals_0',['register_signals',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad1ea7dc3551ca80353ce48d0667002a6',1,'koutil::term::terminal']]],
-  ['reserve_1',['reserve',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a8e22e9dc82dcaa9ab5df961a4619933b',1,'koutil::container::multi_vector']]],
-  ['reserve_5fimpl_2',['reserve_impl',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a3fe56af27a9568c5e48e7d7208614274',1,'koutil::container::multi_vector']]],
-  ['reset_5fall_3',['reset_all',['../d6/d7c/namespacekoutil_1_1term.html#a2b681e21fe25530fd31f312400a5291f',1,'koutil::term']]],
-  ['reset_5fbg_4',['reset_bg',['../d6/d7c/namespacekoutil_1_1term.html#afce441be81651c222a79913f8363fed1',1,'koutil::term']]],
-  ['reset_5fcolor_5',['reset_color',['../d6/d7c/namespacekoutil_1_1term.html#ad622e3c1541c80d7bb046a58bc6176ec',1,'koutil::term']]],
-  ['reset_5ffg_6',['reset_fg',['../d6/d7c/namespacekoutil_1_1term.html#aa7d79d8fad08daeb6d5eff4053a5b281',1,'koutil::term']]],
-  ['resize_7',['resize',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a220676ee728658a09c0cbc07dd4ad3eb',1,'koutil::container::multi_vector::resize(std::size_t size)'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a7dadb2786e6f9cf8dc11930b9b0ca539',1,'koutil::container::multi_vector::resize(std::size_t size, const value_t &amp;value)']]],
-  ['resize_5fall_8',['resize_all',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#ac460d92f460b90c7f9b0e359f2385ef9',1,'koutil::container::multi_vector']]],
-  ['resize_5fall_5fwith_9',['resize_all_with',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a9eff49dc26c1c0797ccc71a3c2dafd34',1,'koutil::container::multi_vector']]],
-  ['rollback_10',['rollback',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a940ea94c15d692b3c0e3de7fdba56e93',1,'koutil::term::terminal']]]
+  ['parse_0',['parse',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a23558709718cf9ed3815a7509850ff83',1,'koutil::argparser::Parser']]],
+  ['parse_5fcommand_5for_5fargument_1',['parse_command_or_argument',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a7f7975ae8c9174216a6fb1463a5a7464',1,'koutil::argparser::Parser']]],
+  ['parse_5flong_5fopt_2',['parse_long_opt',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a6b4263e5441de42ab67f669b762bf9c0',1,'koutil::argparser::Parser']]],
+  ['parse_5fshort_5fopt_3',['parse_short_opt',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a235730efaa1ecb0837ff8234de6c68cd',1,'koutil::argparser::Parser']]],
+  ['parser_4',['Parser',['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#a3730eb8d83eea8b5690651e2741f3fe2',1,'koutil::argparser::Parser::Parser(Ctx &amp;ctx, Args &amp;&amp;args, Cmds &amp;&amp;commands)'],['../df/dbb/classkoutil_1_1argparser_1_1Parser.html#aa833b10a9348327de741f8986f6e8232',1,'koutil::argparser::Parser::Parser(Ctx &amp;ctx, const Args &amp;args, const Cmds &amp;commands)']]],
+  ['pop_5fback_5',['pop_back',['../d4/d2e/classkoutil_1_1container_1_1multi__vector_1_1single__vector.html#a7cfa6fc24a5adab7089fb32f0a1a9342',1,'koutil::container::multi_vector::single_vector::pop_back()'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#affc0d73a5ffa8146ec464fead8d8ce63',1,'koutil::container::multi_vector::pop_back()']]],
+  ['pop_5fback_5fimpl_6',['pop_back_impl',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#aa9349b6513b619b1c60d9aeb550cc553',1,'koutil::container::multi_vector']]],
+  ['process_5fargs_7',['process_args',['../d7/dfe/namespacekoutil_1_1argparser.html#a6ed181ae80f5e9727054f55d31c7f94b',1,'koutil::argparser']]],
+  ['push_5fback_8',['push_back',['../d4/d2e/classkoutil_1_1container_1_1multi__vector_1_1single__vector.html#a01cba0160a1aae4c11c6009ba409cb75',1,'koutil::container::multi_vector::single_vector::push_back(const T &amp;value)'],['../d4/d2e/classkoutil_1_1container_1_1multi__vector_1_1single__vector.html#aaf482ea984e7df2794c680acbfd102db',1,'koutil::container::multi_vector::single_vector::push_back(T &amp;&amp;value)'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a18d6f0807cdf63037e850f2e61c8a4c3',1,'koutil::container::multi_vector::push_back(const value_t &amp;value)'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a5477e610180ddff01cb8f343503538c1',1,'koutil::container::multi_vector::push_back(value_t &amp;&amp;value)']]],
+  ['push_5fback_5fimpl_9',['push_back_impl',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a59ea97352f15f6562574fce7f46d94f1',1,'koutil::container::multi_vector']]]
 ];

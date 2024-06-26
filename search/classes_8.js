@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['unique_5ftypes_5fimpl_0',['unique_types_impl',['../d4/d59/structkoutil_1_1type_1_1detail_1_1unique__types__impl.html',1,'koutil::type::detail']]],
-  ['unique_5ftypes_5fimpl_3c_20t_20_3e_1',['unique_types_impl&lt; T &gt;',['../d7/d32/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_01_4.html',1,'koutil::type::detail']]],
-  ['unique_5ftypes_5fimpl_3c_20t_2c_20other_2e_2e_2e_20_3e_2',['unique_types_impl&lt; T, Other... &gt;',['../d4/d07/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_00_01Other_8_8_8_01_4.html',1,'koutil::type::detail']]]
+  ['single_5fvector_0',['single_vector',['../d4/d2e/classkoutil_1_1container_1_1multi__vector_1_1single__vector.html',1,'koutil::container::multi_vector']]],
+  ['single_5fvector_5fcontainer_1',['single_vector_container',['../da/d1d/structkoutil_1_1container_1_1multi__vector_1_1single__vector__container.html',1,'koutil::container::multi_vector']]],
+  ['subcommand_2',['Subcommand',['../d9/d8f/structkoutil_1_1argparser_1_1Subcommand.html',1,'koutil::argparser']]],
+  ['subcommand_3c_20type_3a_3atypes_3c_20args_2e_2e_2e_20_3e_2c_20type_3a_3atypes_3c_20cmd_2e_2e_2e_20_3e_20_3e_3',['Subcommand&lt; type::types&lt; Args... &gt;, type::types&lt; Cmd... &gt; &gt;',['../d2/d47/structkoutil_1_1argparser_1_1Subcommand_3_01type_1_1types_3_01Args_8_8_8_01_4_00_01type_1_1types_3_01Cmd_8_8_8_01_4_01_4.html',1,'koutil::argparser']]],
+  ['subcommandbase_4',['SubcommandBase',['../dd/d41/structkoutil_1_1argparser_1_1SubcommandBase.html',1,'koutil::argparser']]]
 ];

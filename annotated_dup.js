@@ -15,6 +15,7 @@ var annotated_dup =
       ] ],
       [ "container", "d8/d14/namespacekoutil_1_1container.html", [
         [ "ComptimeMap", "d1/d56/classkoutil_1_1container_1_1ComptimeMap.html", "d1/d56/classkoutil_1_1container_1_1ComptimeMap" ],
+        [ "hash_array", "d2/dd7/classkoutil_1_1container_1_1hash__array.html", "d2/dd7/classkoutil_1_1container_1_1hash__array" ],
         [ "multi_vector", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", "dc/da1/classkoutil_1_1container_1_1multi__vector" ]
       ] ],
       [ "term", "d6/d7c/namespacekoutil_1_1term.html", [
@@ -33,6 +34,11 @@ var annotated_dup =
           [ "types_get_impl< types<>, I >", "da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4.html", "da/d5d/structkoutil_1_1type_1_1detail_1_1types__get__impl_3_01types_3_4_00_01I_01_4" ],
           [ "types_index_of", "da/d92/structkoutil_1_1type_1_1detail_1_1types__index__of.html", null ],
           [ "types_index_of< T, types< Types... >, N >", "d4/d41/structkoutil_1_1type_1_1detail_1_1types__index__of_3_01T_00_01types_3_01Types_8_8_8_01_4_00_01N_01_4.html", "d4/d41/structkoutil_1_1type_1_1detail_1_1types__index__of_3_01T_00_01types_3_01Types_8_8_8_01_4_00_01N_01_4" ],
+          [ "types_remove", "df/db5/structkoutil_1_1type_1_1detail_1_1types__remove.html", null ],
+          [ "types_remove< types< Types... >, Type >", "d4/d35/structkoutil_1_1type_1_1detail_1_1types__remove_3_01types_3_01Types_8_8_8_01_4_00_01Type_01_4.html", "d4/d35/structkoutil_1_1type_1_1detail_1_1types__remove_3_01types_3_01Types_8_8_8_01_4_00_01Type_01_4" ],
+          [ "types_remove< types<>, Type >", "d2/d34/structkoutil_1_1type_1_1detail_1_1types__remove_3_01types_3_4_00_01Type_01_4.html", "d2/d34/structkoutil_1_1type_1_1detail_1_1types__remove_3_01types_3_4_00_01Type_01_4" ],
+          [ "types_remove_impl", "da/d0d/structkoutil_1_1type_1_1detail_1_1types__remove__impl.html", "da/d0d/structkoutil_1_1type_1_1detail_1_1types__remove__impl" ],
+          [ "types_remove_impl< Search, Type >", "da/dbb/structkoutil_1_1type_1_1detail_1_1types__remove__impl_3_01Search_00_01Type_01_4.html", "da/dbb/structkoutil_1_1type_1_1detail_1_1types__remove__impl_3_01Search_00_01Type_01_4" ],
           [ "types_to_arrays", "da/da8/structkoutil_1_1type_1_1detail_1_1types__to__arrays.html", null ],
           [ "types_to_arrays< types< Types... >, types< Unique... > >", "dd/d7d/structkoutil_1_1type_1_1detail_1_1types__to__arrays_3_01types_3_01Types_8_8_8_01_4_00_01types_3_01Unique_8_8_8_01_4_01_4.html", "dd/d7d/structkoutil_1_1type_1_1detail_1_1types__to__arrays_3_01types_3_01Types_8_8_8_01_4_00_01types_3_01Unique_8_8_8_01_4_01_4" ],
           [ "types_to_containers", "d7/dea/structkoutil_1_1type_1_1detail_1_1types__to__containers.html", null ],
@@ -41,10 +47,15 @@ var annotated_dup =
           [ "types_transform_impl< types< Types... >, Transform >", "da/d8e/structkoutil_1_1type_1_1detail_1_1types__transform__impl_3_01types_3_01Types_8_8_8_01_4_00_01Transform_01_4.html", "da/d8e/structkoutil_1_1type_1_1detail_1_1types__transform__impl_3_01types_3_01Types_8_8_8_01_4_00_01Transform_01_4" ],
           [ "types_unique_impl", "d0/dc3/structkoutil_1_1type_1_1detail_1_1types__unique__impl.html", null ],
           [ "types_unique_impl< types< Types... > >", "d2/d02/structkoutil_1_1type_1_1detail_1_1types__unique__impl_3_01types_3_01Types_8_8_8_01_4_01_4.html", "d2/d02/structkoutil_1_1type_1_1detail_1_1types__unique__impl_3_01types_3_01Types_8_8_8_01_4_01_4" ],
+          [ "types_view", "d0/d88/structkoutil_1_1type_1_1detail_1_1types__view.html", null ],
+          [ "types_view< N, types< Type, Other... > >", "dc/d02/structkoutil_1_1type_1_1detail_1_1types__view_3_01N_00_01types_3_01Type_00_01Other_8_8_8_01_4_01_4.html", "dc/d02/structkoutil_1_1type_1_1detail_1_1types__view_3_01N_00_01types_3_01Type_00_01Other_8_8_8_01_4_01_4" ],
+          [ "types_view< N, types<> >", "da/d41/structkoutil_1_1type_1_1detail_1_1types__view_3_01N_00_01types_3_4_01_4.html", "da/d41/structkoutil_1_1type_1_1detail_1_1types__view_3_01N_00_01types_3_4_01_4" ],
           [ "unique_types_impl", "d4/d59/structkoutil_1_1type_1_1detail_1_1unique__types__impl.html", null ],
           [ "unique_types_impl< T >", "d7/d32/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_01_4.html", "d7/d32/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_01_4" ],
           [ "unique_types_impl< T, Other... >", "d4/d07/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_00_01Other_8_8_8_01_4.html", "d4/d07/structkoutil_1_1type_1_1detail_1_1unique__types__impl_3_01T_00_01Other_8_8_8_01_4" ]
         ] ],
+        [ "are_types", "dd/de2/structkoutil_1_1type_1_1are__types.html", null ],
+        [ "are_types< types< Types... > >", "d1/d68/structkoutil_1_1type_1_1are__types_3_01types_3_01Types_8_8_8_01_4_01_4.html", null ],
         [ "types", "dd/d52/structkoutil_1_1type_1_1types.html", "dd/d52/structkoutil_1_1type_1_1types" ],
         [ "types_cat", "d0/de2/structkoutil_1_1type_1_1types__cat.html", null ],
         [ "types_cat< types< T... >, types< U... > >", "dd/ddb/structkoutil_1_1type_1_1types__cat_3_01types_3_01T_8_8_8_01_4_00_01types_3_01U_8_8_8_01_4_01_4.html", "dd/ddb/structkoutil_1_1type_1_1types__cat_3_01types_3_01T_8_8_8_01_4_00_01types_3_01U_8_8_8_01_4_01_4" ],

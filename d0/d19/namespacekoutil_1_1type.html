@@ -114,6 +114,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/de2/structkoutil_1_1type_1_1are__types.html">are_types</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d68/structkoutil_1_1type_1_1are__types_3_01types_3_01Types_8_8_8_01_4_01_4.html">are_types&lt; types&lt; Types... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d52/structkoutil_1_1type_1_1types.html">types</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure representing a variadic list of types.  <a href="../../dd/d52/structkoutil_1_1type_1_1types.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +142,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="concepts" name="concepts"></a>
 Concepts</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/df0/conceptkoutil_1_1type_1_1types__concept.html">types_concept</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc7/conceptkoutil_1_1type_1_1types__transform.html">types_transform</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concept for a type that provides a <code>transform</code> template. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,11 +153,11 @@ Concepts</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:af61525017852023523554add52c0ac8d" id="r_af61525017852023523554add52c0ac8d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:af61525017852023523554add52c0ac8d" id="r_af61525017852023523554add52c0ac8d"><td class="memTemplParams" colspan="2">template&lt;types_concept T, types_concept U&gt; </td></tr>
 <tr class="memitem:af61525017852023523554add52c0ac8d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af61525017852023523554add52c0ac8d">types_cat_t</a> = <a class="el" href="../../d0/de2/structkoutil_1_1type_1_1types__cat.html">types_cat</a>&lt;T, U&gt;::type</td></tr>
 <tr class="memdesc:af61525017852023523554add52c0ac8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for the concatenated types list.  <br /></td></tr>
 <tr class="separator:af61525017852023523554add52c0ac8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7c0fbe49c3e8469b79f6a0f616dd11" id="r_a1a7c0fbe49c3e8469b79f6a0f616dd11"><td class="memTemplParams" colspan="2">template&lt;typename Types , std::size_t I&gt; </td></tr>
+<tr class="memitem:a1a7c0fbe49c3e8469b79f6a0f616dd11" id="r_a1a7c0fbe49c3e8469b79f6a0f616dd11"><td class="memTemplParams" colspan="2">template&lt;types_concept Types, std::size_t I&gt; </td></tr>
 <tr class="memitem:a1a7c0fbe49c3e8469b79f6a0f616dd11"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1a7c0fbe49c3e8469b79f6a0f616dd11">types_get_t</a> = <a class="el" href="../../db/d93/structkoutil_1_1type_1_1detail_1_1types__get__impl.html">detail::types_get_impl</a>&lt;Types, I&gt;::type</td></tr>
 <tr class="memdesc:a1a7c0fbe49c3e8469b79f6a0f616dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for getting a type by index in a types list.  <br /></td></tr>
 <tr class="separator:a1a7c0fbe49c3e8469b79f6a0f616dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,26 +165,35 @@ Typedefs</h2></td></tr>
 <tr class="memitem:abd8d62230710189a3cf09059562480d0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abd8d62230710189a3cf09059562480d0">unique_types_t</a> = <a class="el" href="../../d4/d59/structkoutil_1_1type_1_1detail_1_1unique__types__impl.html">detail::unique_types_impl</a>&lt;Types...&gt;::type</td></tr>
 <tr class="memdesc:abd8d62230710189a3cf09059562480d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for creating a unique types list from a list of types.  <br /></td></tr>
 <tr class="separator:abd8d62230710189a3cf09059562480d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae47ab5ab9088e4fd98e31be003d7641f" id="r_ae47ab5ab9088e4fd98e31be003d7641f"><td class="memTemplParams" colspan="2">template&lt;typename Types &gt; </td></tr>
+<tr class="memitem:ae47ab5ab9088e4fd98e31be003d7641f" id="r_ae47ab5ab9088e4fd98e31be003d7641f"><td class="memTemplParams" colspan="2">template&lt;types_concept Types&gt; </td></tr>
 <tr class="memitem:ae47ab5ab9088e4fd98e31be003d7641f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae47ab5ab9088e4fd98e31be003d7641f">types_unique_t</a> = <a class="el" href="../../d0/dc3/structkoutil_1_1type_1_1detail_1_1types__unique__impl.html">detail::types_unique_impl</a>&lt;Types&gt;::type</td></tr>
 <tr class="memdesc:ae47ab5ab9088e4fd98e31be003d7641f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for creating a unique types list from a <code>types</code> list.  <br /></td></tr>
 <tr class="separator:ae47ab5ab9088e4fd98e31be003d7641f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3f7a581b0da46783958b27949e64273" id="r_af3f7a581b0da46783958b27949e64273"><td class="memTemplParams" colspan="2">template&lt;typename T , types_transform Transform&gt; </td></tr>
-<tr class="memitem:af3f7a581b0da46783958b27949e64273"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af3f7a581b0da46783958b27949e64273">types_transform_t</a> = <a class="el" href="../../da/dce/structkoutil_1_1type_1_1detail_1_1types__transform__impl.html">detail::types_transform_impl</a>&lt;T, Transform&gt;::type</td></tr>
-<tr class="memdesc:af3f7a581b0da46783958b27949e64273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for transforming a types list using a transform template.  <br /></td></tr>
-<tr class="separator:af3f7a581b0da46783958b27949e64273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab60cb0b01cc1e083b52ed73dfca31f11" id="r_ab60cb0b01cc1e083b52ed73dfca31f11"><td class="memTemplParams" colspan="2">template&lt;typename T , types_container Container = types_containers::vector&gt; </td></tr>
-<tr class="memitem:ab60cb0b01cc1e083b52ed73dfca31f11"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab60cb0b01cc1e083b52ed73dfca31f11">types_to_containers_t</a> = <a class="el" href="../../d7/dea/structkoutil_1_1type_1_1detail_1_1types__to__containers.html">detail::types_to_containers</a>&lt;T, Container&gt;::type</td></tr>
-<tr class="memdesc:ab60cb0b01cc1e083b52ed73dfca31f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for transforming a types list to a containers list.  <br /></td></tr>
-<tr class="separator:ab60cb0b01cc1e083b52ed73dfca31f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2770b3ba37a6cbcac65212505a1f9636" id="r_a2770b3ba37a6cbcac65212505a1f9636"><td class="memTemplParams" colspan="2">template&lt;typename Types &gt; </td></tr>
+<tr class="memitem:af8ad71405827caba205664aee209a289" id="r_af8ad71405827caba205664aee209a289"><td class="memTemplParams" colspan="2">template&lt;types_concept Types, types_transform Transform&gt; </td></tr>
+<tr class="memitem:af8ad71405827caba205664aee209a289"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af8ad71405827caba205664aee209a289">types_transform_t</a> = <a class="el" href="../../da/dce/structkoutil_1_1type_1_1detail_1_1types__transform__impl.html">detail::types_transform_impl</a>&lt;Types, Transform&gt;::type</td></tr>
+<tr class="memdesc:af8ad71405827caba205664aee209a289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for transforming a types list using a transform template.  <br /></td></tr>
+<tr class="separator:af8ad71405827caba205664aee209a289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30d2584222d69fd10db572ab316be79" id="r_ad30d2584222d69fd10db572ab316be79"><td class="memTemplParams" colspan="2">template&lt;types_concept Types, types_container Container = types_containers::vector&gt; </td></tr>
+<tr class="memitem:ad30d2584222d69fd10db572ab316be79"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad30d2584222d69fd10db572ab316be79">types_to_containers_t</a> = <a class="el" href="../../d7/dea/structkoutil_1_1type_1_1detail_1_1types__to__containers.html">detail::types_to_containers</a>&lt;Types, Container&gt;::type</td></tr>
+<tr class="memdesc:ad30d2584222d69fd10db572ab316be79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for transforming a types list to a containers list.  <br /></td></tr>
+<tr class="separator:ad30d2584222d69fd10db572ab316be79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2770b3ba37a6cbcac65212505a1f9636" id="r_a2770b3ba37a6cbcac65212505a1f9636"><td class="memTemplParams" colspan="2">template&lt;types_concept Types&gt; </td></tr>
 <tr class="memitem:a2770b3ba37a6cbcac65212505a1f9636"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2770b3ba37a6cbcac65212505a1f9636">types_to_arrays_t</a> = <a class="el" href="../../da/da8/structkoutil_1_1type_1_1detail_1_1types__to__arrays.html">detail::types_to_arrays</a>&lt;Types, <a class="el" href="#ae47ab5ab9088e4fd98e31be003d7641f">types_unique_t</a>&lt;Types&gt;&gt;::type</td></tr>
 <tr class="memdesc:a2770b3ba37a6cbcac65212505a1f9636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for converting a types list to arrays of unique types.  <br /></td></tr>
 <tr class="separator:a2770b3ba37a6cbcac65212505a1f9636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1d837e4966d5e70544545a4b223bf3" id="r_adb1d837e4966d5e70544545a4b223bf3"><td class="memTemplParams" colspan="2">template&lt;types_concept Types, typename T &gt; </td></tr>
+<tr class="memitem:adb1d837e4966d5e70544545a4b223bf3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb1d837e4966d5e70544545a4b223bf3">types_remove_t</a> = <a class="el" href="../../df/db5/structkoutil_1_1type_1_1detail_1_1types__remove.html">detail::types_remove</a>&lt;Types, T&gt;::type</td></tr>
+<tr class="separator:adb1d837e4966d5e70544545a4b223bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaff50d0f44dd5ae1377f1bfc0144a89" id="r_afaff50d0f44dd5ae1377f1bfc0144a89"><td class="memTemplParams" colspan="2">template&lt;types_concept Types, std::size_t N&gt; </td></tr>
+<tr class="memitem:afaff50d0f44dd5ae1377f1bfc0144a89"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afaff50d0f44dd5ae1377f1bfc0144a89">types_view_t</a> = <a class="el" href="../../d0/d88/structkoutil_1_1type_1_1detail_1_1types__view.html">detail::types_view</a>&lt;N, Types&gt;::type</td></tr>
+<tr class="separator:afaff50d0f44dd5ae1377f1bfc0144a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:afa4e756f64619885da337c0d1561a023" id="r_afa4e756f64619885da337c0d1561a023"><td class="memTemplParams" colspan="2">template&lt;typename Types , typename T , std::size_t Skip = 0&gt; </td></tr>
+<tr class="memitem:a78b24dfdaa6405619205334ef0e97a1d" id="r_a78b24dfdaa6405619205334ef0e97a1d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a78b24dfdaa6405619205334ef0e97a1d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a78b24dfdaa6405619205334ef0e97a1d">are_types_v</a> = <a class="el" href="../../dd/de2/structkoutil_1_1type_1_1are__types.html">are_types</a>&lt;T&gt;::value</td></tr>
+<tr class="separator:a78b24dfdaa6405619205334ef0e97a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4e756f64619885da337c0d1561a023" id="r_afa4e756f64619885da337c0d1561a023"><td class="memTemplParams" colspan="2">template&lt;types_concept Types, typename T , std::size_t Skip = 0&gt; </td></tr>
 <tr class="memitem:afa4e756f64619885da337c0d1561a023"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afa4e756f64619885da337c0d1561a023">types_index_of_v</a> = <a class="el" href="../../da/d92/structkoutil_1_1type_1_1detail_1_1types__index__of.html">detail::types_index_of</a>&lt;T, Types, Skip&gt;::value</td></tr>
 <tr class="memdesc:afa4e756f64619885da337c0d1561a023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a type in a types list.  <br /></td></tr>
 <tr class="separator:afa4e756f64619885da337c0d1561a023"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,7 +205,7 @@ Variables</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename U &gt; </div>
+template&lt;types_concept T, types_concept U&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="#af61525017852023523554add52c0ac8d">koutil::type::types_cat_t</a> = <a class="el" href="../../d0/de2/structkoutil_1_1type_1_1types__cat.html">types_cat</a>&lt;T, U&gt;::type</td>
@@ -215,7 +230,7 @@ template&lt;typename T , typename U &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Types , std::size_t I&gt; </div>
+template&lt;types_concept Types, std::size_t I&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="#a1a7c0fbe49c3e8469b79f6a0f616dd11">koutil::type::types_get_t</a> = <a class="el" href="../../db/d93/structkoutil_1_1type_1_1detail_1_1types__get__impl.html">detail::types_get_impl</a>&lt;Types, I&gt;::type</td>
@@ -234,13 +249,29 @@ template&lt;typename Types , std::size_t I&gt; </div>
 
 </div>
 </div>
+<a id="adb1d837e4966d5e70544545a4b223bf3" name="adb1d837e4966d5e70544545a4b223bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb1d837e4966d5e70544545a4b223bf3">&#9670;&#160;</a></span>types_remove_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;types_concept Types, typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#adb1d837e4966d5e70544545a4b223bf3">koutil::type::types_remove_t</a> = <a class="el" href="../../df/db5/structkoutil_1_1type_1_1detail_1_1types__remove.html">detail::types_remove</a>&lt;Types, T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2770b3ba37a6cbcac65212505a1f9636" name="a2770b3ba37a6cbcac65212505a1f9636"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2770b3ba37a6cbcac65212505a1f9636">&#9670;&#160;</a></span>types_to_arrays_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Types &gt; </div>
+template&lt;types_concept Types&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="#a2770b3ba37a6cbcac65212505a1f9636">koutil::type::types_to_arrays_t</a> = <a class="el" href="../../da/da8/structkoutil_1_1type_1_1detail_1_1types__to__arrays.html">detail::types_to_arrays</a>&lt;Types, <a class="el" href="#ae47ab5ab9088e4fd98e31be003d7641f">types_unique_t</a>&lt;Types&gt;&gt;::type</td>
@@ -258,16 +289,16 @@ template&lt;typename Types &gt; </div>
 
 </div>
 </div>
-<a id="ab60cb0b01cc1e083b52ed73dfca31f11" name="ab60cb0b01cc1e083b52ed73dfca31f11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab60cb0b01cc1e083b52ed73dfca31f11">&#9670;&#160;</a></span>types_to_containers_t</h2>
+<a id="ad30d2584222d69fd10db572ab316be79" name="ad30d2584222d69fd10db572ab316be79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30d2584222d69fd10db572ab316be79">&#9670;&#160;</a></span>types_to_containers_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , types_container Container = types_containers::vector&gt; </div>
+template&lt;types_concept Types, types_container Container = types_containers::vector&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ab60cb0b01cc1e083b52ed73dfca31f11">koutil::type::types_to_containers_t</a> = <a class="el" href="../../d7/dea/structkoutil_1_1type_1_1detail_1_1types__to__containers.html">detail::types_to_containers</a>&lt;T, Container&gt;::type</td>
+          <td class="memname">using <a class="el" href="#ad30d2584222d69fd10db572ab316be79">koutil::type::types_to_containers_t</a> = <a class="el" href="../../d7/dea/structkoutil_1_1type_1_1detail_1_1types__to__containers.html">detail::types_to_containers</a>&lt;Types, Container&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -283,16 +314,16 @@ template&lt;typename T , types_container Container = types_containers::vector&gt
 
 </div>
 </div>
-<a id="af3f7a581b0da46783958b27949e64273" name="af3f7a581b0da46783958b27949e64273"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3f7a581b0da46783958b27949e64273">&#9670;&#160;</a></span>types_transform_t</h2>
+<a id="af8ad71405827caba205664aee209a289" name="af8ad71405827caba205664aee209a289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ad71405827caba205664aee209a289">&#9670;&#160;</a></span>types_transform_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , types_transform Transform&gt; </div>
+template&lt;types_concept Types, types_transform Transform&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#af3f7a581b0da46783958b27949e64273">koutil::type::types_transform_t</a> = <a class="el" href="../../da/dce/structkoutil_1_1type_1_1detail_1_1types__transform__impl.html">detail::types_transform_impl</a>&lt;T, Transform&gt;::type</td>
+          <td class="memname">using <a class="el" href="#af8ad71405827caba205664aee209a289">koutil::type::types_transform_t</a> = <a class="el" href="../../da/dce/structkoutil_1_1type_1_1detail_1_1types__transform__impl.html">detail::types_transform_impl</a>&lt;Types, Transform&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -314,7 +345,7 @@ template&lt;typename T , types_transform Transform&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Types &gt; </div>
+template&lt;types_concept Types&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="#ae47ab5ab9088e4fd98e31be003d7641f">koutil::type::types_unique_t</a> = <a class="el" href="../../d0/dc3/structkoutil_1_1type_1_1detail_1_1types__unique__impl.html">detail::types_unique_impl</a>&lt;Types&gt;::type</td>
@@ -329,6 +360,22 @@ template&lt;typename Types &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="afaff50d0f44dd5ae1377f1bfc0144a89" name="afaff50d0f44dd5ae1377f1bfc0144a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaff50d0f44dd5ae1377f1bfc0144a89">&#9670;&#160;</a></span>types_view_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;types_concept Types, std::size_t N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#afaff50d0f44dd5ae1377f1bfc0144a89">koutil::type::types_view_t</a> = <a class="el" href="../../d0/d88/structkoutil_1_1type_1_1detail_1_1types__view.html">detail::types_view</a>&lt;N, Types&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -357,13 +404,37 @@ template&lt;typename... Types&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a78b24dfdaa6405619205334ef0e97a1d" name="a78b24dfdaa6405619205334ef0e97a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b24dfdaa6405619205334ef0e97a1d">&#9670;&#160;</a></span>are_types_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool koutil::type::are_types_v = <a class="el" href="../../dd/de2/structkoutil_1_1type_1_1are__types.html">are_types</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afa4e756f64619885da337c0d1561a023" name="afa4e756f64619885da337c0d1561a023"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa4e756f64619885da337c0d1561a023">&#9670;&#160;</a></span>types_index_of_v</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Types , typename T , std::size_t Skip = 0&gt; </div>
+template&lt;types_concept Types, typename T , std::size_t Skip = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

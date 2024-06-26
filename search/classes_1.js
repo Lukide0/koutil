@@ -8,6 +8,8 @@ var searchData=
   ['commands_3c_20cmd_2e_2e_2e_20_3e_5',['Commands&lt; Cmd... &gt;',['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html',1,'koutil::argparser']]],
   ['commandsbase_6',['CommandsBase',['../de/d6c/classkoutil_1_1argparser_1_1CommandsBase.html',1,'koutil::argparser']]],
   ['comptimemap_7',['ComptimeMap',['../d1/d56/classkoutil_1_1container_1_1ComptimeMap.html',1,'koutil::container']]],
-  ['cursormove_8',['CursorMove',['../d2/df8/structkoutil_1_1term_1_1CursorMove.html',1,'koutil::term']]],
-  ['cursorpos_9',['CursorPos',['../d4/d5d/structkoutil_1_1term_1_1CursorPos.html',1,'koutil::term']]]
+  ['constant_8',['constant',['../d7/da3/structkoutil_1_1type_1_1types__transforms_1_1constant.html',1,'koutil::type::types_transforms']]],
+  ['constant_5freference_9',['constant_reference',['../da/d65/structkoutil_1_1type_1_1types__transforms_1_1constant__reference.html',1,'koutil::type::types_transforms']]],
+  ['cursormove_10',['CursorMove',['../d2/df8/structkoutil_1_1term_1_1CursorMove.html',1,'koutil::term']]],
+  ['cursorpos_11',['CursorPos',['../d4/d5d/structkoutil_1_1term_1_1CursorPos.html',1,'koutil::term']]]
 ];
