@@ -218,7 +218,8 @@ private:
     args_ref_t m_long_args;
 
     constexpr void create_refs() {
-        for (auto&& [i, arg] : m_args | std::views::enumerate) {
+        for (std::size_t i = 0; i < m_args.size(); ++i) {
+            auto& arg = m_args[i];
 
             if (arg.short_name != '\0') {
                 m_short_args.second[m_short_args.first++] = i;

@@ -14,7 +14,7 @@ koutil is a C++ header library providing utilities for terminal-based applicatio
 ## Requirements
 
 - **cmake**
-- **c++23**
+- **c++20**
 
 ## Installation
 

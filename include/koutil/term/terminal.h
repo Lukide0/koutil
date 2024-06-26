@@ -139,12 +139,12 @@ bool terminal::init() {
     s_instance->m_color_support = ColorSupport::TRUE_COLOR;
 #else
     std::string_view colorterm = util::safe_getenv("COLORTERM");
-    if (colorterm.contains("24bit") || colorterm.contains("truecolor")) {
+    if (colorterm.find("24bit") != std::string_view::npos || colorterm.find("truecolor") != std::string_view::npos) {
         s_instance->m_color_support = ColorSupport::TRUE_COLOR;
     }
 
     std::string_view term = util::safe_getenv("TERM");
-    if (colorterm.contains("256") || term.contains("256")) {
+    if (colorterm.find("256") != std::string_view::npos || term.find("256") != std::string_view::npos) {
         s_instance->m_color_support = ColorSupport::COLOR256;
     }
 #endif
