@@ -2,6 +2,7 @@
 #define KOUTIL_UTIL_TYPES_H
 
 #include <array>
+#include <cassert>
 #include <cstddef>
 #include <tuple>
 #include <type_traits>
@@ -20,13 +21,22 @@ template <typename... T> struct types {
     static constexpr std::size_t size = sizeof...(T);
 };
 
+template <typename T> struct are_types : std::false_type { };
+
+template <typename... Types> struct are_types<types<Types...>> : std::true_type { };
+
+template <typename T> inline constexpr bool are_types_v = are_types<T>::value;
+
+template <typename T>
+concept types_concept = are_types_v<T>;
+
 /**
  * @brief Concatenates two types lists.
  *
  * @tparam T The first types list.
  * @tparam U The second types list.
  */
-template <typename T, typename U> struct types_cat;
+template <types_concept T, types_concept U> struct types_cat;
 
 /**
  * @brief Specialization for concatenating two `types` lists.
@@ -44,7 +54,7 @@ template <typename... T, typename... U> struct types_cat<types<T...>, types<U...
  * @tparam T The first types list.
  * @tparam U The second types list.
  */
-template <typename T, typename U> using types_cat_t = types_cat<T, U>::type;
+template <types_concept T, types_concept U> using types_cat_t = types_cat<T, U>::type;
 
 /**
  * @brief Concept for a type that provides a `transform` template.
@@ -79,6 +89,41 @@ struct types_transforms {
     struct variant {
         template <typename... Types> using transform = std::variant<Types...>;
     };
+
+    /**
+     * @brief Provides a `T&` transform.
+     */
+    struct reference {
+        template <typename... Types> using transform = types<Types&...>;
+    };
+
+    /**
+     * @brief Provides a `const T` transform.
+     */
+    struct constant {
+        template <typename... Types> using transform = types<const Types...>;
+    };
+
+    /*
+     * @brief Provides a `const T&` transform.
+     */
+    struct constant_reference {
+        template <typename... Types> using transform = types<const Types&...>;
+    };
+
+    /**
+     * @brief Provides a `std::vector<T>::reference` transform.
+     */
+    struct vector_reference {
+        template <typename... Types> using transform = types<typename std::vector<Types>::reference...>;
+    };
+
+    /*
+     * @brief Provides a `std::vector<T>::const_reference` transform.
+     */
+    struct vector_const_reference {
+        template <typename... Types> using transform = types<typename std::vector<Types>::const_reference...>;
+    };
 };
 
 /**
@@ -98,7 +143,7 @@ struct types_containers {
  *
  * @tparam Types The types list.
  */
-template <typename Types> struct types_count;
+template <types_concept Types> struct types_count;
 
 /**
  * @brief Specialization to count occurrences of a specific type in a `types` list.
@@ -160,7 +205,7 @@ namespace detail {
      * @tparam T The types list.
      * @tparam Container The container type.
      */
-    template <typename T, types_container Container> struct types_to_containers;
+    template <types_concept T, types_container Container> struct types_to_containers;
 
     /**
      * @brief Specialization for transforming a types list to a containers list.
@@ -178,7 +223,7 @@ namespace detail {
      * @tparam T The types list.
      * @tparam Transform The transform template.
      */
-    template <typename T, types_transform Transform> struct types_transform_impl;
+    template <types_concept T, types_transform Transform> struct types_transform_impl;
 
     /**
      * @brief Specialization for transforming a types list using a transform template.
@@ -211,7 +256,7 @@ namespace detail {
         } else if constexpr (sizeof...(Other) != 0) {
             return types_index_of_impl<T, N, I + 1, Other...>();
         }
-        std::unreachable();
+        assert(false);
     }
 
     /**
@@ -221,7 +266,7 @@ namespace detail {
      * @tparam Types The types list.
      * @tparam N The number of occurrences to skip.
      */
-    template <typename T, typename Types, std::size_t N> struct types_index_of;
+    template <typename T, types_concept Types, std::size_t N> struct types_index_of;
 
     /**
      * @brief Specialization to get the index of a type in a `types` list.
@@ -240,7 +285,7 @@ namespace detail {
      * @tparam Types The types list.
      * @tparam I The index.
      */
-    template <typename Types, std::size_t I> struct types_get_impl;
+    template <types_concept Types, std::size_t I> struct types_get_impl;
 
     /**
      * @brief Specialization for getting a type by index in a `types` list.
@@ -263,7 +308,7 @@ namespace detail {
      *
      * @tparam Types The types list.
      */
-    template <typename Types> struct types_unique_impl;
+    template <types_concept Types> struct types_unique_impl;
 
     /**
      * @brief Specialization for creating a unique types list from a `types` list.
@@ -280,7 +325,7 @@ namespace detail {
      * @tparam Types The types list.
      * @tparam Unique The unique types list.
      */
-    template <typename Types, typename Unique> struct types_to_arrays;
+    template <types_concept Types, typename Unique> struct types_to_arrays;
 
     /**
      * @brief Specialization for converting a types list to arrays of unique types.
@@ -292,6 +337,39 @@ namespace detail {
         using type = types<std::array<Unique, types_count<types<Types...>>::template value<Unique>>...>;
     };
 
+    template <typename Search, typename Type, typename... Other> struct types_remove_impl {
+        using rest = types_remove_impl<Search, Other...>::type;
+
+        using type = std::conditional_t<std::is_same_v<Type, Search>, rest, types_cat_t<types<Type>, rest>>;
+    };
+
+    template <typename Search, typename Type> struct types_remove_impl<Search, Type> {
+        using type = std::conditional_t<std::is_same_v<Type, Search>, types<>, types<Type>>;
+    };
+
+    template <typename Types, typename Type> struct types_remove;
+
+    template <typename... Types, typename Type>
+        requires(sizeof...(Types) > 0)
+    struct types_remove<types<Types...>, Type> {
+        using type = types_remove_impl<Type, Types...>::type;
+    };
+
+    template <typename Type> struct types_remove<types<>, Type> {
+        using type = types<>;
+    };
+
+    template <std::size_t N, types_concept Types> struct types_view;
+
+    template <std::size_t N, typename Type, typename... Other> struct types_view<N, types<Type, Other...>> {
+        using type = types_cat_t<
+            types<Type>,
+            std::conditional_t<(N > 1), typename types_view<N - 1, types<Other...>>::type, types<>>>;
+    };
+
+    template <std::size_t N> struct types_view<N, types<>> {
+        using type = types<>;
+    };
 }
 
 /**
@@ -300,7 +378,7 @@ namespace detail {
  * @tparam Types The types list.
  * @tparam I The index.
  */
-template <typename Types, std::size_t I> using types_get_t = detail::types_get_impl<Types, I>::type;
+template <types_concept Types, std::size_t I> using types_get_t = detail::types_get_impl<Types, I>::type;
 
 /**
  * @brief Alias for creating a unique types list from a list of types.
@@ -314,7 +392,7 @@ template <typename... Types> using unique_types_t = detail::unique_types_impl<Ty
  *
  * @tparam Types The `types` list.
  */
-template <typename Types> using types_unique_t = detail::types_unique_impl<Types>::type;
+template <types_concept Types> using types_unique_t = detail::types_unique_impl<Types>::type;
 
 /**
  * @brief Alias for transforming a types list using a transform template.
@@ -322,8 +400,8 @@ template <typename Types> using types_unique_t = detail::types_unique_impl<Types
  * @tparam T The types list.
  * @tparam Transform The transform template.
  */
-template <typename T, types_transform Transform>
-using types_transform_t = detail::types_transform_impl<T, Transform>::type;
+template <types_concept Types, types_transform Transform>
+using types_transform_t = detail::types_transform_impl<Types, Transform>::type;
 
 /**
  * @brief Alias for transforming a types list to a containers list.
@@ -331,8 +409,8 @@ using types_transform_t = detail::types_transform_impl<T, Transform>::type;
  * @tparam T The types list.
  * @tparam Container The container template.
  */
-template <typename T, types_container Container = types_containers::vector>
-using types_to_containers_t = detail::types_to_containers<T, Container>::type;
+template <types_concept Types, types_container Container = types_containers::vector>
+using types_to_containers_t = detail::types_to_containers<Types, Container>::type;
 
 /**
  * @brief Gets the index of a type in a types list.
@@ -341,7 +419,7 @@ using types_to_containers_t = detail::types_to_containers<T, Container>::type;
  * @tparam T The type to find.
  * @tparam Skip The number of occurrences to skip.
  */
-template <typename Types, typename T, std::size_t Skip = 0>
+template <types_concept Types, typename T, std::size_t Skip = 0>
 inline constexpr std::size_t types_index_of_v = detail::types_index_of<T, Types, Skip>::value;
 
 /**
@@ -349,7 +427,17 @@ inline constexpr std::size_t types_index_of_v = detail::types_index_of<T, Types,
  *
  * @tparam Types The types list.
  */
-template <typename Types> using types_to_arrays_t = detail::types_to_arrays<Types, types_unique_t<Types>>::type;
+template <types_concept Types> using types_to_arrays_t = detail::types_to_arrays<Types, types_unique_t<Types>>::type;
+
+/*
+ * @brief Alias for removing type from a types list
+ *
+ * @tparam Types The types list.
+ * @tparam T The type to remove
+ */
+template <types_concept Types, typename T> using types_remove_t = detail::types_remove<Types, T>::type;
+
+template <types_concept Types, std::size_t N> using types_view_t = detail::types_view<N, Types>::type;
 
 }
 

@@ -40,7 +40,7 @@ struct MyCtx {
             break;
         }
 
-        stream << std::format("MyCtx{{ .a = {}, .b = {}, .cmd = {}}}\n", a, b, cmd_name);
+        stream << "MyCtx{ .a = " << a << ", .b = " << b << ", .cmd = " << cmd_name << "}\n";
     }
 };
 

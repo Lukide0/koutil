@@ -6,6 +6,7 @@
 #include <cmath>
 #include <cstdint>
 #include <string_view>
+#include <type_traits>
 
 namespace koutil::term {
 
@@ -183,7 +184,7 @@ private:
      * @return Channel value.
      */
     static constexpr std::uint8_t convert_val(float val) {
-        if consteval {
+        if (std::is_constant_evaluated()) {
             return static_cast<std::uint8_t>(val * 255.0F + 0.5F);
         } else {
             return static_cast<std::uint8_t>(std::round(val * 255.0F));

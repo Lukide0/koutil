@@ -6,7 +6,7 @@
 #include <cstdint>
 #include <ostream>
 #include <string_view>
-#include <utility>
+#include <type_traits>
 
 namespace koutil::term {
 
@@ -23,15 +23,19 @@ enum class Style : std::uint8_t {
 };
 
 constexpr Style operator+(Style a, Style b) {
-    return static_cast<Style>(std::to_underlying(a) | std::to_underlying(b));
+    using enum_type = std::underlying_type_t<Style>;
+
+    return static_cast<Style>(static_cast<enum_type>(a) | static_cast<enum_type>(b));
 }
 
 constexpr Style operator-(Style a, Style b) {
-    return static_cast<Style>(std::to_underlying(a) ^ (std::to_underlying(b) & std::to_underlying(a)));
+    using enum_type = std::underlying_type_t<Style>;
+    return static_cast<Style>(static_cast<enum_type>(a) ^ (static_cast<enum_type>(b) & static_cast<enum_type>(a)));
 }
 
 constexpr Style operator&(Style a, Style b) {
-    return static_cast<Style>(std::to_underlying(a) & std::to_underlying(b));
+    using enum_type = std::underlying_type_t<Style>;
+    return static_cast<Style>(static_cast<enum_type>(a) & static_cast<enum_type>(b));
 }
 
 /**
