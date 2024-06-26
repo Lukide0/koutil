@@ -1,7 +1,7 @@
 # koutil
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-![C++ Version](https://img.shields.io/badge/C%2B%2B-23-blue.svg)
+![C++ Version](https://img.shields.io/badge/C%2B%2B-20-blue.svg)
 
 koutil is a C++ header library providing utilities for terminal-based applications. It offers a collection of helpful functions and classes to simplify common tasks in terminal environments.
 
