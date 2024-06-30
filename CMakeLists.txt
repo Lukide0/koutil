@@ -23,11 +23,14 @@ target_include_directories(${PROJECT_NAME}
 
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_EXTENSIONS OFF)
 
-if(ENABLE_KOUTIL_TESTING)
-    enable_testing()
-    add_subdirectory(tests)
-endif()
+if(PROJECT_IS_TOP_LEVEL)
+    if(ENABLE_KOUTIL_TESTING)
+        enable_testing()
+        add_subdirectory(tests)
+    endif()
 
-if(ENABLE_KOUTIL_BUILD_EXAMPLES)
-    add_subdirectory(examples)
+    if(ENABLE_KOUTIL_BUILD_EXAMPLES)
+        add_subdirectory(examples)
+    endif()
+
 endif()
