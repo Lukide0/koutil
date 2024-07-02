@@ -64,7 +64,7 @@ public:
     [[nodiscard]] constexpr std::size_t find(const Key& key) const {
 
         const auto iter = std::ranges::lower_bound(m_data.begin(), m_data.end(), key, {}, &pair_t::first);
-        if (iter == m_data.end()) {
+        if (iter == m_data.end() || iter->first != key) {
             return npos;
         } else {
             return std::distance(m_data.begin(), iter);
