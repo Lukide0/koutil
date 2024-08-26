@@ -40,6 +40,9 @@ function(create_test name)
     target_compile_definitions("${name}"
                              PRIVATE DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN)
 
+    target_compile_options("${name}" PRIVATE -fsanitize=address)
+    target_link_options("${name}" PRIVATE -fsanitize=address)
+
     add_test(NAME "${name}" COMMAND "${name}")
 
 endfunction()

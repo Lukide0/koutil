@@ -101,9 +101,14 @@ TEST_CASE("[MULTI_VECTOR][RESIZE]") {
     vec_2d.clear();
     REQUIRE_EQ(vec_2d.size(), 0);
 
-    vec_2d.resize(INIT_SIZE, std::make_tuple(5, 5));
-    for (std::size_t i = 0; i < INIT_SIZE; ++i) {
-        CHECK_EQ(vec_2d[i], std::make_tuple(5, 5));
+    vec_2d.emplace_back(5, 5);
+    REQUIRE_EQ(vec_2d.size(), 1);
+
+    vec_2d.resize(INIT_SIZE, std::make_tuple(6, 6));
+    CHECK_EQ(vec_2d[0], std::make_tuple(5, 5));
+
+    for (std::size_t i = 1; i < INIT_SIZE; ++i) {
+        CHECK_EQ(vec_2d[i], std::make_tuple(6, 6));
     }
 }
 

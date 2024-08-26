@@ -58,6 +58,7 @@ private:
 
         ~single_vector() {
             if (m_capacity != 0) {
+                std::destroy_n(m_data, m_size);
                 Allocator().deallocate(m_data, m_capacity);
             }
         }
@@ -73,6 +74,7 @@ private:
 
         single_vector& operator=(single_vector&& other) {
             if (m_capacity != 0) {
+                std::destroy_n(m_data, m_size);
                 Allocator().deallocate(m_data, m_capacity);
             }
 
@@ -92,12 +94,15 @@ private:
                 return *this;
             }
 
+            std::destroy_n(m_data, m_size);
             if (m_capacity != other.m_capacity) {
                 auto alloc = Allocator();
+
                 alloc.deallocate(m_data, m_capacity);
 
                 m_data = new (alloc.allocate(other.m_capacity)) T[other.m_capacity];
             }
+
             std::uninitialized_copy_n(other.m_data, other.m_size, m_data);
 
             m_capacity = other.m_capacity;
@@ -234,6 +239,7 @@ private:
 
             std::uninitialized_move(m_data, m_data + m_size, new_data);
 
+            std::destroy_n(m_data, m_size);
             alloc.deallocate(m_data, old_capacity);
             m_data = new_data;
         }
@@ -247,12 +253,16 @@ private:
             const std::size_t old_capacity = m_capacity;
             m_capacity                     = capacity;
 
-            auto alloc     = Allocator();
-            auto* new_data = new (alloc.allocate(m_capacity)) T[m_capacity];
+            auto alloc  = Allocator();
+            T* new_data = nullptr;
 
-            std::uninitialized_move_n(m_data, index, new_data);
-            std::uninitialized_move_n(m_data + index + 1, m_size - index, new_data);
+            if (m_capacity != 0) {
+                new_data = new (alloc.allocate(m_capacity)) T[m_capacity];
+                std::uninitialized_move_n(m_data, index, new_data);
+                std::uninitialized_move_n(m_data + index + 1, m_size - index, new_data);
+            }
 
+            std::destroy_n(m_data, m_size + 1);
             alloc.deallocate(m_data, old_capacity);
             m_data = new_data;
         }
