@@ -533,6 +533,7 @@ private:
             }
         }
 
+        std::destroy_n(m_buckets, m_buckets_count);
         alloc.deallocate(m_buckets, m_buckets_count);
 
         m_buckets_count = new_buckets_count;
