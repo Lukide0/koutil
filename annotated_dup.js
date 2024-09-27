@@ -16,7 +16,8 @@ var annotated_dup =
       [ "container", "d8/d14/namespacekoutil_1_1container.html", [
         [ "ComptimeMap", "d1/d56/classkoutil_1_1container_1_1ComptimeMap.html", "d1/d56/classkoutil_1_1container_1_1ComptimeMap" ],
         [ "hash_array", "d2/dd7/classkoutil_1_1container_1_1hash__array.html", "d2/dd7/classkoutil_1_1container_1_1hash__array" ],
-        [ "multi_vector", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", "dc/da1/classkoutil_1_1container_1_1multi__vector" ]
+        [ "multi_vector", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", "dc/da1/classkoutil_1_1container_1_1multi__vector" ],
+        [ "template_hash_array", "db/d9f/classkoutil_1_1container_1_1template__hash__array.html", "db/d9f/classkoutil_1_1container_1_1template__hash__array" ]
       ] ],
       [ "term", "d6/d7c/namespacekoutil_1_1term.html", [
         [ "Color", "d8/d09/structkoutil_1_1term_1_1Color.html", "d8/d09/structkoutil_1_1term_1_1Color" ],

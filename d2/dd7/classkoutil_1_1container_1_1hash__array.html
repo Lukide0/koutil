@@ -102,8 +102,8 @@ $(function(){initNavTree('d2/dd7/classkoutil_1_1container_1_1hash__array.html','
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../d2/d5c/classkoutil_1_1container_1_1hash__array-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">koutil::container::hash_array&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -116,22 +116,23 @@ $(function(){initNavTree('d2/dd7/classkoutil_1_1container_1_1hash__array.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5d/classkoutil_1_1container_1_1hash__array_1_1iterator.html">iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator class template for <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>.  <a href="../../d4/d5d/classkoutil_1_1container_1_1hash__array_1_1iterator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de6/structkoutil_1_1container_1_1hash__array_1_1AdapterWrapper.html">AdapterWrapper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd5/structkoutil_1_1container_1_1hash__array_1_1HashWrapper.html">HashWrapper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0dc08445d5654fd1ecf6befcd13d0152" id="r_a0dc08445d5654fd1ecf6befcd13d0152"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dc08445d5654fd1ecf6befcd13d0152">iterator_t</a> = <a class="el" href="../../d4/d5d/classkoutil_1_1container_1_1hash__array_1_1iterator.html">iterator</a>&lt;false&gt;</td></tr>
-<tr class="separator:a0dc08445d5654fd1ecf6befcd13d0152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a120768484b5b42e1931732b863b32137" id="r_a120768484b5b42e1931732b863b32137"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a> = <a class="el" href="../../d4/d5d/classkoutil_1_1container_1_1hash__array_1_1iterator.html">iterator</a>&lt;true&gt;</td></tr>
-<tr class="separator:a120768484b5b42e1931732b863b32137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2424b918b9a7b2d10149de89d61fb8" id="r_a6f2424b918b9a7b2d10149de89d61fb8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f2424b918b9a7b2d10149de89d61fb8">iterator_t</a> = <a class="el" href="../../db/d9f/classkoutil_1_1container_1_1template__hash__array.html#a49b90da327d5f2f40bb4d6ff6860386a">template_hash_array_t::iterator_t</a></td></tr>
+<tr class="separator:a6f2424b918b9a7b2d10149de89d61fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17be5ae30de750e9c0c95bc894f158b" id="r_ad17be5ae30de750e9c0c95bc894f158b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a> = <a class="el" href="../../db/d9f/classkoutil_1_1container_1_1template__hash__array.html#a153001fe0f20ce4589f1920150f44315">template_hash_array_t::const_iterator_t</a></td></tr>
+<tr class="separator:ad17be5ae30de750e9c0c95bc894f158b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26e1ceb7718813e15da0c99d45f40a7e" id="r_a26e1ceb7718813e15da0c99d45f40a7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26e1ceb7718813e15da0c99d45f40a7e">hash_array</a> ()</td></tr>
-<tr class="memdesc:a26e1ceb7718813e15da0c99d45f40a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="separator:a26e1ceb7718813e15da0c99d45f40a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a81dca69b9bbb158dc3a1ad5df1bcc3" id="r_a4a81dca69b9bbb158dc3a1ad5df1bcc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a81dca69b9bbb158dc3a1ad5df1bcc3">hash_array</a> ()=default</td></tr>
+<tr class="memdesc:a4a81dca69b9bbb158dc3a1ad5df1bcc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="separator:a4a81dca69b9bbb158dc3a1ad5df1bcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ce730d72d70708b8127333dd4a4a13f" id="r_a4ce730d72d70708b8127333dd4a4a13f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ce730d72d70708b8127333dd4a4a13f">hash_array</a> (std::size_t <a class="el" href="#a69be50cfe2867f17bd536b93a1deca73">bucket_count</a>)</td></tr>
 <tr class="memdesc:a4ce730d72d70708b8127333dd4a4a13f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with bucket count.  <br /></td></tr>
 <tr class="separator:a4ce730d72d70708b8127333dd4a4a13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,15 +142,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55c31a8782354f342dee69dbcf1d2d10" id="r_a55c31a8782354f342dee69dbcf1d2d10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55c31a8782354f342dee69dbcf1d2d10">hash_array</a> (<a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;&amp;other)</td></tr>
 <tr class="memdesc:a55c31a8782354f342dee69dbcf1d2d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <br /></td></tr>
 <tr class="separator:a55c31a8782354f342dee69dbcf1d2d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa59c46e4e4f841e6617cf6c3798c0e4d" id="r_aa59c46e4e4f841e6617cf6c3798c0e4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa59c46e4e4f841e6617cf6c3798c0e4d">~hash_array</a> ()</td></tr>
-<tr class="memdesc:aa59c46e4e4f841e6617cf6c3798c0e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="separator:aa59c46e4e4f841e6617cf6c3798c0e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af13966ae9d6974a21debc1b24993667f" id="r_af13966ae9d6974a21debc1b24993667f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af13966ae9d6974a21debc1b24993667f">operator=</a> (const <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;other)</td></tr>
-<tr class="memdesc:af13966ae9d6974a21debc1b24993667f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator.  <br /></td></tr>
-<tr class="separator:af13966ae9d6974a21debc1b24993667f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27904cfa808e9cd667c43111f587b4e4" id="r_a27904cfa808e9cd667c43111f587b4e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27904cfa808e9cd667c43111f587b4e4">operator=</a> (<a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;&amp;other)</td></tr>
-<tr class="memdesc:a27904cfa808e9cd667c43111f587b4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <br /></td></tr>
-<tr class="separator:a27904cfa808e9cd667c43111f587b4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc50d7c40a1ae026f6eedbcf404b8efc" id="r_abc50d7c40a1ae026f6eedbcf404b8efc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc50d7c40a1ae026f6eedbcf404b8efc">~hash_array</a> ()=default</td></tr>
+<tr class="memdesc:abc50d7c40a1ae026f6eedbcf404b8efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:abc50d7c40a1ae026f6eedbcf404b8efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d58babdfda57a6d710a79b2d7d6b41" id="r_af7d58babdfda57a6d710a79b2d7d6b41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7d58babdfda57a6d710a79b2d7d6b41">operator=</a> (const <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;other)=default</td></tr>
+<tr class="memdesc:af7d58babdfda57a6d710a79b2d7d6b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator.  <br /></td></tr>
+<tr class="separator:af7d58babdfda57a6d710a79b2d7d6b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96728d0d463e73e53e8839d81e2e230e" id="r_a96728d0d463e73e53e8839d81e2e230e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96728d0d463e73e53e8839d81e2e230e">operator=</a> (<a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">hash_array</a> &amp;&amp;other)=default</td></tr>
+<tr class="memdesc:a96728d0d463e73e53e8839d81e2e230e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <br /></td></tr>
+<tr class="separator:a96728d0d463e73e53e8839d81e2e230e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5fc91224dfc5f00938896ad3ba2a250" id="r_ab5fc91224dfc5f00938896ad3ba2a250"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5fc91224dfc5f00938896ad3ba2a250">empty</a> () const</td></tr>
 <tr class="memdesc:ab5fc91224dfc5f00938896ad3ba2a250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a> is empty.  <br /></td></tr>
 <tr class="separator:ab5fc91224dfc5f00938896ad3ba2a250"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,28 +178,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f0e032947b0f653475e756739888e10" id="r_a4f0e032947b0f653475e756739888e10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f0e032947b0f653475e756739888e10">erase</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter)</td></tr>
 <tr class="memdesc:a4f0e032947b0f653475e756739888e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases an element from the hash table.  <br /></td></tr>
 <tr class="separator:a4f0e032947b0f653475e756739888e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23fb74956ef17ae28c80831a3616bab" id="r_ab23fb74956ef17ae28c80831a3616bab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0dc08445d5654fd1ecf6befcd13d0152">iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab23fb74956ef17ae28c80831a3616bab">find</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter)</td></tr>
+<tr class="memitem:ab23fb74956ef17ae28c80831a3616bab" id="r_ab23fb74956ef17ae28c80831a3616bab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6f2424b918b9a7b2d10149de89d61fb8">iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab23fb74956ef17ae28c80831a3616bab">find</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter)</td></tr>
 <tr class="memdesc:ab23fb74956ef17ae28c80831a3616bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an element in the hash table.  <br /></td></tr>
 <tr class="separator:ab23fb74956ef17ae28c80831a3616bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa9720e8cb73b3383c533a7942c947c" id="r_aafa9720e8cb73b3383c533a7942c947c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafa9720e8cb73b3383c533a7942c947c">find</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter) const</td></tr>
+<tr class="memitem:aafa9720e8cb73b3383c533a7942c947c" id="r_aafa9720e8cb73b3383c533a7942c947c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafa9720e8cb73b3383c533a7942c947c">find</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter) const</td></tr>
 <tr class="memdesc:aafa9720e8cb73b3383c533a7942c947c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an element in the hash table.  <br /></td></tr>
 <tr class="separator:aafa9720e8cb73b3383c533a7942c947c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8e270f205da5514ab0ebbf1da6dd516" id="r_aa8e270f205da5514ab0ebbf1da6dd516"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0dc08445d5654fd1ecf6befcd13d0152">iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8e270f205da5514ab0ebbf1da6dd516">begin</a> ()</td></tr>
+<tr class="memitem:aa8e270f205da5514ab0ebbf1da6dd516" id="r_aa8e270f205da5514ab0ebbf1da6dd516"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6f2424b918b9a7b2d10149de89d61fb8">iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8e270f205da5514ab0ebbf1da6dd516">begin</a> ()</td></tr>
 <tr class="memdesc:aa8e270f205da5514ab0ebbf1da6dd516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an iterator to the beginning of the <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>.  <br /></td></tr>
 <tr class="separator:aa8e270f205da5514ab0ebbf1da6dd516"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47278695a7fb9168c7e4ea1502ac75e7" id="r_a47278695a7fb9168c7e4ea1502ac75e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0dc08445d5654fd1ecf6befcd13d0152">iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47278695a7fb9168c7e4ea1502ac75e7">end</a> ()</td></tr>
+<tr class="memitem:a47278695a7fb9168c7e4ea1502ac75e7" id="r_a47278695a7fb9168c7e4ea1502ac75e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6f2424b918b9a7b2d10149de89d61fb8">iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47278695a7fb9168c7e4ea1502ac75e7">end</a> ()</td></tr>
 <tr class="memdesc:a47278695a7fb9168c7e4ea1502ac75e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an iterator to the end of the <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>.  <br /></td></tr>
 <tr class="separator:a47278695a7fb9168c7e4ea1502ac75e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a139bc5f21ccdcdcce4d4bfbe0744cc8e" id="r_a139bc5f21ccdcdcce4d4bfbe0744cc8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a139bc5f21ccdcdcce4d4bfbe0744cc8e">begin</a> () const</td></tr>
+<tr class="memitem:a139bc5f21ccdcdcce4d4bfbe0744cc8e" id="r_a139bc5f21ccdcdcce4d4bfbe0744cc8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a139bc5f21ccdcdcce4d4bfbe0744cc8e">begin</a> () const</td></tr>
 <tr class="memdesc:a139bc5f21ccdcdcce4d4bfbe0744cc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant iterator to the beginning of the <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>.  <br /></td></tr>
 <tr class="separator:a139bc5f21ccdcdcce4d4bfbe0744cc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3c7fd5bc9b5056ded743e088677db5" id="r_aed3c7fd5bc9b5056ded743e088677db5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed3c7fd5bc9b5056ded743e088677db5">end</a> () const</td></tr>
+<tr class="memitem:aed3c7fd5bc9b5056ded743e088677db5" id="r_aed3c7fd5bc9b5056ded743e088677db5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed3c7fd5bc9b5056ded743e088677db5">end</a> () const</td></tr>
 <tr class="memdesc:aed3c7fd5bc9b5056ded743e088677db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant iterator to the end of the <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>.  <br /></td></tr>
 <tr class="separator:aed3c7fd5bc9b5056ded743e088677db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcf779423f4cadabcf80c32b68138f5d" id="r_adcf779423f4cadabcf80c32b68138f5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcf779423f4cadabcf80c32b68138f5d">cbegin</a> () const</td></tr>
+<tr class="memitem:adcf779423f4cadabcf80c32b68138f5d" id="r_adcf779423f4cadabcf80c32b68138f5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcf779423f4cadabcf80c32b68138f5d">cbegin</a> () const</td></tr>
 <tr class="memdesc:adcf779423f4cadabcf80c32b68138f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant iterator to the beginning of the <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>.  <br /></td></tr>
 <tr class="separator:adcf779423f4cadabcf80c32b68138f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d32a78fda837325fb56c606f177bfce" id="r_a2d32a78fda837325fb56c606f177bfce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d32a78fda837325fb56c606f177bfce">cend</a> () const</td></tr>
+<tr class="memitem:a2d32a78fda837325fb56c606f177bfce" id="r_a2d32a78fda837325fb56c606f177bfce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d32a78fda837325fb56c606f177bfce">cend</a> () const</td></tr>
 <tr class="memdesc:a2d32a78fda837325fb56c606f177bfce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant iterator to the end of the <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>.  <br /></td></tr>
 <tr class="separator:a2d32a78fda837325fb56c606f177bfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -220,40 +221,18 @@ Private Types</h2></td></tr>
 <tr class="separator:a78d6353b367a79a313a8d73c9af4095a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a265d20057e25ab0aa117f37b9fb1dd80" id="r_a265d20057e25ab0aa117f37b9fb1dd80"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a265d20057e25ab0aa117f37b9fb1dd80">allocator_t</a> = Allocator</td></tr>
 <tr class="separator:a265d20057e25ab0aa117f37b9fb1dd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a1f6cb55536c9e7274b8bfa61e81d6011" id="r_a1f6cb55536c9e7274b8bfa61e81d6011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab5431022339af246c010af33bda21283">value_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f6cb55536c9e7274b8bfa61e81d6011">hash_key</a> (const Key &amp;key)</td></tr>
-<tr class="separator:a1f6cb55536c9e7274b8bfa61e81d6011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c4c6f6aae85bade35c55609cf4f1f3" id="r_a70c4c6f6aae85bade35c55609cf4f1f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70c4c6f6aae85bade35c55609cf4f1f3">get_bucket</a> (const Key &amp;key)</td></tr>
-<tr class="separator:a70c4c6f6aae85bade35c55609cf4f1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a215b8cc671ab24583b8a1ce4f4751e57" id="r_a215b8cc671ab24583b8a1ce4f4751e57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abcf0f5164a7c762625fea9396450b71b">bucket_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a215b8cc671ab24583b8a1ce4f4751e57">find_bucket_item</a> (const Key &amp;key, <a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a> &amp;bucket, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter)</td></tr>
-<tr class="separator:a215b8cc671ab24583b8a1ce4f4751e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a770e16a596e87f8432c89885a0afee14" id="r_a770e16a596e87f8432c89885a0afee14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abcf0f5164a7c762625fea9396450b71b">bucket_iter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a770e16a596e87f8432c89885a0afee14">find_bucket_item</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, const <a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a> &amp;bucket, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter) const</td></tr>
-<tr class="separator:a770e16a596e87f8432c89885a0afee14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39f5e9102a95d07d6168d391c4adcd4a" id="r_a39f5e9102a95d07d6168d391c4adcd4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39f5e9102a95d07d6168d391c4adcd4a">insert</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, const <a class="el" href="#a4f3f77577d3d6181b6e0b96dcdeb2a5c">key_id_t</a> &amp;key_id, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter)</td></tr>
-<tr class="separator:a39f5e9102a95d07d6168d391c4adcd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca661559bcb6ea7f23b230bf78f6f842" id="r_aca661559bcb6ea7f23b230bf78f6f842"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca661559bcb6ea7f23b230bf78f6f842">remove</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter)</td></tr>
-<tr class="separator:aca661559bcb6ea7f23b230bf78f6f842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e97347c5eca462c7560a7ae5fecfe4" id="r_a29e97347c5eca462c7560a7ae5fecfe4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29e97347c5eca462c7560a7ae5fecfe4">set</a> (const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;key, const <a class="el" href="#a4f3f77577d3d6181b6e0b96dcdeb2a5c">key_id_t</a> &amp;new_key_id, <a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a> adapter)</td></tr>
-<tr class="separator:a29e97347c5eca462c7560a7ae5fecfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a6ce126b1f4392d4b2508181b57b006" id="r_a1a6ce126b1f4392d4b2508181b57b006"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a6ce126b1f4392d4b2508181b57b006">rehash_if_needed</a> ()</td></tr>
-<tr class="separator:a1a6ce126b1f4392d4b2508181b57b006"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a29cb7342c11b4d6c0d5bd52ccb7a4d" id="r_a5a29cb7342c11b4d6c0d5bd52ccb7a4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a29cb7342c11b4d6c0d5bd52ccb7a4d">clear_all_buckets</a> ()</td></tr>
-<tr class="separator:a5a29cb7342c11b4d6c0d5bd52ccb7a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a1baf79b26dbadda3195e4e9dd289c7" id="r_a8a1baf79b26dbadda3195e4e9dd289c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a1baf79b26dbadda3195e4e9dd289c7">destroy</a> ()</td></tr>
-<tr class="separator:a8a1baf79b26dbadda3195e4e9dd289c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916e5f21460da0c486894b84ef9d7813" id="r_a916e5f21460da0c486894b84ef9d7813"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a916e5f21460da0c486894b84ef9d7813">template_hash_array_t</a> = <a class="el" href="../../db/d9f/classkoutil_1_1container_1_1template__hash__array.html">template_hash_array</a>&lt;<a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a>, <a class="el" href="#a4f3f77577d3d6181b6e0b96dcdeb2a5c">key_id_t</a>, bool, <a class="el" href="../../dc/de6/structkoutil_1_1container_1_1hash__array_1_1AdapterWrapper.html">AdapterWrapper</a>, <a class="el" href="../../dc/dd5/structkoutil_1_1container_1_1hash__array_1_1HashWrapper.html">HashWrapper</a>, <a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a>, <a class="el" href="#a265d20057e25ab0aa117f37b9fb1dd80">allocator_t</a>&gt;</td></tr>
+<tr class="separator:a916e5f21460da0c486894b84ef9d7813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aa66e0a3fcdfc2e0b099bfd52ec3ad3bd" id="r_aa66e0a3fcdfc2e0b099bfd52ec3ad3bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa66e0a3fcdfc2e0b099bfd52ec3ad3bd">m_buckets</a></td></tr>
-<tr class="separator:aa66e0a3fcdfc2e0b099bfd52ec3ad3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdbfdb1cb7badd6e04aa7e329bd0bcd4" id="r_abdbfdb1cb7badd6e04aa7e329bd0bcd4"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdbfdb1cb7badd6e04aa7e329bd0bcd4">m_buckets_count</a></td></tr>
-<tr class="separator:abdbfdb1cb7badd6e04aa7e329bd0bcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3f17d0efcad4ed2bceace84505fbd2d" id="r_aa3f17d0efcad4ed2bceace84505fbd2d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3f17d0efcad4ed2bceace84505fbd2d">m_size</a> = 0</td></tr>
-<tr class="separator:aa3f17d0efcad4ed2bceace84505fbd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab609345e7536cdba5ce8fb72bbf23e" id="r_afab609345e7536cdba5ce8fb72bbf23e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afab609345e7536cdba5ce8fb72bbf23e">m_max_load_factor</a> = 1.0F</td></tr>
-<tr class="separator:afab609345e7536cdba5ce8fb72bbf23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872639a08d99d3ca830471a0ae832cd8" id="r_a872639a08d99d3ca830471a0ae832cd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a916e5f21460da0c486894b84ef9d7813">template_hash_array_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a872639a08d99d3ca830471a0ae832cd8">m_storage</a></td></tr>
+<tr class="separator:a872639a08d99d3ca830471a0ae832cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:acfac66784d8dfb3d51f5b877905f5b52" id="r_acfac66784d8dfb3d51f5b877905f5b52"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfac66784d8dfb3d51f5b877905f5b52">comptime_value</a> = true</td></tr>
+<tr class="separator:acfac66784d8dfb3d51f5b877905f5b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Key, typename KeyID, is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt;<br />
@@ -366,8 +345,8 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 
 </div>
 </div>
-<a id="a120768484b5b42e1931732b863b32137" name="a120768484b5b42e1931732b863b32137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a120768484b5b42e1931732b863b32137">&#9670;&#160;</a></span>const_iterator_t</h2>
+<a id="ad17be5ae30de750e9c0c95bc894f158b" name="ad17be5ae30de750e9c0c95bc894f158b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17be5ae30de750e9c0c95bc894f158b">&#9670;&#160;</a></span>const_iterator_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,7 +354,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::const_iterator_t = <a class="el" href="../../d4/d5d/classkoutil_1_1container_1_1hash__array_1_1iterator.html">iterator</a>&lt;true&gt;</td>
+          <td class="memname">using <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::const_iterator_t = <a class="el" href="../../db/d9f/classkoutil_1_1container_1_1template__hash__array.html#a153001fe0f20ce4589f1920150f44315">template_hash_array_t::const_iterator_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -406,8 +385,8 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 
 </div>
 </div>
-<a id="a0dc08445d5654fd1ecf6befcd13d0152" name="a0dc08445d5654fd1ecf6befcd13d0152"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dc08445d5654fd1ecf6befcd13d0152">&#9670;&#160;</a></span>iterator_t</h2>
+<a id="a6f2424b918b9a7b2d10149de89d61fb8" name="a6f2424b918b9a7b2d10149de89d61fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2424b918b9a7b2d10149de89d61fb8">&#9670;&#160;</a></span>iterator_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,7 +394,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::iterator_t = <a class="el" href="../../d4/d5d/classkoutil_1_1container_1_1hash__array_1_1iterator.html">iterator</a>&lt;false&gt;</td>
+          <td class="memname">using <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::iterator_t = <a class="el" href="../../db/d9f/classkoutil_1_1container_1_1template__hash__array.html#a49b90da327d5f2f40bb4d6ff6860386a">template_hash_array_t::iterator_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -470,6 +449,30 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 
 </div>
 </div>
+<a id="a916e5f21460da0c486894b84ef9d7813" name="a916e5f21460da0c486894b84ef9d7813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916e5f21460da0c486894b84ef9d7813">&#9670;&#160;</a></span>template_hash_array_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::template_hash_array_t = <a class="el" href="../../db/d9f/classkoutil_1_1container_1_1template__hash__array.html">template_hash_array</a>&lt;<a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a>, <a class="el" href="#a4f3f77577d3d6181b6e0b96dcdeb2a5c">key_id_t</a>, bool, <a class="el" href="../../dc/de6/structkoutil_1_1container_1_1hash__array_1_1AdapterWrapper.html">AdapterWrapper</a>, <a class="el" href="../../dc/dd5/structkoutil_1_1container_1_1hash__array_1_1HashWrapper.html">HashWrapper</a>, <a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a>, <a class="el" href="#a265d20057e25ab0aa117f37b9fb1dd80">allocator_t</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab5431022339af246c010af33bda21283" name="ab5431022339af246c010af33bda21283"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5431022339af246c010af33bda21283">&#9670;&#160;</a></span>value_t</h2>
 
@@ -495,8 +498,8 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a26e1ceb7718813e15da0c99d45f40a7e" name="a26e1ceb7718813e15da0c99d45f40a7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26e1ceb7718813e15da0c99d45f40a7e">&#9670;&#160;</a></span>hash_array() <span class="overload">[1/4]</span></h2>
+<a id="a4a81dca69b9bbb158dc3a1ad5df1bcc3" name="a4a81dca69b9bbb158dc3a1ad5df1bcc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a81dca69b9bbb158dc3a1ad5df1bcc3">&#9670;&#160;</a></span>hash_array() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -515,7 +518,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -629,8 +632,8 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 
 </div>
 </div>
-<a id="aa59c46e4e4f841e6617cf6c3798c0e4d" name="aa59c46e4e4f841e6617cf6c3798c0e4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa59c46e4e4f841e6617cf6c3798c0e4d">&#9670;&#160;</a></span>~hash_array()</h2>
+<a id="abc50d7c40a1ae026f6eedbcf404b8efc" name="abc50d7c40a1ae026f6eedbcf404b8efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc50d7c40a1ae026f6eedbcf404b8efc">&#9670;&#160;</a></span>~hash_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -649,7 +652,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -671,7 +674,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0dc08445d5654fd1ecf6befcd13d0152">iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::begin </td>
+          <td class="memname"><a class="el" href="#a6f2424b918b9a7b2d10149de89d61fb8">iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -701,7 +704,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::begin </td>
+          <td class="memname"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -761,7 +764,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::cbegin </td>
+          <td class="memname"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::cbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -791,7 +794,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::cend </td>
+          <td class="memname"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::cend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -838,60 +841,6 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 
 </div>
 </div>
-<a id="a5a29cb7342c11b4d6c0d5bd52ccb7a4d" name="a5a29cb7342c11b4d6c0d5bd52ccb7a4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a29cb7342c11b4d6c0d5bd52ccb7a4d">&#9670;&#160;</a></span>clear_all_buckets()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::clear_all_buckets </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8a1baf79b26dbadda3195e4e9dd289c7" name="a8a1baf79b26dbadda3195e4e9dd289c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a1baf79b26dbadda3195e4e9dd289c7">&#9670;&#160;</a></span>destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::destroy </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab5fc91224dfc5f00938896ad3ba2a250" name="ab5fc91224dfc5f00938896ad3ba2a250"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5fc91224dfc5f00938896ad3ba2a250">&#9670;&#160;</a></span>empty()</h2>
 
@@ -934,7 +883,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0dc08445d5654fd1ecf6befcd13d0152">iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::end </td>
+          <td class="memname"><a class="el" href="#a6f2424b918b9a7b2d10149de89d61fb8">iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -964,7 +913,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::end </td>
+          <td class="memname"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1037,7 +986,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0dc08445d5654fd1ecf6befcd13d0152">iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::find </td>
+          <td class="memname"><a class="el" href="#a6f2424b918b9a7b2d10149de89d61fb8">iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::find </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
@@ -1078,7 +1027,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a120768484b5b42e1931732b863b32137">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::find </td>
+          <td class="memname"><a class="el" href="#ad17be5ae30de750e9c0c95bc894f158b">const_iterator_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::find </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
@@ -1104,168 +1053,6 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const_iterator_t The iterator with found element, if not found <a class="el" href="#a47278695a7fb9168c7e4ea1502ac75e7" title="Get an iterator to the end of the hash_array.">end()</a> is returned. </dd></dl>
-
-</div>
-</div>
-<a id="a215b8cc671ab24583b8a1ce4f4751e57" name="a215b8cc671ab24583b8a1ce4f4751e57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a215b8cc671ab24583b8a1ce4f4751e57">&#9670;&#160;</a></span>find_bucket_item() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#abcf0f5164a7c762625fea9396450b71b">bucket_iter</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::find_bucket_item </td>
-          <td>(</td>
-          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bucket</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a></td>          <td class="paramname"><span class="paramname"><em>adapter</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a770e16a596e87f8432c89885a0afee14" name="a770e16a596e87f8432c89885a0afee14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a770e16a596e87f8432c89885a0afee14">&#9670;&#160;</a></span>find_bucket_item() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#abcf0f5164a7c762625fea9396450b71b">bucket_iter</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::find_bucket_item </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bucket</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a></td>          <td class="paramname"><span class="paramname"><em>adapter</em></span>&#160;) const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a70c4c6f6aae85bade35c55609cf4f1f3" name="a70c4c6f6aae85bade35c55609cf4f1f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70c4c6f6aae85bade35c55609cf4f1f3">&#9670;&#160;</a></span>get_bucket()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a> &amp; <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::get_bucket </td>
-          <td>(</td>
-          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1f6cb55536c9e7274b8bfa61e81d6011" name="a1f6cb55536c9e7274b8bfa61e81d6011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f6cb55536c9e7274b8bfa61e81d6011">&#9670;&#160;</a></span>hash_key()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#ab5431022339af246c010af33bda21283">value_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::hash_key </td>
-          <td>(</td>
-          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a39f5e9102a95d07d6168d391c4adcd4a" name="a39f5e9102a95d07d6168d391c4adcd4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39f5e9102a95d07d6168d391c4adcd4a">&#9670;&#160;</a></span>insert()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::insert </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a4f3f77577d3d6181b6e0b96dcdeb2a5c">key_id_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a></td>          <td class="paramname"><span class="paramname"><em>adapter</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1299,8 +1086,8 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 
 </div>
 </div>
-<a id="af13966ae9d6974a21debc1b24993667f" name="af13966ae9d6974a21debc1b24993667f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af13966ae9d6974a21debc1b24993667f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af7d58babdfda57a6d710a79b2d7d6b41" name="af7d58babdfda57a6d710a79b2d7d6b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d58babdfda57a6d710a79b2d7d6b41">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1319,7 +1106,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1335,8 +1122,8 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 
 </div>
 </div>
-<a id="a27904cfa808e9cd667c43111f587b4e4" name="a27904cfa808e9cd667c43111f587b4e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27904cfa808e9cd667c43111f587b4e4">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a96728d0d463e73e53e8839d81e2e230e" name="a96728d0d463e73e53e8839d81e2e230e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96728d0d463e73e53e8839d81e2e230e">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1355,7 +1142,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1368,100 +1155,6 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>&amp; Reference to the assigned <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html" title="A hash array with open addressing and linear probing.">hash_array</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a1a6ce126b1f4392d4b2508181b57b006" name="a1a6ce126b1f4392d4b2508181b57b006"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a6ce126b1f4392d4b2508181b57b006">&#9670;&#160;</a></span>rehash_if_needed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::rehash_if_needed </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aca661559bcb6ea7f23b230bf78f6f842" name="aca661559bcb6ea7f23b230bf78f6f842"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca661559bcb6ea7f23b230bf78f6f842">&#9670;&#160;</a></span>remove()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::remove </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a></td>          <td class="paramname"><span class="paramname"><em>adapter</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a29e97347c5eca462c7560a7ae5fecfe4" name="a29e97347c5eca462c7560a7ae5fecfe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29e97347c5eca462c7560a7ae5fecfe4">&#9670;&#160;</a></span>set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::set </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ac1a43664d240a49d9baf02aa1635c081">key_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a4f3f77577d3d6181b6e0b96dcdeb2a5c">key_id_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>new_key_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a78d6353b367a79a313a8d73c9af4095a">adapter_t</a></td>          <td class="paramname"><span class="paramname"><em>adapter</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1623,8 +1316,8 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa66e0a3fcdfc2e0b099bfd52ec3ad3bd" name="aa66e0a3fcdfc2e0b099bfd52ec3ad3bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa66e0a3fcdfc2e0b099bfd52ec3ad3bd">&#9670;&#160;</a></span>m_buckets</h2>
+<a id="acfac66784d8dfb3d51f5b877905f5b52" name="acfac66784d8dfb3d51f5b877905f5b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfac66784d8dfb3d51f5b877905f5b52">&#9670;&#160;</a></span>comptime_value</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1635,20 +1328,20 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#af4f116feb645a8022f6590108e965d06">bucket_t</a>* <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::m_buckets</td>
+          <td class="memname">bool <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::comptime_value = true</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abdbfdb1cb7badd6e04aa7e329bd0bcd4" name="abdbfdb1cb7badd6e04aa7e329bd0bcd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdbfdb1cb7badd6e04aa7e329bd0bcd4">&#9670;&#160;</a></span>m_buckets_count</h2>
+<a id="a872639a08d99d3ca830471a0ae832cd8" name="a872639a08d99d3ca830471a0ae832cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872639a08d99d3ca830471a0ae832cd8">&#9670;&#160;</a></span>m_storage</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1659,55 +1352,7 @@ template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; K
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::m_buckets_count</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afab609345e7536cdba5ce8fb72bbf23e" name="afab609345e7536cdba5ce8fb72bbf23e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afab609345e7536cdba5ce8fb72bbf23e">&#9670;&#160;</a></span>m_max_load_factor</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::m_max_load_factor = 1.0F</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa3f17d0efcad4ed2bceace84505fbd2d" name="aa3f17d0efcad4ed2bceace84505fbd2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3f17d0efcad4ed2bceace84505fbd2d">&#9670;&#160;</a></span>m_size</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key , typename KeyID , is_key_adapter&lt; Key, KeyID &gt; KeyAdapter, is_hash&lt; Key &gt; Hash = std::hash&lt;Key&gt;, is_bucket&lt; KeyID &gt; Bucket = std::vector&lt;std::pair&lt;std::size_t, KeyID&gt;&gt;, is_allocator&lt; Bucket &gt; Allocator = std::allocator&lt;Bucket&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::m_size = 0</td>
+          <td class="memname"><a class="el" href="#a916e5f21460da0c486894b84ef9d7813">template_hash_array_t</a> <a class="el" href="../../d2/dd7/classkoutil_1_1container_1_1hash__array.html">koutil::container::hash_array</a>&lt; Key, KeyID, KeyAdapter, Hash, Bucket, Allocator &gt;::m_storage</td>
         </tr>
       </table>
   </td>

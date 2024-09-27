@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "koutil::container::hash_array< Key, KeyID, KeyAdapter, Hash, Bucket, Allocator >::AdapterWrapper", "dc/de6/structkoutil_1_1container_1_1hash__array_1_1AdapterWrapper.html", null ],
     [ "koutil::argparser::Arg", "dd/db6/structkoutil_1_1argparser_1_1Arg.html", null ],
     [ "koutil::argparser::ArgumentsBase", "d6/d3f/classkoutil_1_1argparser_1_1ArgumentsBase.html", [
       [ "koutil::argparser::Arguments< Args... >", "df/d51/classkoutil_1_1argparser_1_1Arguments.html", null ],
@@ -23,8 +24,9 @@ var hierarchy =
       [ "koutil::type::are_types< T >", "dd/de2/structkoutil_1_1type_1_1are__types.html", null ]
     ] ],
     [ "koutil::container::hash_array< Key, KeyID, KeyAdapter, Hash, Bucket, Allocator >", "d2/dd7/classkoutil_1_1container_1_1hash__array.html", null ],
-    [ "koutil::container::hash_array< Key, KeyID, KeyAdapter, Hash, Bucket, Allocator >::iterator< is_const >", "d4/d5d/classkoutil_1_1container_1_1hash__array_1_1iterator.html", null ],
+    [ "koutil::container::hash_array< Key, KeyID, KeyAdapter, Hash, Bucket, Allocator >::HashWrapper", "dc/dd5/structkoutil_1_1container_1_1hash__array_1_1HashWrapper.html", null ],
     [ "koutil::container::multi_vector< Types >::iterator< is_const >", "d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html", null ],
+    [ "koutil::container::template_hash_array< Key, KeyID, ComptimeData, KeyAdapter, Hash, Bucket, Allocator >::iterator< is_const >", "d2/d4e/classkoutil_1_1container_1_1template__hash__array_1_1iterator.html", null ],
     [ "koutil::container::multi_vector< Types >", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", null ],
     [ "koutil::argparser::Parser< Ctx, UParser, Args, Cmds >", "df/dbb/classkoutil_1_1argparser_1_1Parser.html", null ],
     [ "koutil::type::types_transforms::reference", "df/da4/structkoutil_1_1type_1_1types__transforms_1_1reference.html", null ],
@@ -34,6 +36,8 @@ var hierarchy =
     [ "koutil::argparser::SubcommandBase", "dd/d41/structkoutil_1_1argparser_1_1SubcommandBase.html", [
       [ "koutil::argparser::Subcommand< type::types< Args... >, type::types< Cmd... > >", "d2/d47/structkoutil_1_1argparser_1_1Subcommand_3_01type_1_1types_3_01Args_8_8_8_01_4_00_01type_1_1types_3_01Cmd_8_8_8_01_4_01_4.html", null ]
     ] ],
+    [ "koutil::container::template_hash_array< Key, KeyID, ComptimeData, KeyAdapter, Hash, Bucket, Allocator >", "db/d9f/classkoutil_1_1container_1_1template__hash__array.html", null ],
+    [ "koutil::container::template_hash_array< key_t, key_id_t, bool, AdapterWrapper, HashWrapper, bucket_t, allocator_t >", "db/d9f/classkoutil_1_1container_1_1template__hash__array.html", null ],
     [ "koutil::term::terminal", "d8/d3d/classkoutil_1_1term_1_1terminal.html", null ],
     [ "std::true_type", null, [
       [ "koutil::type::are_types< types< Types... > >", "d1/d68/structkoutil_1_1type_1_1are__types_3_01types_3_01Types_8_8_8_01_4_01_4.html", null ]

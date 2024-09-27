@@ -104,7 +104,7 @@ $(function(){initNavTree('d3/d42/conceptkoutil_1_1container_1_1is__allocator.htm
 <p>Concept to check if a type is a valid allocator for a given bucket type.  
 <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d4/d55/hash__array_8h_source.html">hash_array.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d4/d53/template__hash__array_8h_source.html">template_hash_array.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Bucket&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="../../d3/d42/conceptkoutil_1_1container_1_1is__allocator.html">koutil::container::is_allocator</a> =  <span class="keyword">requires</span>(T alloc, std::size_t n, Bucket* buckets) {</div>
@@ -112,7 +112,7 @@ $(function(){initNavTree('d3/d42/conceptkoutil_1_1container_1_1is__allocator.htm
 <div class="line">    { alloc.allocate(n) } -&gt; std::same_as&lt;Bucket*&gt;;</div>
 <div class="line">    { alloc.deallocate(buckets, n) };</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptkoutil_1_1container_1_1is__allocator_html"><div class="ttname"><a href="../../d3/d42/conceptkoutil_1_1container_1_1is__allocator.html">koutil::container::is_allocator</a></div><div class="ttdoc">Concept to check if a type is a valid allocator for a given bucket type.</div><div class="ttdef"><b>Definition</b> hash_array.h:67</div></div>
+<div class="ttc" id="aconceptkoutil_1_1container_1_1is__allocator_html"><div class="ttname"><a href="../../d3/d42/conceptkoutil_1_1container_1_1is__allocator.html">koutil::container::is_allocator</a></div><div class="ttdoc">Concept to check if a type is a valid allocator for a given bucket type.</div><div class="ttdef"><b>Definition</b> template_hash_array.h:69</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concept to check if a type is a valid allocator for a given bucket type. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
