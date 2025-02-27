@@ -39,7 +39,7 @@ struct KeyAdapter {
         : container(storage) { }
 
     [[nodiscard]] bool eql(const CustomKey& key, std::size_t key_index) const {
-        return key.a == container[key_index * 2] && key.b == container[key_index * 2 + 1];
+        return key.a == container[key_index * 2] && key.b == container[(key_index * 2) + 1];
     }
 
     std::vector<int>& container;
@@ -52,7 +52,7 @@ struct KeyAdapterTemplate {
 
     template <CustomKeyTag Tag> [[nodiscard]] bool eql(const CustomKeyTemplate& key, std::size_t key_index) const {
         return tags_container[key_index] == Tag && key.a == container[key_index * 2]
-            && key.b == container[key_index * 2 + 1];
+            && key.b == container[(key_index * 2) + 1];
     }
 
     std::vector<int>& container;
@@ -68,7 +68,7 @@ struct HashKey {
 };
 
 struct HashKeyTemplate {
-    template <CustomKeyTag Tag> std::size_t hash(const CustomKeyTemplate& key) const {
+    template <CustomKeyTag Tag> [[nodiscard]] std::size_t hash(const CustomKeyTemplate& key) const {
 
         auto value = key.a + (static_cast<std::uint64_t>(key.b) << (sizeof(key.a) * 8))
             + (static_cast<std::uint64_t>(key.tag) << ((sizeof(key.a) + sizeof(key.b)) * 8));
@@ -103,9 +103,9 @@ TEST_CASE("[HASH_ARRAY][CONSTRUCTORS]") {
 
     std::vector<int> storage;
 
-    CustomKey a { 1, 2 };
-    CustomKey b { 2, 4 };
-    CustomKey c { 3, 6 };
+    CustomKey a { .a = 1, .b = 2 };
+    CustomKey b { .a = 2, .b = 4 };
+    CustomKey c { .a = 3, .b = 6 };
 
     auto a_index = insert_key(a, storage);
     auto b_index = insert_key(b, storage);
@@ -167,10 +167,10 @@ TEST_CASE("[HASH_ARRAY][TRY]") {
 
     std::vector<int> storage;
 
-    CustomKey a { 1, 2 };
-    CustomKey b { 2, 4 };
-    CustomKey c { 3, 6 };
-    CustomKey d { 2, 4 };
+    CustomKey a { .a = 1, .b = 2 };
+    CustomKey b { .a = 2, .b = 4 };
+    CustomKey c { .a = 3, .b = 6 };
+    CustomKey d { .a = 2, .b = 4 };
 
     auto a_index = insert_key(a, storage);
     auto b_index = insert_key(b, storage);
@@ -196,9 +196,9 @@ TEST_CASE("[HASH_ARRAY][FIND]") {
 
     std::vector<int> storage;
 
-    CustomKey a { 1, 2 };
-    CustomKey b { 2, 4 };
-    CustomKey c { 3, 6 };
+    CustomKey a { .a = 1, .b = 2 };
+    CustomKey b { .a = 2, .b = 4 };
+    CustomKey c { .a = 3, .b = 6 };
 
     auto a_index = insert_key(a, storage);
     auto b_index = insert_key(b, storage);
@@ -224,9 +224,9 @@ TEST_CASE("[HASH_ARRAY][ERASE]") {
 
     std::vector<int> storage;
 
-    CustomKey a { 1, 2 };
-    CustomKey b { 2, 4 };
-    CustomKey c { 3, 6 };
+    CustomKey a { .a = 1, .b = 2 };
+    CustomKey b { .a = 2, .b = 4 };
+    CustomKey c { .a = 3, .b = 6 };
 
     auto a_index = insert_key(a, storage);
     auto b_index = insert_key(b, storage);
@@ -250,9 +250,9 @@ TEST_CASE("[HASH_ARRAY][ITERATOR]") {
 
     std::vector<int> storage;
 
-    CustomKey a { 1, 2 };
-    CustomKey b { 2, 4 };
-    CustomKey c { 3, 6 };
+    CustomKey a { .a = 1, .b = 2 };
+    CustomKey b { .a = 2, .b = 4 };
+    CustomKey c { .a = 3, .b = 6 };
 
     auto a_index = insert_key(a, storage);
     auto b_index = insert_key(b, storage);
@@ -285,9 +285,9 @@ TEST_CASE("[TEMPLATE_HASH_ARRAY][CONSTRUCTORS]") {
     std::vector<int> storage;
     std::vector<CustomKeyTag> tags;
 
-    constexpr CustomKeyTemplate a { 1, 2, CustomKeyTag::ONE };
-    constexpr CustomKeyTemplate b { 2, 4, CustomKeyTag::TWO };
-    constexpr CustomKeyTemplate c { 3, 6, CustomKeyTag::THREE };
+    constexpr CustomKeyTemplate a { .a = 1, .b = 2, .tag = CustomKeyTag::ONE };
+    constexpr CustomKeyTemplate b { .a = 2, .b = 4, .tag = CustomKeyTag::TWO };
+    constexpr CustomKeyTemplate c { .a = 3, .b = 6, .tag = CustomKeyTag::THREE };
 
     auto a_index = insert_key(a, storage, tags);
     auto b_index = insert_key(b, storage, tags);
@@ -350,10 +350,10 @@ TEST_CASE("[TEMPLATE_HASH_ARRAY][TRY]") {
     std::vector<int> storage;
     std::vector<CustomKeyTag> tags;
 
-    constexpr CustomKeyTemplate a { 1, 2, CustomKeyTag::ONE };
-    constexpr CustomKeyTemplate b { 2, 4, CustomKeyTag::TWO };
-    constexpr CustomKeyTemplate c { 3, 6, CustomKeyTag::THREE };
-    constexpr CustomKeyTemplate d { 2, 4, CustomKeyTag::TWO };
+    constexpr CustomKeyTemplate a { .a = 1, .b = 2, .tag = CustomKeyTag::ONE };
+    constexpr CustomKeyTemplate b { .a = 2, .b = 4, .tag = CustomKeyTag::TWO };
+    constexpr CustomKeyTemplate c { .a = 3, .b = 6, .tag = CustomKeyTag::THREE };
+    constexpr CustomKeyTemplate d { .a = 2, .b = 4, .tag = CustomKeyTag::TWO };
 
     auto a_index = insert_key(a, storage, tags);
     auto b_index = insert_key(b, storage, tags);
@@ -381,9 +381,9 @@ TEST_CASE("[TEMPLATE_HASH_ARRAY][FIND]") {
     std::vector<int> storage;
     std::vector<CustomKeyTag> tags;
 
-    constexpr CustomKeyTemplate a { 1, 2, CustomKeyTag::ONE };
-    constexpr CustomKeyTemplate b { 2, 4, CustomKeyTag::TWO };
-    constexpr CustomKeyTemplate c { 3, 6, CustomKeyTag::THREE };
+    constexpr CustomKeyTemplate a { .a = 1, .b = 2, .tag = CustomKeyTag::ONE };
+    constexpr CustomKeyTemplate b { .a = 2, .b = 4, .tag = CustomKeyTag::TWO };
+    constexpr CustomKeyTemplate c { .a = 3, .b = 6, .tag = CustomKeyTag::THREE };
 
     auto a_index = insert_key(a, storage, tags);
     auto b_index = insert_key(b, storage, tags);
@@ -410,9 +410,9 @@ TEST_CASE("[TEMPLATE_HASH_ARRAY][ERASE]") {
     std::vector<int> storage;
     std::vector<CustomKeyTag> tags;
 
-    constexpr CustomKeyTemplate a { 1, 2, CustomKeyTag::ONE };
-    constexpr CustomKeyTemplate b { 2, 4, CustomKeyTag::TWO };
-    constexpr CustomKeyTemplate c { 3, 6, CustomKeyTag::THREE };
+    constexpr CustomKeyTemplate a { .a = 1, .b = 2, .tag = CustomKeyTag::ONE };
+    constexpr CustomKeyTemplate b { .a = 2, .b = 4, .tag = CustomKeyTag::TWO };
+    constexpr CustomKeyTemplate c { .a = 3, .b = 6, .tag = CustomKeyTag::THREE };
 
     auto a_index = insert_key(a, storage, tags);
     auto b_index = insert_key(b, storage, tags);
@@ -437,9 +437,9 @@ TEST_CASE("[TEMPLATE_HASH_ARRAY][ITERATOR]") {
     std::vector<int> storage;
     std::vector<CustomKeyTag> tags;
 
-    constexpr CustomKeyTemplate a { 1, 2, CustomKeyTag::ONE };
-    constexpr CustomKeyTemplate b { 2, 4, CustomKeyTag::TWO };
-    constexpr CustomKeyTemplate c { 3, 6, CustomKeyTag::THREE };
+    constexpr CustomKeyTemplate a { .a = 1, .b = 2, .tag = CustomKeyTag::ONE };
+    constexpr CustomKeyTemplate b { .a = 2, .b = 4, .tag = CustomKeyTag::TWO };
+    constexpr CustomKeyTemplate c { .a = 3, .b = 6, .tag = CustomKeyTag::THREE };
 
     auto a_index = insert_key(a, storage, tags);
     auto b_index = insert_key(b, storage, tags);
