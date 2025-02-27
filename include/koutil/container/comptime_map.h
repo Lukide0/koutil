@@ -18,7 +18,7 @@ namespace koutil::container {
  * @tparam Value The value type.
  * @tparam Size The size of the map.
  */
-template <typename Key, typename Value, std::size_t Size> class ComptimeMap {
+template <typename Key, typename Value, std::size_t Size> class comptime_map {
 public:
     using pair_t               = std::pair<Key, Value>;
     using pairs_t              = std::array<pair_t, Size>;
@@ -29,7 +29,7 @@ public:
      *
      * @param pairs The array of key-value pairs.
      */
-    consteval ComptimeMap(pairs_t pairs)
+    consteval comptime_map(pairs_t pairs)
         : m_data(std::move(pairs)) {
 
         if (contains_duplicate_key()) {
@@ -39,15 +39,15 @@ public:
     }
 
     template <std::size_t Count> [[nodiscard]] consteval auto extend(const std::array<pair_t, Count>& pairs) const {
-        return ComptimeMap<Key, Value, Size + Count>(type::array_concat(m_data, pairs));
+        return comptime_map<Key, Value, Size + Count>(type::array_concat(m_data, pairs));
     }
 
     [[nodiscard]] consteval auto extend(const pair_t& pair) const {
-        return ComptimeMap<Key, Value, Size + 1>(type::array_concat(m_data, std::array<pair_t, 1>({ pair })));
+        return comptime_map<Key, Value, Size + 1>(type::array_concat(m_data, std::array<pair_t, 1>({ pair })));
     }
 
     template <std::size_t OtherSize>
-    [[nodiscard]] consteval auto extend(const ComptimeMap<Key, Value, OtherSize>& other) const {
+    [[nodiscard]] consteval auto extend(const comptime_map<Key, Value, OtherSize>& other) const {
         return extend(other.m_data);
     }
 
@@ -175,7 +175,7 @@ private:
  * @return The compile-time map.
  */
 template <typename Key, typename Value, std::size_t Size>
-consteval ComptimeMap<Key, Value, Size> to_map(std::array<std::pair<Key, Value>, Size> pairs) {
+consteval comptime_map<Key, Value, Size> to_map(std::array<std::pair<Key, Value>, Size> pairs) {
     return { pairs };
 }
 
@@ -189,7 +189,7 @@ consteval ComptimeMap<Key, Value, Size> to_map(std::array<std::pair<Key, Value>,
  */
 template <typename Key, typename Value, std::size_t Size>
 // NOLINTNEXTLINE(modernize-avoid-c-arrays)
-consteval ComptimeMap<Key, Value, Size> to_map(std::pair<Key, Value> (&&pairs)[Size]) {
+consteval comptime_map<Key, Value, Size> to_map(std::pair<Key, Value> (&&pairs)[Size]) {
     return { std::to_array(pairs) };
 }
 

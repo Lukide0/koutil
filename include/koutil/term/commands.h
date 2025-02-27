@@ -8,7 +8,7 @@ namespace koutil::term {
 /**
  * @brief Represents a cursor movement command.
  */
-struct CursorPos {
+struct cursor_pos {
     unsigned short line;
     unsigned short column;
 };
@@ -16,7 +16,7 @@ struct CursorPos {
 /**
  * @brief Represents a cursor movement command.
  */
-struct CursorMove {
+struct cursor_move {
     /**
      * @brief Enumerates different types of cursor movements.
      */
@@ -65,12 +65,12 @@ enum class EraseCommand {
     ERASE_LINE_CURSOR_BEGIN, /**< Erase from the cursor to the beginning of the line. */
 };
 
-std::ostream& operator<<(std::ostream& stream, CursorPos pos) {
+std::ostream& operator<<(std::ostream& stream, cursor_pos pos) {
     stream << util::ESC << '[' << pos.line << ';' << pos.column << 'H';
     return stream;
 }
 
-std::ostream& operator<<(std::ostream& stream, CursorMove move) {
+std::ostream& operator<<(std::ostream& stream, cursor_move move) {
     stream << util::ESC << '[' << move.move << static_cast<char>(move.type);
     return stream;
 }

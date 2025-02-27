@@ -18,9 +18,9 @@ namespace color_literals {
      * @param size The size of the string.
      * @return Color The Color object created from the hexadecimal string.
      */
-    consteval Color operator""_color(const char* str, std::size_t size) {
+    consteval color_t operator""_color(const char* str, std::size_t size) {
         std::string_view hex(str, size);
-        return Color::from_hex(hex);
+        return color_t::from_hex(hex);
     }
 
     /**
@@ -30,9 +30,9 @@ namespace color_literals {
      * @param size The size of the string.
      * @return ColorBG The ColorBG object created from the hexadecimal string.
      */
-    consteval ColorBG operator""_bg(const char* str, std::size_t size) {
+    consteval color_bg_t operator""_bg(const char* str, std::size_t size) {
         std::string_view hex(str, size);
-        return Color::from_hex(hex).as_bg();
+        return color_t::from_hex(hex).as_bg();
     }
 
     /**
@@ -42,20 +42,20 @@ namespace color_literals {
      * @param size The size of the string.
      * @return ColorFG The ColorFG object created from the hexadecimal string.
      */
-    consteval ColorFG operator""_fg(const char* str, std::size_t size) {
+    consteval color_fg_t operator""_fg(const char* str, std::size_t size) {
         std::string_view hex(str, size);
-        return Color::from_hex(hex).as_fg();
+        return color_t::from_hex(hex).as_fg();
     }
 
 }
 
-std::ostream& operator<<(std::ostream& stream, ColorBG bg) {
+std::ostream& operator<<(std::ostream& stream, color_bg_t bg) {
 
     switch (bg.color.tag) {
-    case Color::Tag::RGB:
+    case color_t::Tag::RGB:
         stream << util::ESC << "[48;2;" << +bg.color.red << ';' << +bg.color.green << ';' << +bg.color.blue << 'm';
         break;
-    case Color::Tag::ID:
+    case color_t::Tag::ID:
         stream << util::ESC << '[' << +bg.color.id() + 10 << 'm';
         break;
     }
@@ -63,13 +63,13 @@ std::ostream& operator<<(std::ostream& stream, ColorBG bg) {
     return stream;
 }
 
-std::ostream& operator<<(std::ostream& stream, ColorFG fg) {
+std::ostream& operator<<(std::ostream& stream, color_fg_t fg) {
 
     switch (fg.color.tag) {
-    case Color::Tag::RGB:
+    case color_t::Tag::RGB:
         stream << util::ESC << "[38;2;" << +fg.color.red << ';' << +fg.color.green << ';' << +fg.color.blue << 'm';
         break;
-    case Color::Tag::ID:
+    case color_t::Tag::ID:
         stream << util::ESC << '[' << +fg.color.id() << 'm';
         break;
     }
