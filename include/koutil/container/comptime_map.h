@@ -1,6 +1,7 @@
 #ifndef KOUTIL_CONTAINER_COMPTIME_MAP_H
 #define KOUTIL_CONTAINER_COMPTIME_MAP_H
 
+#include "koutil/type/array_concat.h"
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -32,9 +33,22 @@ public:
         : m_data(std::move(pairs)) {
 
         if (contains_duplicate_key()) {
-            assert(false);
+            assert(false && "Duplicate keys are not allowed in a compile-time map.");
         }
         std::ranges::sort(m_data, {}, &pair_t::first);
+    }
+
+    template <std::size_t Count> [[nodiscard]] consteval auto extend(const std::array<pair_t, Count>& pairs) const {
+        return ComptimeMap<Key, Value, Size + Count>(type::array_concat(m_data, pairs));
+    }
+
+    [[nodiscard]] consteval auto extend(const pair_t& pair) const {
+        return ComptimeMap<Key, Value, Size + 1>(type::array_concat(m_data, std::array<pair_t, 1>({ pair })));
+    }
+
+    template <std::size_t OtherSize>
+    [[nodiscard]] consteval auto extend(const ComptimeMap<Key, Value, OtherSize>& other) const {
+        return extend(other.m_data);
     }
 
     /**
@@ -43,7 +57,6 @@ public:
      * @return True if duplicate keys are found, false otherwise.
      */
     [[nodiscard]] consteval bool contains_duplicate_key() const {
-
         for (std::size_t i = 0; i < Size; i++) {
             for (std::size_t j = i + 1; j < Size; j++) {
                 if (m_data[i].first == m_data[j].first) {
@@ -62,7 +75,6 @@ public:
      * @return The index of the key if found, npos otherwise.
      */
     [[nodiscard]] constexpr std::size_t find(const Key& key) const {
-
         const auto iter = std::ranges::lower_bound(m_data.begin(), m_data.end(), key, {}, &pair_t::first);
         if (iter == m_data.end()) {
             return npos;
@@ -133,7 +145,6 @@ public:
      * @return True if the value exists, false otherwise.
      */
     [[nodiscard]] consteval bool test_value(const Value& value) const {
-
         for (auto&& [_, val] : m_data) {
             if (val == value) {
                 return true;
