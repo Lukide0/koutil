@@ -10,6 +10,7 @@ koutil is a C++ header library providing utilities for terminal-based applicatio
 - **Colors**
 - **Styles**
 - **Cursor movement**
+- **Containers**
 
 ## Requirements
 
