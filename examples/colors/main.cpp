@@ -2,7 +2,7 @@
 #include <koutil/term.h>
 
 int main() {
-    using koutil::term::Color;
+    using koutil::term::color_t;
     using namespace koutil::term::color_literals;
 
     if (!koutil::term::terminal::init()) {
@@ -10,9 +10,9 @@ int main() {
         return 1;
     }
 
-    constexpr auto color_rgb     = Color::from_rgb(55, 145, 127);
-    constexpr auto color_hsv     = Color::from_hsv(168, 0.62F, 0.57F);
-    constexpr auto color_hex     = Color::from_hex("#37917f");
+    constexpr auto color_rgb     = color_t::from_rgb(55, 145, 127);
+    constexpr auto color_hsv     = color_t::from_hsv(168, 0.62F, 0.57F);
+    constexpr auto color_hex     = color_t::from_hex("#37917f");
     constexpr auto color_hex_lit = "#37917f"_color;
 
     std::cout << color_rgb.as_fg() << "Hello" << color_hsv.as_fg() << ' ' << color_hex.as_fg() << "World"

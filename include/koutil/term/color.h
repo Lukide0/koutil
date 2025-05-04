@@ -10,8 +10,8 @@
 
 namespace koutil::term {
 
-struct ColorBG;
-struct ColorFG;
+struct color_bg_t;
+struct color_fg_t;
 
 /**
  * @brief Structure representing a color.
@@ -20,7 +20,7 @@ struct ColorFG;
  * It can also represent a color using an ID value. Color objects can be
  * created from RGB values, ID values, hexadecimal strings, or HSV values.
  */
-struct Color {
+struct color_t {
 public:
     using channel_t = std::uint8_t;
 
@@ -35,7 +35,7 @@ public:
     const Tag tag;
 
 public:
-    constexpr Color()
+    constexpr color_t()
         : red()
         , green()
         , blue()
@@ -50,7 +50,7 @@ public:
      * @param g Green channel value.
      * @param b Blue channel value.
      */
-    constexpr Color(channel_t r, channel_t g, channel_t b)
+    constexpr color_t(channel_t r, channel_t g, channel_t b)
         : red(r)
         , green(g)
         , blue(b)
@@ -63,7 +63,7 @@ public:
      *
      * @param id ID value.
      */
-    constexpr Color(std::uint8_t id)
+    constexpr color_t(std::uint8_t id)
         : red(id)
         , green()
         , blue()
@@ -77,7 +77,7 @@ public:
      * @param blue Blue channel value.
      * @return Color object.
      */
-    static constexpr Color from_rgb(channel_t red, channel_t green, channel_t blue) { return { red, green, blue }; }
+    static constexpr color_t from_rgb(channel_t red, channel_t green, channel_t blue) { return { red, green, blue }; }
 
     /**
      * @brief Creates a Color object from an ID value.
@@ -85,7 +85,7 @@ public:
      * @param id ID value.
      * @return Color object.
      */
-    static constexpr Color from_id(channel_t id) { return { id }; }
+    static constexpr color_t from_id(channel_t id) { return { id }; }
 
     /**
      * @brief Creates a Color object from HSV values.
@@ -95,7 +95,7 @@ public:
      * @param v Value (0.0-1.0).
      * @return Color object.
      */
-    static constexpr Color from_hsv(std::uint16_t h, float s, float v);
+    static constexpr color_t from_hsv(std::uint16_t h, float s, float v);
 
     /**
      * @brief Creates a Color object from a hexadecimal string.
@@ -103,7 +103,7 @@ public:
      * @param hex Hexadecimal string (e.g., "#RRGGBB" or "#RGB").
      * @return Color object.
      */
-    static consteval Color from_hex(std::string_view hex) {
+    static consteval color_t from_hex(std::string_view hex) {
         if (!hex.starts_with('#')) {
             assert(false);
         }
@@ -147,16 +147,16 @@ public:
      *
      * @return ColorBG object.
      */
-    [[nodiscard]] constexpr ColorBG as_bg() const;
+    [[nodiscard]] constexpr color_bg_t as_bg() const;
 
     /**
      * @brief Converts the color to a ColorFG object.
      *
      * @return ColorFG object.
      */
-    [[nodiscard]] constexpr ColorFG as_fg() const;
+    [[nodiscard]] constexpr color_fg_t as_fg() const;
 
-    constexpr bool operator==(Color other) const {
+    constexpr bool operator==(color_t other) const {
         return red == other.red && green == other.green && blue == other.blue && tag == other.tag;
     }
 
@@ -195,28 +195,28 @@ private:
 /**
  * @brief Structure representing a background color.
  */
-struct ColorBG {
-    constexpr ColorBG(Color c)
+struct color_bg_t {
+    constexpr color_bg_t(color_t c)
         : color(c) { }
 
-    const Color color;
+    const color_t color;
 };
 
 /**
  * @brief Structure representing a foreground color.
  */
-struct ColorFG {
-    constexpr ColorFG(Color c)
+struct color_fg_t {
+    constexpr color_fg_t(color_t c)
         : color(c) { }
 
-    const Color color;
+    const color_t color;
 };
 
-constexpr ColorBG Color::as_bg() const { return { *this }; }
+constexpr color_bg_t color_t::as_bg() const { return { *this }; }
 
-constexpr ColorFG Color::as_fg() const { return { *this }; }
+constexpr color_fg_t color_t::as_fg() const { return { *this }; }
 
-constexpr Color Color::from_hsv(std::uint16_t h, float s, float v) {
+constexpr color_t color_t::from_hsv(std::uint16_t h, float s, float v) {
     constexpr std::uint16_t HUE_PART = 360 / 6;
     constexpr float HUE_PART_FLOAT   = 360.0F / 6.0F;
 

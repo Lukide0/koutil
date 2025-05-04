@@ -64,13 +64,13 @@ private:
     using adapter_t   = KeyAdapter;
     using allocator_t = Allocator;
 
-    struct AdapterWrapper {
+    struct adapter_wrapper {
         template <bool> bool eql(const key_t& key, const key_id_t& id) const { return adapter.eql(key, id); }
 
         adapter_t adapter;
     };
 
-    struct HashWrapper {
+    struct hash_wrapper {
         template <bool> std::size_t hash(const key_t& key) { return hasher(key); }
 
         hash_t hasher;
@@ -79,7 +79,7 @@ private:
     constexpr static bool comptime_value = true;
 
     using template_hash_array_t
-        = template_hash_array<key_t, key_id_t, bool, AdapterWrapper, HashWrapper, bucket_t, allocator_t>;
+        = template_hash_array<key_t, key_id_t, bool, adapter_wrapper, hash_wrapper, bucket_t, allocator_t>;
 
 public:
     using iterator_t       = template_hash_array_t::iterator_t;
@@ -181,8 +181,7 @@ public:
      * @return bool True if the key is not inside hash_array, false otherwise.
      */
     bool try_insert(const key_t& key, const key_id_t& key_id, adapter_t adapter) {
-
-        return m_storage.template try_insert<comptime_value>(key, key_id, AdapterWrapper { adapter });
+        return m_storage.template try_insert<comptime_value>(key, key_id, adapter_wrapper { adapter });
     }
 
     /**
@@ -192,7 +191,7 @@ public:
      * @return bool True if the key ID was changed, false otherwise.
      */
     bool try_set(const key_t& key, const key_id_t& new_key_id, adapter_t adapter) {
-        return m_storage.template try_set<comptime_value>(key, new_key_id, AdapterWrapper { adapter });
+        return m_storage.template try_set<comptime_value>(key, new_key_id, adapter_wrapper { adapter });
     }
 
     /**
@@ -204,7 +203,7 @@ public:
      * @return false If the element was not found.
      */
     void erase(const key_t& key, adapter_t adapter) {
-        m_storage.template erase<comptime_value>(key, AdapterWrapper { adapter });
+        m_storage.template erase<comptime_value>(key, adapter_wrapper { adapter });
     }
 
     /**
@@ -215,7 +214,7 @@ public:
      * @return iterator_t The iterator with found element, if not found end() is returned.
      */
     iterator_t find(const key_t& key, adapter_t adapter) {
-        return m_storage.template find<comptime_value>(key, AdapterWrapper { adapter });
+        return m_storage.template find<comptime_value>(key, adapter_wrapper { adapter });
     }
 
     /**
@@ -226,7 +225,7 @@ public:
      * @return const_iterator_t The iterator with found element, if not found end() is returned.
      */
     const_iterator_t find(const key_t& key, adapter_t adapter) const {
-        return m_storage.template find<comptime_value>(key, AdapterWrapper { adapter });
+        return m_storage.template find<comptime_value>(key, adapter_wrapper { adapter });
     }
 
     /**
