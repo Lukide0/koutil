@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['id_0',['ID',['../d8/d09/structkoutil_1_1term_1_1Color.html#a75c3693db1e41e55d8ed3af28fb8cb0fab718adec73e04ce3ec720dd11a06a308',1,'koutil::term::Color']]],
-  ['id_1',['id',['../d8/d09/structkoutil_1_1term_1_1Color.html#a21e385f1d31fdc9bc80a81144093a88b',1,'koutil::term::Color']]],
+  ['id_0',['ID',['../d1/d7e/structkoutil_1_1term_1_1color__t.html#a02e5642cd7d2e57589210d5135b314c3ab718adec73e04ce3ec720dd11a06a308',1,'koutil::term::color_t']]],
+  ['id_1',['id',['../d1/d7e/structkoutil_1_1term_1_1color__t.html#a32c28be87ea3b15d477adf6359f22168',1,'koutil::term::color_t']]],
   ['increment_2',['increment',['../d2/d4e/classkoutil_1_1container_1_1template__hash__array_1_1iterator.html#a3bd4b92febceaf4a0442af8dce82e5a9',1,'koutil::container::template_hash_array::iterator']]],
   ['init_3',['init',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a9fe4835dae20f0d9522691d92aecbfda',1,'koutil::term::terminal']]],
   ['init_5fvector_4',['init_vector',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a6022f90b69ce720a13359e3f73a3d23e',1,'koutil::container::multi_vector']]],

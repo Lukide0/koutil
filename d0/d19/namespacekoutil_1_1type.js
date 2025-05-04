@@ -1,6 +1,9 @@
 var namespacekoutil_1_1type =
 [
-    [ "detail", "dc/d33/namespacekoutil_1_1type_1_1detail.html", "dc/d33/namespacekoutil_1_1type_1_1detail" ],
+    [ "detail", "dc/d33/namespacekoutil_1_1type_1_1detail.html", [
+      [ "contains_type", "dc/d33/namespacekoutil_1_1type_1_1detail.html#a15ead99236487ba10fbefe28aac8511c", null ],
+      [ "types_index_of_impl", "dc/d33/namespacekoutil_1_1type_1_1detail.html#ae3b5bdc0e9d0b810d1f84b01171223e8", null ]
+    ] ],
     [ "are_types", "dd/de2/structkoutil_1_1type_1_1are__types.html", null ],
     [ "are_types< types< Types... > >", "d1/d68/structkoutil_1_1type_1_1are__types_3_01types_3_01Types_8_8_8_01_4_01_4.html", null ],
     [ "types", "dd/d52/structkoutil_1_1type_1_1types.html", "dd/d52/structkoutil_1_1type_1_1types" ],
@@ -22,6 +25,7 @@ var namespacekoutil_1_1type =
     [ "types_unique_t", "d0/d19/namespacekoutil_1_1type.html#ae47ab5ab9088e4fd98e31be003d7641f", null ],
     [ "types_view_t", "d0/d19/namespacekoutil_1_1type.html#afaff50d0f44dd5ae1377f1bfc0144a89", null ],
     [ "unique_types_t", "d0/d19/namespacekoutil_1_1type.html#abd8d62230710189a3cf09059562480d0", null ],
+    [ "array_concat", "d0/d19/namespacekoutil_1_1type.html#aa755bdc58c23d735992f1140ae8d16b1", null ],
     [ "are_types_v", "d0/d19/namespacekoutil_1_1type.html#a78b24dfdaa6405619205334ef0e97a1d", null ],
     [ "types_index_of_v", "d0/d19/namespacekoutil_1_1type.html#afa4e756f64619885da337c0d1561a023", null ]
 ];

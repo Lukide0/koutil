@@ -1,13 +1,6 @@
 var concepts =
 [
     [ "koutil", "dd/dcf/namespacekoutil.html", [
-      [ "argparser", "d7/dfe/namespacekoutil_1_1argparser.html", [
-        [ "is_arg", "d5/d44/conceptkoutil_1_1argparser_1_1is__arg.html", null ],
-        [ "are_arguments", "d0/d12/conceptkoutil_1_1argparser_1_1are__arguments.html", null ],
-        [ "parser", "d5/db2/conceptkoutil_1_1argparser_1_1parser.html", null ],
-        [ "is_subcommand", "d2/d34/conceptkoutil_1_1argparser_1_1is__subcommand.html", null ],
-        [ "are_commands", "d0/df3/conceptkoutil_1_1argparser_1_1are__commands.html", null ]
-      ] ],
       [ "container", "d8/d14/namespacekoutil_1_1container.html", [
         [ "is_hash", "da/d53/conceptkoutil_1_1container_1_1is__hash.html", null ],
         [ "is_key_adapter", "d6/d44/conceptkoutil_1_1container_1_1is__key__adapter.html", null ],

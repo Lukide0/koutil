@@ -5,7 +5,7 @@ var searchData=
   ['black_2',['black',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a2798a15d196ec5f7b3fd5c3ee1882553',1,'koutil::term::color']]],
   ['black_5fbright_3',['black_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a7ba535a4730468c8e019b318d8adcaf8',1,'koutil::term::color']]],
   ['blink_4',['BLINK',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83ad810ed8e97088a3c987f179dfb88cefc',1,'koutil::term']]],
-  ['blue_5',['blue',['../d8/d09/structkoutil_1_1term_1_1Color.html#aa6181a0423d0f88bef10342f96f9547e',1,'koutil::term::Color::blue'],['../d1/df4/namespacekoutil_1_1term_1_1color.html#afe37fabd4ceee70c72db5113fee32d59',1,'koutil::term::color::blue']]],
+  ['blue_5',['blue',['../d1/d7e/structkoutil_1_1term_1_1color__t.html#a82d725299184725555c4964fefb639d3',1,'koutil::term::color_t::blue'],['../d1/df4/namespacekoutil_1_1term_1_1color.html#afe37fabd4ceee70c72db5113fee32d59',1,'koutil::term::color::blue']]],
   ['blue_5fbright_6',['blue_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a20f321a24a6ce9734954af9c38425e9e',1,'koutil::term::color']]],
   ['bold_7',['BOLD',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a2909dd0e0336f10b6da9735b859a3d19',1,'koutil::term']]],
   ['bucket_5fconst_5fiter_8',['bucket_const_iter',['../db/d9f/classkoutil_1_1container_1_1template__hash__array.html#a12a2fb29275961c92f657904fd572183',1,'koutil::container::template_hash_array']]],

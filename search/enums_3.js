@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parseresult_0',['ParseResult',['../d7/dfe/namespacekoutil_1_1argparser.html#a5615269d92ae1937d5e0e01832966684',1,'koutil::argparser']]]
+  ['style_0',['Style',['../d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83',1,'koutil::term']]]
 ];

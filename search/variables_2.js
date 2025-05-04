@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['cmds_0',['cmds',['../d2/d47/structkoutil_1_1argparser_1_1Subcommand_3_01type_1_1types_3_01Args_8_8_8_01_4_00_01type_1_1types_3_01Cmd_8_8_8_01_4_01_4.html#a7fcbe1392b00cae11696a41e594934c0',1,'koutil::argparser::Subcommand&lt; type::types&lt; Args... &gt;, type::types&lt; Cmd... &gt; &gt;']]],
-  ['color_1',['color',['../d2/d2a/structkoutil_1_1term_1_1ColorBG.html#a3d6c3892bb679d15a881b5c33f5a9ac8',1,'koutil::term::ColorBG::color'],['../db/ddc/structkoutil_1_1term_1_1ColorFG.html#a3c113d84146a645a049308317220b91c',1,'koutil::term::ColorFG::color']]],
-  ['column_2',['column',['../d4/d5d/structkoutil_1_1term_1_1CursorPos.html#a300e03a01db51801628a6876c08eaa09',1,'koutil::term::CursorPos']]],
-  ['comptime_5fvalue_3',['comptime_value',['../d2/dd7/classkoutil_1_1container_1_1hash__array.html#acfac66784d8dfb3d51f5b877905f5b52',1,'koutil::container::hash_array']]],
-  ['count_4',['count',['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html#a8f0e8e4a64313a985b1a7198cda28384',1,'koutil::argparser::Commands']]],
-  ['cyan_5',['cyan',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a4d9b39bf60843de4b6c2070fa3572886',1,'koutil::term::color']]],
-  ['cyan_5fbright_6',['cyan_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a5b6b6d1d0dc8ecf5e661a70b1ee8ba67',1,'koutil::term::color']]]
+  ['color_0',['color',['../de/df5/structkoutil_1_1term_1_1color__bg__t.html#aba09e5a8ddb05034c25e67a8b76647bc',1,'koutil::term::color_bg_t::color'],['../db/d1f/structkoutil_1_1term_1_1color__fg__t.html#ab28edf5974e841ba8e8ce78fba886833',1,'koutil::term::color_fg_t::color']]],
+  ['column_1',['column',['../dd/d70/structkoutil_1_1term_1_1cursor__pos.html#a2368e7e8e82182bd1876a0fbbf5341ae',1,'koutil::term::cursor_pos']]],
+  ['comptime_5fvalue_2',['comptime_value',['../d2/dd7/classkoutil_1_1container_1_1hash__array.html#acfac66784d8dfb3d51f5b877905f5b52',1,'koutil::container::hash_array']]],
+  ['cyan_3',['cyan',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a4d9b39bf60843de4b6c2070fa3572886',1,'koutil::term::color']]],
+  ['cyan_5fbright_4',['cyan_bright',['../d1/df4/namespacekoutil_1_1term_1_1color.html#a5b6b6d1d0dc8ecf5e661a70b1ee8ba67',1,'koutil::term::color']]]
 ];

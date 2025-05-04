@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['color_0',['Color',['../d8/d09/structkoutil_1_1term_1_1Color.html',1,'koutil::term']]],
-  ['colorbg_1',['ColorBG',['../d2/d2a/structkoutil_1_1term_1_1ColorBG.html',1,'koutil::term']]],
-  ['colorfg_2',['ColorFG',['../db/ddc/structkoutil_1_1term_1_1ColorFG.html',1,'koutil::term']]],
-  ['commands_3',['Commands',['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html',1,'koutil::argparser']]],
-  ['commands_3c_20cmd_20_3e_4',['Commands&lt; Cmd &gt;',['../df/d8d/classkoutil_1_1argparser_1_1Commands_3_01Cmd_01_4.html',1,'koutil::argparser']]],
-  ['commands_3c_20cmd_2e_2e_2e_20_3e_5',['Commands&lt; Cmd... &gt;',['../d5/d8b/classkoutil_1_1argparser_1_1Commands.html',1,'koutil::argparser']]],
-  ['commandsbase_6',['CommandsBase',['../de/d6c/classkoutil_1_1argparser_1_1CommandsBase.html',1,'koutil::argparser']]],
-  ['comptimemap_7',['ComptimeMap',['../d1/d56/classkoutil_1_1container_1_1ComptimeMap.html',1,'koutil::container']]],
-  ['constant_8',['constant',['../d7/da3/structkoutil_1_1type_1_1types__transforms_1_1constant.html',1,'koutil::type::types_transforms']]],
-  ['constant_5freference_9',['constant_reference',['../da/d65/structkoutil_1_1type_1_1types__transforms_1_1constant__reference.html',1,'koutil::type::types_transforms']]],
-  ['cursormove_10',['CursorMove',['../d2/df8/structkoutil_1_1term_1_1CursorMove.html',1,'koutil::term']]],
-  ['cursorpos_11',['CursorPos',['../d4/d5d/structkoutil_1_1term_1_1CursorPos.html',1,'koutil::term']]]
+  ['color_5fbg_5ft_0',['color_bg_t',['../de/df5/structkoutil_1_1term_1_1color__bg__t.html',1,'koutil::term']]],
+  ['color_5ffg_5ft_1',['color_fg_t',['../db/d1f/structkoutil_1_1term_1_1color__fg__t.html',1,'koutil::term']]],
+  ['color_5ft_2',['color_t',['../d1/d7e/structkoutil_1_1term_1_1color__t.html',1,'koutil::term']]],
+  ['comptime_5fmap_3',['comptime_map',['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html',1,'koutil::container']]],
+  ['constant_4',['constant',['../d7/da3/structkoutil_1_1type_1_1types__transforms_1_1constant.html',1,'koutil::type::types_transforms']]],
+  ['constant_5freference_5',['constant_reference',['../da/d65/structkoutil_1_1type_1_1types__transforms_1_1constant__reference.html',1,'koutil::type::types_transforms']]],
+  ['cursor_5fmove_6',['cursor_move',['../dc/d9b/structkoutil_1_1term_1_1cursor__move.html',1,'koutil::term']]],
+  ['cursor_5fpos_7',['cursor_pos',['../dd/d70/structkoutil_1_1term_1_1cursor__pos.html',1,'koutil::term']]]
 ];

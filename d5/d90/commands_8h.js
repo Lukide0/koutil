@@ -1,7 +1,7 @@
 var commands_8h =
 [
-    [ "koutil::term::CursorPos", "d4/d5d/structkoutil_1_1term_1_1CursorPos.html", "d4/d5d/structkoutil_1_1term_1_1CursorPos" ],
-    [ "koutil::term::CursorMove", "d2/df8/structkoutil_1_1term_1_1CursorMove.html", "d2/df8/structkoutil_1_1term_1_1CursorMove" ],
+    [ "koutil::term::cursor_pos", "dd/d70/structkoutil_1_1term_1_1cursor__pos.html", "dd/d70/structkoutil_1_1term_1_1cursor__pos" ],
+    [ "koutil::term::cursor_move", "dc/d9b/structkoutil_1_1term_1_1cursor__move.html", "dc/d9b/structkoutil_1_1term_1_1cursor__move" ],
     [ "BufferCommand", "d5/d90/commands_8h.html#addd55ce6a3bc95576fd4aebcc76d99f2", [
       [ "ENABLE_ALTERNATIVE_BUFFER", "d5/d90/commands_8h.html#addd55ce6a3bc95576fd4aebcc76d99f2a5c4c594107462f361f081a7257bdfbf3", null ],
       [ "DISABLE_ALTERNATIVE_BUFFER", "d5/d90/commands_8h.html#addd55ce6a3bc95576fd4aebcc76d99f2acb8f39fd206d42cf454dfcc37e8db198", null ]
@@ -22,8 +22,8 @@ var commands_8h =
       [ "ERASE_LINE_CURSOR_BEGIN", "d5/d90/commands_8h.html#aea815af98bef8a15f5a0828c5ccf225fae132cdd624e2c4c3ad63afb2bce57131", null ]
     ] ],
     [ "operator<<", "d5/d90/commands_8h.html#afde1e9c566eafa024e3fb5be95390615", null ],
+    [ "operator<<", "d5/d90/commands_8h.html#a824890c13bea0fc183ba1364762cbf71", null ],
+    [ "operator<<", "d5/d90/commands_8h.html#ac2f077bb8695c459bd8d91232b3eb428", null ],
     [ "operator<<", "d5/d90/commands_8h.html#aa4b3db580d98f38d312b296e4052f9e5", null ],
-    [ "operator<<", "d5/d90/commands_8h.html#ab41bb5da3adbc8b84e33892f1e3dd486", null ],
-    [ "operator<<", "d5/d90/commands_8h.html#ae260dd7f2a9b0061e66cb46e27b3dd63", null ],
     [ "operator<<", "d5/d90/commands_8h.html#a82a887f92ddf79d208f4b86bf1d947de", null ]
 ];

@@ -1,6 +1,5 @@
 var namespacekoutil =
 [
-    [ "argparser", "d7/dfe/namespacekoutil_1_1argparser.html", "d7/dfe/namespacekoutil_1_1argparser" ],
     [ "container", "d8/d14/namespacekoutil_1_1container.html", "d8/d14/namespacekoutil_1_1container" ],
     [ "term", "d6/d7c/namespacekoutil_1_1term.html", "d6/d7c/namespacekoutil_1_1term" ],
     [ "type", "d0/d19/namespacekoutil_1_1type.html", "d0/d19/namespacekoutil_1_1type" ],

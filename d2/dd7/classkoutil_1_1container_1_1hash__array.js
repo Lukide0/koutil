@@ -1,7 +1,7 @@
 var classkoutil_1_1container_1_1hash__array =
 [
-    [ "AdapterWrapper", "dc/de6/structkoutil_1_1container_1_1hash__array_1_1AdapterWrapper.html", "dc/de6/structkoutil_1_1container_1_1hash__array_1_1AdapterWrapper" ],
-    [ "HashWrapper", "dc/dd5/structkoutil_1_1container_1_1hash__array_1_1HashWrapper.html", "dc/dd5/structkoutil_1_1container_1_1hash__array_1_1HashWrapper" ],
+    [ "adapter_wrapper", "d0/d14/structkoutil_1_1container_1_1hash__array_1_1adapter__wrapper.html", "d0/d14/structkoutil_1_1container_1_1hash__array_1_1adapter__wrapper" ],
+    [ "hash_wrapper", "d5/daa/structkoutil_1_1container_1_1hash__array_1_1hash__wrapper.html", "d5/daa/structkoutil_1_1container_1_1hash__array_1_1hash__wrapper" ],
     [ "adapter_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#a78d6353b367a79a313a8d73c9af4095a", null ],
     [ "allocator_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#a265d20057e25ab0aa117f37b9fb1dd80", null ],
     [ "bucket_iter", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#abcf0f5164a7c762625fea9396450b71b", null ],
@@ -11,7 +11,7 @@ var classkoutil_1_1container_1_1hash__array =
     [ "iterator_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#a6f2424b918b9a7b2d10149de89d61fb8", null ],
     [ "key_id_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#a4f3f77577d3d6181b6e0b96dcdeb2a5c", null ],
     [ "key_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#ac1a43664d240a49d9baf02aa1635c081", null ],
-    [ "template_hash_array_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#a916e5f21460da0c486894b84ef9d7813", null ],
+    [ "template_hash_array_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#ac9735c314d50ef9c80618151528f96d8", null ],
     [ "value_t", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#ab5431022339af246c010af33bda21283", null ],
     [ "hash_array", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#a4a81dca69b9bbb158dc3a1ad5df1bcc3", null ],
     [ "hash_array", "d2/dd7/classkoutil_1_1container_1_1hash__array.html#a4ce730d72d70708b8127333dd4a4a13f", null ],

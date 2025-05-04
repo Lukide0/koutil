@@ -1,4 +1,0 @@
-var structkoutil_1_1type_1_1detail_1_1types__to__containers_3_01types_3_01Types_8_8_8_01_4_00_01Container_01_4 =
-[
-    [ "type", "de/d79/structkoutil_1_1type_1_1detail_1_1types__to__containers_3_01types_3_01Types_8_8_8_01_4_00_01Container_01_4.html#a31470b976d2c053844080ad9fe9da365", null ]
-];

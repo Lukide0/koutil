@@ -16,7 +16,7 @@ var classkoutil_1_1term_1_1terminal =
     [ "handle_exit_signal", "d8/d3d/classkoutil_1_1term_1_1terminal.html#a77c64dfd067b2d71c5dd7ceed5016ca1", null ],
     [ "has_error", "d8/d3d/classkoutil_1_1term_1_1terminal.html#a5a4b0837cd6e31903832e7f4f9ed4725", null ],
     [ "init", "d8/d3d/classkoutil_1_1term_1_1terminal.html#a9fe4835dae20f0d9522691d92aecbfda", null ],
-    [ "query_dimensions", "d8/d3d/classkoutil_1_1term_1_1terminal.html#a2ee7b9fff4423d3dcd6c7cf739a2c25d", null ],
+    [ "query_dimensions", "d8/d3d/classkoutil_1_1term_1_1terminal.html#a5f7a977b5641d683a618fd004c59ce51", null ],
     [ "register_signals", "d8/d3d/classkoutil_1_1term_1_1terminal.html#ad1ea7dc3551ca80353ce48d0667002a6", null ],
     [ "rollback", "d8/d3d/classkoutil_1_1term_1_1terminal.html#a940ea94c15d692b3c0e3de7fdba56e93", null ],
     [ "m_color_support", "d8/d3d/classkoutil_1_1term_1_1terminal.html#a79fa63e123adc7c5d2ca2916a4879095", null ],
