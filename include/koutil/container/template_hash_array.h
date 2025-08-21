@@ -428,7 +428,9 @@ public:
      * @brief Get a constant iterator to the end of the hash_array.
      * @return const_iterator_t Constant iterator to the end.
      */
-    const_iterator_t end() const { return iterator_t { m_buckets + m_buckets_count, 0, m_buckets + m_buckets_count }; }
+    const_iterator_t end() const {
+        return const_iterator_t { m_buckets + m_buckets_count, 0, m_buckets + m_buckets_count };
+    }
 
     /**
      * @brief Get a constant iterator to the beginning of the hash_array.
@@ -440,7 +442,9 @@ public:
      * @brief Get a constant iterator to the end of the hash_array.
      * @return const_iterator_t  Constant iterator to the end.
      */
-    const_iterator_t cend() const { return iterator_t { m_buckets + m_buckets_count, 0, m_buckets + m_buckets_count }; }
+    const_iterator_t cend() const {
+        return const_iterator_t { m_buckets + m_buckets_count, 0, m_buckets + m_buckets_count };
+    }
 
 private:
     bucket_t* m_buckets;
@@ -448,12 +452,16 @@ private:
     std::size_t m_size      = 0;
     float m_max_load_factor = 1.0F;
 
-    template <comptime_t Data> value_t hash_key(const Key& key) {
+    template <comptime_t Data> value_t hash_key(const Key& key) const {
         value_t hash = hash_t().template hash<Data>(key);
         return hash % m_buckets_count;
     }
 
     template <comptime_t Data> bucket_t& get_bucket(const key_t& key) { return m_buckets[hash_key<Data>(key)]; }
+
+    template <comptime_t Data> const bucket_t& get_bucket(const key_t& key) const {
+        return m_buckets[hash_key<Data>(key)];
+    }
 
     template <comptime_t Data> bucket_iter find_bucket_item(const key_t& key, bucket_t& bucket, adapter_t adapter) {
         auto bucket_end   = bucket.end();
