@@ -17,6 +17,7 @@ function(create_example name)
 
 endfunction()
 
+create_example("arguments" FILES arguments/main.cpp LIBS "${PROJECT_NAME}")
 create_example("colors" FILES colors/main.cpp LIBS "${PROJECT_NAME}")
 create_example("styles" FILES styles/main.cpp LIBS "${PROJECT_NAME}")
 create_example("commands" FILES commands/main.cpp LIBS "${PROJECT_NAME}")
