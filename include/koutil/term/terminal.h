@@ -43,7 +43,7 @@ enum class ColorSupport {
 /**
  * @brief Represents the dimensions of the terminal buffer.
  */
-struct dimensions {
+struct dimensions_t {
     std::size_t width;
     std::size_t height;
 };
@@ -94,10 +94,10 @@ public:
     static bool has_error();
 
     /**
-     * @brief Queries the dimensions of the terminal window.
+     * @brief Queries the dimensions of the terminal window. Does not require initialization.
      * @return The dimensions of the terminal window.
      */
-    static dimensions query_dimensions();
+    static dimensions_t query_dimensions();
 
     ~terminal() { exit(); }
 
@@ -234,7 +234,7 @@ bool terminal::has_error() {
     return s_instance->m_error != Error::NONE;
 }
 
-dimensions terminal::query_dimensions() {
+dimensions_t terminal::query_dimensions() {
 #if defined(OS_LINUX)
 
     winsize ws;
