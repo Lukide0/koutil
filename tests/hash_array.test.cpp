@@ -51,8 +51,8 @@ struct KeyAdapterTemplate {
         , tags_container(tags) { }
 
     template <CustomKeyTag Tag> [[nodiscard]] bool eql(const CustomKeyTemplate& key, std::size_t key_index) const {
-        return tags_container[key_index] == Tag && key.a == container[key_index * 2]
-            && key.b == container[(key_index * 2) + 1];
+        return tags_container[key_index] == Tag && std::cmp_equal(key.a, container[key_index * 2])
+            && std::cmp_equal(key.b, container[(key_index * 2) + 1]);
     }
 
     std::vector<int>& container;

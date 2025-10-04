@@ -1,10 +1,8 @@
-#include <array>
-#include <cmath>
-#include <cstdint>
 #include <cstdlib>
 #include <doctest/doctest.h>
 #include <koutil/container/multi_vector.h>
 #include <tuple>
+#include <utility>
 
 using namespace koutil::container;
 
@@ -126,7 +124,7 @@ TEST_CASE("[MULTI_VECTOR][AT]") {
     multi_vector<int, int> vec(INIT_SIZE);
     REQUIRE_EQ(vec.size(), INIT_SIZE);
 
-    for (int i = 0; i < static_cast<int>(INIT_SIZE); ++i) {
+    for (int i = 0; std::cmp_less(i, INIT_SIZE); ++i) {
         auto val = vec[i];
 
         std::get<0>(val) = i;

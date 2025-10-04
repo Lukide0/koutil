@@ -6,7 +6,7 @@ find_package(Git REQUIRED)
 FetchContent_Declare(
   doctest
   GIT_REPOSITORY https://github.com/doctest/doctest.git
-  GIT_TAG "v2.4.11"
+  GIT_TAG "v2.4.12"
   GIT_SHALLOW TRUE
   GIT_PROGRESS ON)
 FetchContent_MakeAvailable(doctest)
@@ -31,14 +31,21 @@ function(create_test name)
     add_executable("${name}" ${ARG_FILES})
 
     target_compile_features("${name}" PRIVATE cxx_std_20)
-    set_target_properties("${name}" PROPERTIES CXX_EXTENSIONS OFF)
+    set_target_properties("${name}" PROPERTIES
+        CXX_EXTENSIONS OFF
+        COMPILE_WARNING_AS_ERROR OFF
+    )
 
-    target_include_directories("${name}" PRIVATE "${ARG_INCLUDE}"
-                                               ${DOCTEST_INCLUDE_DIR})
+    target_include_directories("${name}"
+        PRIVATE "${ARG_INCLUDE}"
+        PRIVATE  ${DOCTEST_INCLUDE_DIR}
+    )
+
     target_link_libraries("${name}" PRIVATE ${ARG_LIBS})
 
     target_compile_definitions("${name}"
-                             PRIVATE DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN)
+        PRIVATE DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+    )
 
     target_compile_options("${name}" PRIVATE -fsanitize=address)
     target_link_options("${name}" PRIVATE -fsanitize=address)

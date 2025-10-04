@@ -9,7 +9,7 @@ function(create_example name)
 
     add_executable("${name}" ${ARG_FILES})
 
-    target_compile_features("${name}" PRIVATE cxx_std_23)
+    target_compile_features("${name}" PRIVATE cxx_std_20)
     set_target_properties("${name}" PROPERTIES CXX_EXTENSIONS OFF)
 
     target_include_directories("${name}" PRIVATE "${ARG_INCLUDE}")
