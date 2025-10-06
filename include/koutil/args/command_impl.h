@@ -2,6 +2,7 @@
 #define KOUTIL_ARGS_COMMAND_IMPL_H
 
 #include "koutil/args/command.h"
+#include "koutil/args/errors.h"
 #include "koutil/args/help.h"
 
 #include "koutil/args/result.h"
@@ -75,28 +76,15 @@ template <extends_result Result> void command_t<Result>::process(std::span<const
 
     const std::uint32_t needed_arguments = m_arguments.size();
 
-    auto create_argument_error = [this, needed_arguments](std::uint32_t arguments) -> std::string {
+    auto create_argument_error = [this, needed_arguments](std::uint32_t provided) -> std::string {
         if (m_path.empty()) {
-            return std::format(
-                "'{}' requires {} argument{}, but {} {} provided",
-                m_name,
-                needed_arguments,
-                needed_arguments == 1 ? "" : "s",
-                arguments,
-                arguments == 1 ? "was" : "were"
-            );
+            return error::make_argument_count(m_name, needed_arguments, provided);
         }
 
-        return std::format(
-            "command '{}' requires {} argument{}, but {} {} provided",
-            m_name,
-            needed_arguments,
-            needed_arguments == 1 ? "" : "s",
-            arguments,
-            arguments == 1 ? "was" : "were"
-        );
+        return error::make_command_argument_count(m_name, needed_arguments, provided);
     };
 
+    bool only_arguments = false;
     for (std::uint32_t i = 0; i < args.size(); ++i) {
         if (result.need_exit()) {
             return;
@@ -104,28 +92,35 @@ template <extends_result Result> void command_t<Result>::process(std::span<const
 
         std::string_view arg { args[i] };
 
-        if (arg.starts_with('-')) {
-            i = process_option(arg, args, i, result);
+        if (!only_arguments && arg == "--") {
+            only_arguments = true;
             continue;
         }
 
-        auto cmd_it = m_cmd_map.find(arg);
-        if (cmd_it != m_cmd_map.end()) {
-            if (needed_arguments != arguments) {
-                result.add_error(create_argument_error(arguments));
+        if (!only_arguments) {
+            if (arg.starts_with('-')) {
+                i = process_option(arg, args, i, result);
+                continue;
             }
 
-            check_options(result);
+            auto cmd_it = m_cmd_map.find(arg);
+            if (cmd_it != m_cmd_map.end()) {
+                if (needed_arguments != arguments) {
+                    result.add_error(create_argument_error(arguments));
+                }
 
-            auto rest = args.subspan(i + 1);
+                check_options(result);
 
-            auto& cmd = m_commands[cmd_it->second];
-            if (cmd.m_handle) {
-                cmd.m_handle(rest, result);
+                auto rest = args.subspan(i + 1);
+
+                auto& cmd = m_commands[cmd_it->second];
+                if (cmd.m_handle) {
+                    cmd.m_handle(rest, result);
+                }
+
+                cmd.process(rest, result);
+                return;
             }
-
-            cmd.process(rest, result);
-            return;
         }
 
         if (arguments < needed_arguments) {
@@ -133,7 +128,7 @@ template <extends_result Result> void command_t<Result>::process(std::span<const
 
             arguments += 1;
         } else {
-            result.add_error(std::format("unknown argument: {}", arg));
+            result.add_error(error::make_unknown_argument(arg));
         }
     }
 
@@ -162,13 +157,18 @@ std::uint32_t command_t<Result>::process_option(
     auto value_start = arg.find('=');
     bool has_value   = value_start != std::string_view::npos;
 
+    std::string_view whole_name = arg;
+    if (has_value) {
+        whole_name = whole_name.substr(0, value_start);
+    }
+
     std::uint32_t option_id;
 
     // long option
     if (name.starts_with('-')) {
 
         if (has_value) {
-            name = name.substr(0, value_start - 2);
+            name = name.substr(0, value_start - 1);
         }
 
         // removes second '-'
@@ -176,7 +176,7 @@ std::uint32_t command_t<Result>::process_option(
 
         auto option_it = m_long_options.find(option_name);
         if (option_it == m_long_options.end()) {
-            result.add_error(std::format("unknown option '-{}'", name));
+            result.add_error(error::make_unknown_long_option(option_name));
             return index;
         }
 
@@ -184,16 +184,17 @@ std::uint32_t command_t<Result>::process_option(
 
     } else {
         if (has_value) {
-            name = name.substr(0, value_start - 1);
+            name = name.substr(0, value_start);
         }
 
         if (name.size() != 1) {
-            result.add_error(std::format("Invalid short option '-{}': must be a single character", name));
+            result.add_error(error::make_invalid_short_option(name));
+            return index;
         }
 
         auto option_it = m_short_options.find(name[0]);
         if (option_it == m_short_options.end()) {
-            result.add_error(std::format("unknown option '{}'", name));
+            result.add_error(error::make_unknown_short_option(name[0]));
             return index;
         }
 
@@ -204,7 +205,7 @@ std::uint32_t command_t<Result>::process_option(
 
     if (!option.has_value()) {
         if (has_value) {
-            result.add_error(std::format("option '-{}' requires a value", name));
+            result.add_error(error::make_unexpected_option_value(whole_name));
             return index;
         }
 
@@ -220,7 +221,7 @@ std::uint32_t command_t<Result>::process_option(
         index += 1;
         value = args[index];
     } else {
-        result.add_error(std::format("option '-{}' requires a value", name));
+        result.add_error(error::make_option_requires_value(whole_name));
         return index;
     }
 
@@ -231,17 +232,7 @@ std::uint32_t command_t<Result>::process_option(
 template <extends_result Result> void command_t<Result>::check_options(result_t& result) {
     for (const auto& option : m_options) {
         if (option.required() && !option.used()) {
-            std::string option_display;
-            if (option.long_name()) {
-                option_display = std::format("--{}", *option.long_name());
-                if (option.short_name()) {
-                    option_display += std::format(" (-{})", *option.short_name());
-                }
-            } else if (option.short_name()) {
-                option_display = std::format("-{}", *option.short_name());
-            }
-
-            result.add_error(std::format("required option {} was not provided", option_display));
+            result.add_error(error::make_missing_required_option(option));
         }
     }
 }
@@ -250,6 +241,16 @@ template <extends_result Result> void command_t<Result>::show_help(std::ostream&
 
     help_printer_t printer(*this, terminal_size);
     printer.print(out);
+}
+
+template <extends_result Result> void command_t<Result>::clear_used() {
+    for (auto& option : m_options) {
+        option.clear_used();
+    }
+
+    for (auto& cmd : m_commands) {
+        cmd.clear_used();
+    }
 }
 
 }

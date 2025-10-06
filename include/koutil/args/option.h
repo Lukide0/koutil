@@ -109,6 +109,11 @@ public:
      */
     void process(std::optional<std::string_view> value, result_t& result);
 
+    /**
+     * @brief Clears state
+     */
+    void clear_used() { m_used = false; }
+
 private:
     bool m_has_value;
     bool m_required;

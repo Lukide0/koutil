@@ -148,6 +148,11 @@ public:
      */
     void show_help(std::ostream& out, std::size_t terminal_size = 80) const;
 
+    /**
+     * @brief Clears state
+     */
+    void clear_used();
+
 private:
     std::uint32_t
     process_option(std::string_view name, std::span<const char* const> args, std::uint32_t index, result_t& result);

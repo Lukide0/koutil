@@ -42,6 +42,18 @@ public:
     parser_t(command_t cmd);
 
     /**
+     * @brief Gets the parser name
+     * @return Parser name
+     */
+    [[nodiscard]] std::string_view name() const { return m_main_command.name(); }
+
+    /**
+     * @brief Gets the parser description
+     * @return Parser description
+     */
+    [[nodiscard]] std::string_view description() const { return m_main_command.description(); }
+
+    /**
      * @brief Adds a subcommand.
      * @param command Command to add.
      * @return True if added successfully.
@@ -84,6 +96,11 @@ public:
     void show_help(std::ostream& out = std::cout, std::size_t terminal_size = 80) const {
         m_main_command.show_help(out, terminal_size);
     }
+
+    /**
+     * @brief Clears state
+     */
+    void clear_used() { m_main_command.clear_used(); }
 
 private:
     std::string_view m_version;
