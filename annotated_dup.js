@@ -1,6 +1,17 @@
 var annotated_dup =
 [
     [ "koutil", "dd/dcf/namespacekoutil.html", [
+      [ "args", "de/d8e/namespacekoutil_1_1args.html", [
+        [ "argument_t", "d6/dc4/classkoutil_1_1args_1_1argument__t.html", "d6/dc4/classkoutil_1_1args_1_1argument__t" ],
+        [ "command_builder_t", "dd/dc3/classkoutil_1_1args_1_1command__builder__t.html", "dd/dc3/classkoutil_1_1args_1_1command__builder__t" ],
+        [ "command_t", "d9/d8c/classkoutil_1_1args_1_1command__t.html", "d9/d8c/classkoutil_1_1args_1_1command__t" ],
+        [ "help_printer_t", "d1/d44/classkoutil_1_1args_1_1help__printer__t.html", "d1/d44/classkoutil_1_1args_1_1help__printer__t" ],
+        [ "option_builder_t", "df/dd5/classkoutil_1_1args_1_1option__builder__t.html", "df/dd5/classkoutil_1_1args_1_1option__builder__t" ],
+        [ "option_data_t", "d2/d7e/structkoutil_1_1args_1_1option__data__t.html", "d2/d7e/structkoutil_1_1args_1_1option__data__t" ],
+        [ "option_t", "d3/d31/classkoutil_1_1args_1_1option__t.html", "d3/d31/classkoutil_1_1args_1_1option__t" ],
+        [ "parser_t", "de/d03/classkoutil_1_1args_1_1parser__t.html", "de/d03/classkoutil_1_1args_1_1parser__t" ],
+        [ "result_base_t", "df/dfb/classkoutil_1_1args_1_1result__base__t.html", "df/dfb/classkoutil_1_1args_1_1result__base__t" ]
+      ] ],
       [ "container", "d8/d14/namespacekoutil_1_1container.html", [
         [ "comptime_map", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html", "d2/d7d/classkoutil_1_1container_1_1comptime__map" ],
         [ "hash_array", "d2/dd7/classkoutil_1_1container_1_1hash__array.html", "d2/dd7/classkoutil_1_1container_1_1hash__array" ],
@@ -13,7 +24,7 @@ var annotated_dup =
         [ "color_t", "d1/d7e/structkoutil_1_1term_1_1color__t.html", "d1/d7e/structkoutil_1_1term_1_1color__t" ],
         [ "cursor_move", "dc/d9b/structkoutil_1_1term_1_1cursor__move.html", "dc/d9b/structkoutil_1_1term_1_1cursor__move" ],
         [ "cursor_pos", "dd/d70/structkoutil_1_1term_1_1cursor__pos.html", "dd/d70/structkoutil_1_1term_1_1cursor__pos" ],
-        [ "dimensions", "d2/d2e/structkoutil_1_1term_1_1dimensions.html", "d2/d2e/structkoutil_1_1term_1_1dimensions" ],
+        [ "dimensions_t", "dd/da7/structkoutil_1_1term_1_1dimensions__t.html", "dd/da7/structkoutil_1_1term_1_1dimensions__t" ],
         [ "terminal", "d8/d3d/classkoutil_1_1term_1_1terminal.html", "d8/d3d/classkoutil_1_1term_1_1terminal" ]
       ] ],
       [ "type", "d0/d19/namespacekoutil_1_1type.html", [

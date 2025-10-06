@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>koutil: koutil::term::dimensions Struct Reference</title>
+<title>koutil: include/koutil/args/option.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d2/d2e/structkoutil_1_1term_1_1dimensions.html','../../'); initResizable(true); });
+$(function(){initNavTree('db/db8/option_8h.html','../../'); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,64 +98,43 @@ $(function(){initNavTree('d2/d2e/structkoutil_1_1term_1_1dimensions.html','../..
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="../../db/df0/structkoutil_1_1term_1_1dimensions-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">koutil::term::dimensions Struct Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
+  <div class="headertitle"><div class="title">option.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Represents the dimensions of the terminal buffer.  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../dc/dbe/terminal_8h_source.html">terminal.h</a>&gt;</code></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d3/d78/handle_8h_source.html">koutil/args/handle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d93/result_8h_source.html">koutil/args/result.h</a>&quot;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+</div>
+<p><a href="../../db/db8/option_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a4ab2ec1ca494498c7965a82ab0bc511a" id="r_a4ab2ec1ca494498c7965a82ab0bc511a"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ab2ec1ca494498c7965a82ab0bc511a">width</a></td></tr>
-<tr class="separator:a4ab2ec1ca494498c7965a82ab0bc511a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14e053c862021b6a2c0a1a750f86923d" id="r_a14e053c862021b6a2c0a1a750f86923d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14e053c862021b6a2c0a1a750f86923d">height</a></td></tr>
-<tr class="separator:a14e053c862021b6a2c0a1a750f86923d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7e/structkoutil_1_1args_1_1option__data__t.html">koutil::args::option_data_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds metadata for an option.  <a href="../../d2/d7e/structkoutil_1_1args_1_1option__data__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d31/classkoutil_1_1args_1_1option__t.html">koutil::args::option_t&lt; Result &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a command-line option.  <a href="../../d3/d31/classkoutil_1_1args_1_1option__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcf/namespacekoutil.html">koutil</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d8e/namespacekoutil_1_1args.html">koutil::args</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents the dimensions of the terminal buffer. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a14e053c862021b6a2c0a1a750f86923d" name="a14e053c862021b6a2c0a1a750f86923d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14e053c862021b6a2c0a1a750f86923d">&#9670;&#160;</a></span>height</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t koutil::term::dimensions::height</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4ab2ec1ca494498c7965a82ab0bc511a" name="a4ab2ec1ca494498c7965a82ab0bc511a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ab2ec1ca494498c7965a82ab0bc511a">&#9670;&#160;</a></span>width</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t koutil::term::dimensions::width</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/koutil/term/<a class="el" href="../../dc/dbe/terminal_8h_source.html">terminal.h</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dd/dcf/namespacekoutil.html">koutil</a></li><li class="navelem"><a class="el" href="../../d6/d7c/namespacekoutil_1_1term.html">term</a></li><li class="navelem"><a class="el" href="../../d2/d2e/structkoutil_1_1term_1_1dimensions.html">dimensions</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_d86e4bb1a7191b6cd17359eb2871f472.html">koutil</a></li><li class="navelem"><a class="el" href="../../dir_d0a59e6c7df98a9545255e2b654bea04.html">args</a></li><li class="navelem"><a class="el" href="../../db/db8/option_8h.html">option.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

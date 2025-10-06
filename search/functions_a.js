@@ -1,4 +1,14 @@
 var searchData=
 [
-  ['next_5fcapacity_0',['next_capacity',['../d4/d2e/classkoutil_1_1container_1_1multi__vector_1_1single__vector.html#a9a659e482745576007f5a3a2c0106f2a',1,'koutil::container::multi_vector::single_vector']]]
+  ['make_5fargument_5fcount_0',['make_argument_count',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#ad027f865f07373c6c3a1249cacc602d7',1,'koutil::args::error']]],
+  ['make_5fcommand_5fargument_5fcount_1',['make_command_argument_count',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#a43f3c2d8ea7ebab6a7d5a14357d97010',1,'koutil::args::error']]],
+  ['make_5finvalid_5fshort_5foption_2',['make_invalid_short_option',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#a14a12a6120c71d5aea026c7872fbae81',1,'koutil::args::error']]],
+  ['make_5fmissing_5frequired_5foption_3',['make_missing_required_option',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#a1da1dfafd6f6eb5fe40d47ccc97c7564',1,'koutil::args::error']]],
+  ['make_5foption_5frequires_5fvalue_4',['make_option_requires_value',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#ad4d9d48654b45484aa64916e2eb9a219',1,'koutil::args::error']]],
+  ['make_5funexpected_5foption_5fvalue_5',['make_unexpected_option_value',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#aac9aaac934d5db0bdec00bb94bd1c286',1,'koutil::args::error']]],
+  ['make_5funknown_5fargument_6',['make_unknown_argument',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#a73b5b756bc1af181f3cced110ed39540',1,'koutil::args::error']]],
+  ['make_5funknown_5flong_5foption_7',['make_unknown_long_option',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#adb42b05f5427c7d707e6e8f5a3d35dcd',1,'koutil::args::error']]],
+  ['make_5funknown_5fshort_5foption_8',['make_unknown_short_option',['../d2/d0f/namespacekoutil_1_1args_1_1error.html#acca1ca3c22948a9a52136118d2061620',1,'koutil::args::error']]],
+  ['max_5fload_5ffactor_9',['max_load_factor',['../d2/dd7/classkoutil_1_1container_1_1hash__array.html#ae49bbfc33effa1b2561aba2c8789b806',1,'koutil::container::hash_array::max_load_factor()'],['../db/d9f/classkoutil_1_1container_1_1template__hash__array.html#af7d19e5c5fb01511d6101332384249a7',1,'koutil::container::template_hash_array::max_load_factor()']]],
+  ['multi_5fvector_10',['multi_vector',['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#ab97763786bb0ac045fa39fe352bbbf6f',1,'koutil::container::multi_vector::multi_vector()=default'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#aff54e59d3cdbf8fa445edee51f0c13ef',1,'koutil::container::multi_vector::multi_vector(const multi_vector &amp;)=default'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a98e4c1d65f3fdab9e37796d68135a4d5',1,'koutil::container::multi_vector::multi_vector(multi_vector &amp;&amp;)=default'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#abf921e94637be1eefef38c08f3bef2b2',1,'koutil::container::multi_vector::multi_vector(std::size_t count, const value_t &amp;value)'],['../dc/da1/classkoutil_1_1container_1_1multi__vector.html#a80ee5f7202200369f57b91f6f9468a21',1,'koutil::container::multi_vector::multi_vector(std::size_t count)']]]
 ];

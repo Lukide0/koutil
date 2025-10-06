@@ -1,6 +1,10 @@
 var concepts =
 [
     [ "koutil", "dd/dcf/namespacekoutil.html", [
+      [ "args", "de/d8e/namespacekoutil_1_1args.html", [
+        [ "void_handle", "d6/dad/conceptkoutil_1_1args_1_1void__handle.html", null ],
+        [ "extends_result", "d0/d90/conceptkoutil_1_1args_1_1extends__result.html", null ]
+      ] ],
       [ "container", "d8/d14/namespacekoutil_1_1container.html", [
         [ "is_hash", "da/d53/conceptkoutil_1_1container_1_1is__hash.html", null ],
         [ "is_key_adapter", "d6/d44/conceptkoutil_1_1container_1_1is__key__adapter.html", null ],

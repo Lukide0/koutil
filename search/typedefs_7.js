@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pair_5ft_0',['pair_t',['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a4373641a13679e197199b2d371745f04',1,'koutil::container::comptime_map']]],
-  ['pairs_5ft_1',['pairs_t',['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a7e9cf2fef8bedc367682dc278957e39b',1,'koutil::container::comptime_map']]]
+  ['option_5ft_0',['option_t',['../d9/d8c/classkoutil_1_1args_1_1command__t.html#a1d0c4157c5574defc8edb8af5a4972b2',1,'koutil::args::command_t::option_t'],['../dd/dc3/classkoutil_1_1args_1_1command__builder__t.html#a173bb3a7f3c43b055c32db45cf600760',1,'koutil::args::command_builder_t::option_t'],['../d1/d44/classkoutil_1_1args_1_1help__printer__t.html#ab69611fa91d1cfacaea20b903dd03b45',1,'koutil::args::help_printer_t::option_t'],['../df/dd5/classkoutil_1_1args_1_1option__builder__t.html#a35224f9f8bad9fc727739d09401285e8',1,'koutil::args::option_builder_t::option_t'],['../de/d03/classkoutil_1_1args_1_1parser__t.html#ac199bd79d3f1d4135a186a991b1873ba',1,'koutil::args::parser_t::option_t']]]
 ];

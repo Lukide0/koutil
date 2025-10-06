@@ -17,8 +17,10 @@ var searchData=
   ['erasecommand_14',['EraseCommand',['../d6/d7c/namespacekoutil_1_1term.html#aea815af98bef8a15f5a0828c5ccf225f',1,'koutil::term']]],
   ['error_15',['Error',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#ad5b888cc614d56a533696451e59bf2c7',1,'koutil::term::terminal']]],
   ['error_16',['error',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a44781b55de45a3260c35b8d8fadc9105',1,'koutil::term::terminal']]],
-  ['esc_17',['ESC',['../d3/d72/namespacekoutil_1_1util.html#a9a08d6c32bff9476faa3afb75025d705',1,'koutil::util']]],
-  ['exit_18',['exit',['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a85a51157d5b365dffe0f54671030a254',1,'koutil::term::terminal']]],
-  ['extend_19',['extend',['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a47001a367ce74591be71558ef6f13d69',1,'koutil::container::comptime_map::extend(const std::array&lt; pair_t, Count &gt; &amp;pairs) const'],['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a234965102e7cecb9811488c103dafdb6',1,'koutil::container::comptime_map::extend(const pair_t &amp;pair) const'],['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a921b10379c4033193d9f74caaba019b8',1,'koutil::container::comptime_map::extend(const comptime_map&lt; Key, Value, OtherSize &gt; &amp;other) const']]],
-  ['extract_5fvalue_20',['extract_value',['../d1/d7e/structkoutil_1_1term_1_1color__t.html#a30a6fb27d93204909814faa9a685a878',1,'koutil::term::color_t']]]
+  ['errors_17',['errors',['../df/dfb/classkoutil_1_1args_1_1result__base__t.html#a0d2df19e5e7aff560970c5489331e340',1,'koutil::args::result_base_t']]],
+  ['errors_2eh_18',['errors.h',['../de/d45/errors_8h.html',1,'']]],
+  ['esc_19',['ESC',['../d3/d72/namespacekoutil_1_1util.html#a9a08d6c32bff9476faa3afb75025d705',1,'koutil::util']]],
+  ['exit_20',['exit',['../df/dfb/classkoutil_1_1args_1_1result__base__t.html#ac139455f0d0ab1b09b2aa2d986ea1fc4',1,'koutil::args::result_base_t::exit()'],['../d8/d3d/classkoutil_1_1term_1_1terminal.html#a85a51157d5b365dffe0f54671030a254',1,'koutil::term::terminal::exit()']]],
+  ['extend_21',['extend',['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a47001a367ce74591be71558ef6f13d69',1,'koutil::container::comptime_map::extend(const std::array&lt; pair_t, Count &gt; &amp;pairs) const'],['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a234965102e7cecb9811488c103dafdb6',1,'koutil::container::comptime_map::extend(const pair_t &amp;pair) const'],['../d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a921b10379c4033193d9f74caaba019b8',1,'koutil::container::comptime_map::extend(const comptime_map&lt; Key, Value, OtherSize &gt; &amp;other) const']]],
+  ['extract_5fvalue_22',['extract_value',['../d1/d7e/structkoutil_1_1term_1_1color__t.html#a30a6fb27d93204909814faa9a685a878',1,'koutil::term::color_t']]]
 ];

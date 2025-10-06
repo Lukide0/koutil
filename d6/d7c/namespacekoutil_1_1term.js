@@ -29,7 +29,7 @@ var namespacekoutil_1_1term =
     [ "color_t", "d1/d7e/structkoutil_1_1term_1_1color__t.html", "d1/d7e/structkoutil_1_1term_1_1color__t" ],
     [ "cursor_move", "dc/d9b/structkoutil_1_1term_1_1cursor__move.html", "dc/d9b/structkoutil_1_1term_1_1cursor__move" ],
     [ "cursor_pos", "dd/d70/structkoutil_1_1term_1_1cursor__pos.html", "dd/d70/structkoutil_1_1term_1_1cursor__pos" ],
-    [ "dimensions", "d2/d2e/structkoutil_1_1term_1_1dimensions.html", "d2/d2e/structkoutil_1_1term_1_1dimensions" ],
+    [ "dimensions_t", "dd/da7/structkoutil_1_1term_1_1dimensions__t.html", "dd/da7/structkoutil_1_1term_1_1dimensions__t" ],
     [ "terminal", "d8/d3d/classkoutil_1_1term_1_1terminal.html", "d8/d3d/classkoutil_1_1term_1_1terminal" ],
     [ "BufferCommand", "d6/d7c/namespacekoutil_1_1term.html#addd55ce6a3bc95576fd4aebcc76d99f2", [
       [ "ENABLE_ALTERNATIVE_BUFFER", "d6/d7c/namespacekoutil_1_1term.html#addd55ce6a3bc95576fd4aebcc76d99f2a5c4c594107462f361f081a7257bdfbf3", null ],
