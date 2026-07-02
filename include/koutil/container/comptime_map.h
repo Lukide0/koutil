@@ -35,7 +35,7 @@ public:
         if (contains_duplicate_key()) {
             assert(false && "Duplicate keys are not allowed in a compile-time map.");
         }
-        std::ranges::sort(m_data, {}, &pair_t::first);
+        std::ranges::sort(m_data, { }, &pair_t::first);
     }
 
     template <std::size_t Count> [[nodiscard]] consteval auto extend(const std::array<pair_t, Count>& pairs) const {
@@ -75,7 +75,7 @@ public:
      * @return The index of the key if found, npos otherwise.
      */
     [[nodiscard]] constexpr std::size_t find(const Key& key) const {
-        const auto iter = std::ranges::lower_bound(m_data.begin(), m_data.end(), key, {}, &pair_t::first);
+        const auto iter = std::ranges::lower_bound(m_data.begin(), m_data.end(), key, { }, &pair_t::first);
         if (iter == m_data.end() || iter->first != key) {
             return npos;
         } else {
@@ -110,6 +110,11 @@ public:
      * @return The value associated with the key if found, default_value otherwise.
      */
     [[nodiscard]] constexpr const Value& safe_at(const Key& key, const Value& default_value) const {
+        const auto index = find(key);
+        return (index == npos) ? default_value : unsafe_get(index);
+    }
+
+    [[nodiscard]] constexpr Value safe_at(const Key& key, Value&& default_value) const {
         const auto index = find(key);
         return (index == npos) ? default_value : unsafe_get(index);
     }
