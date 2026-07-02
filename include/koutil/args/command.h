@@ -29,9 +29,9 @@ namespace koutil::args {
  */
 template <extends_result Result = result_base_t> class command_t {
 public:
-    using result_t   = Result;
-    using option_t   = option_t<result_t>;
-    using argument_t = argument_t<result_t>;
+    using result_t      = Result;
+    using option_type   = option_t<result_t>;
+    using argument_type = argument_t<result_t>;
     /**
      * @brief Function handle type for command execution.
      *
@@ -116,7 +116,7 @@ public:
      * @return True if added successfully.
      * @note The order of added options affects their order in the help text.
      */
-    bool add_option(const option_t& option);
+    bool add_option(const option_type& option);
 
     /**
      * @brief Adds a positional argument.
@@ -124,7 +124,7 @@ public:
      * @note The order of added arguments defines their expected order on the command line
      *       and their order in the help text.
      */
-    void add_argument(const argument_t& argument);
+    void add_argument(const argument_type& argument);
 
     /**
      * @brief Processes command-line arguments.
@@ -173,8 +173,8 @@ private:
     std::string_view m_description;
     handle_t m_handle;
 
-    std::vector<argument_t> m_arguments;
-    std::vector<option_t> m_options;
+    std::vector<argument_type> m_arguments;
+    std::vector<option_type> m_options;
     std::vector<command_t> m_commands;
     std::unordered_map<std::string_view, std::uint32_t, string_hash> m_cmd_map;
 

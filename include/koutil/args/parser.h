@@ -23,10 +23,10 @@ namespace koutil::args {
  */
 template <extends_result Result = result_base_t> class parser_t {
 public:
-    using result_t   = Result;
-    using command_t  = command_t<result_t>;
-    using option_t   = option_t<result_t>;
-    using argument_t = argument_t<result_t>;
+    using result_t      = Result;
+    using command_type  = command_t<result_t>;
+    using option_type   = option_t<result_t>;
+    using argument_type = argument_t<result_t>;
 
     /**
      * @brief Constructs a parser with a name and description.
@@ -39,7 +39,7 @@ public:
      * @brief Constructs a parser from command.
      * @param main Command.
      */
-    parser_t(command_t cmd);
+    parser_t(command_type cmd);
 
     /**
      * @brief Gets the parser name
@@ -58,20 +58,20 @@ public:
      * @param command Command to add.
      * @return True if added successfully.
      */
-    bool add_command(command_t&& command);
+    bool add_command(command_type&& command);
 
     /**
      * @brief Adds an option to the parser.
      * @param option Option to add.
      * @return True if added successfully.
      */
-    bool add_option(const option_t& option);
+    bool add_option(const option_type& option);
 
     /**
      * @brief Adds a positional argument.
      * @param argument Argument to add.
      */
-    void add_argument(const argument_t& argument);
+    void add_argument(const argument_type& argument);
 
     /**
      * @brief Parses command-line arguments.
@@ -104,26 +104,26 @@ public:
 
 private:
     std::string_view m_version;
-    command_t m_main_command;
+    command_type m_main_command;
 };
 
 template <extends_result Result>
-parser_t<Result>::parser_t(command_t cmd)
+parser_t<Result>::parser_t(command_type cmd)
     : m_main_command(std::move(cmd)) { }
 
 template <extends_result Result>
 parser_t<Result>::parser_t(std::string_view name, std::string_view description)
     : m_main_command(name, description) { }
 
-template <extends_result Result> bool parser_t<Result>::add_command(command_t&& command) {
+template <extends_result Result> bool parser_t<Result>::add_command(command_type&& command) {
     return m_main_command.add_command(std::move(command));
 }
 
-template <extends_result Result> bool parser_t<Result>::add_option(const option_t& option) {
+template <extends_result Result> bool parser_t<Result>::add_option(const option_type& option) {
     return m_main_command.add_option(option);
 }
 
-template <extends_result Result> void parser_t<Result>::add_argument(const argument_t& argument) {
+template <extends_result Result> void parser_t<Result>::add_argument(const argument_type& argument) {
     m_main_command.add_argument(argument);
 }
 

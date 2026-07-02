@@ -52,7 +52,7 @@ template <extends_result Result> void help_printer_t<Result>::print(std::ostream
 }
 
 template <extends_result Result>
-void help_printer_t<Result>::print_arguments(std::ostream& out, const std::vector<argument_t>& args) {
+void help_printer_t<Result>::print_arguments(std::ostream& out, const std::vector<argument_type>& args) {
     if (args.empty()) {
         return;
     }
@@ -71,7 +71,7 @@ void help_printer_t<Result>::print_arguments(std::ostream& out, const std::vecto
 }
 
 template <extends_result Result>
-void help_printer_t<Result>::print_options(std::ostream& out, const std::vector<option_t>& options) {
+void help_printer_t<Result>::print_options(std::ostream& out, const std::vector<option_type>& options) {
     if (options.empty()) {
         return;
     }
@@ -140,7 +140,7 @@ void help_printer_t<Result>::print_options(std::ostream& out, const std::vector<
 }
 
 template <extends_result Result>
-void help_printer_t<Result>::print_commands(std::ostream& out, const std::vector<command_t>& cmds) {
+void help_printer_t<Result>::print_commands(std::ostream& out, const std::vector<command_type>& cmds) {
     if (cmds.empty()) {
         return;
     }

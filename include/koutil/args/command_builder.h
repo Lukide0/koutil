@@ -30,10 +30,10 @@ namespace koutil::args {
  */
 template <extends_result Result = result_base_t> class command_builder_t {
 public:
-    using result_t   = Result;
-    using command_t  = command_t<result_t>;
-    using option_t   = option_t<result_t>;
-    using argument_t = argument_t<result_t>;
+    using result_t      = Result;
+    using command_type  = command_t<result_t>;
+    using option_type   = option_t<result_t>;
+    using argument_type = argument_t<result_t>;
 
     /**
      * @brief Constructs a builder for a command with name and description.
@@ -59,7 +59,7 @@ public:
      * @param option Option to add.
      * @return Builder.
      */
-    command_builder_t&& add_option(const option_t& option) && {
+    command_builder_t&& add_option(const option_type& option) && {
         assert(m_cmd.add_option(option));
         return std::move(*this);
     }
@@ -69,7 +69,7 @@ public:
      * @param argument Argument to add.
      * @return Builder.
      */
-    command_builder_t&& add_argument(const argument_t& argument) && {
+    command_builder_t&& add_argument(const argument_type& argument) && {
         m_cmd.add_argument(argument);
         return std::move(*this);
     }
@@ -79,7 +79,7 @@ public:
      * @param command Subcommand to add.
      * @return Builder.
      */
-    command_builder_t&& add_command(command_t&& command) && {
+    command_builder_t&& add_command(command_type&& command) && {
         assert(m_cmd.add_command(std::move(command)));
         return std::move(*this);
     }
@@ -88,10 +88,10 @@ public:
      * @brief Builds and returns the final command.
      * @return Constructed @ref command_t object.
      */
-    command_t build() && { return std::move(m_cmd); }
+    command_type build() && { return std::move(m_cmd); }
 
 private:
-    command_t m_cmd;
+    command_type m_cmd;
 };
 }
 

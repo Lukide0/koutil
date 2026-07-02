@@ -15,10 +15,3 @@ cmake_policy(SET CMP0076 NEW)
 # Use folders for source file organization with IDE generators (Visual
 # Studio/Xcode)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-
-# -----------------------------------------------------------------------------
-# Set compiler options
-
-if(NOT DEFINED CMAKE_COMPILE_WARNING_AS_ERROR)
-    set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
-endif()

@@ -28,8 +28,8 @@ namespace koutil::args {
  */
 template <extends_result Result = result_base_t> class option_builder_t {
 public:
-    using result_t = Result;
-    using option_t = option_t<result_t>;
+    using result_t    = Result;
+    using option_type = option_t<result_t>;
 
     /**
      * @brief Constructs a builder with both short and long names.
@@ -99,7 +99,7 @@ public:
      * @brief Builds the option with the configured properties.
      * @return Constructed option.
      */
-    option_t build() && { return option_t(m_data, std::move(m_handle)); }
+    option_type build() && { return option_type(m_data, std::move(m_handle)); }
 
     /**
      * @brief Builds the option with an explicit handler.
@@ -107,14 +107,14 @@ public:
      * @param handle Function to handle the option’s value.
      * @return Constructed option.
      */
-    template <void_handle<std::optional<std::string_view>, result_t&> Handle> option_t build(Handle&& handle) && {
+    template <void_handle<std::optional<std::string_view>, result_t&> Handle> option_type build(Handle&& handle) && {
         assert(m_handle == nullptr);
-        return option_t(m_data, std::forward<Handle>(handle));
+        return option_type(m_data, std::forward<Handle>(handle));
     }
 
 private:
     option_data_t m_data;
-    option_t::handle_t m_handle;
+    option_type::handle_t m_handle;
 };
 
 }

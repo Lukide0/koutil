@@ -16,13 +16,13 @@
             },
             "warnings": {
                 "dev": true,
-                "deprecated": false,
+                "deprecated": true,
                 "uninitialized": true,
                 "unusedCli": true,
                 "systemVars": false
             },
             "errors": {
-                "dev": true,
+                "dev": false,
                 "deprecated": false
             }
         },
@@ -51,7 +51,9 @@
             "name": "ci-base",
             "hidden": true,
             "binaryDir": "${sourceDir}/build/${presetName}",
-            "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
         },
         {
             "name": "ci-linux",

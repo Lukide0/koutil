@@ -36,7 +36,9 @@ TEST_CASE("[ARGS][Arguments]") {
     parser_t<> parser("test", "");
 
     for (std::size_t i = 0; i < args_count; ++i) {
-        parser.add_argument(argument_t<>("arg", "", [&](auto value, result_base_t& _) { arguments.push_back(value); }));
+        parser.add_argument(argument_t<>("arg", "", [&](auto value, [[maybe_unused]] result_base_t& _) {
+            arguments.push_back(value);
+        }));
     }
 
     {
@@ -87,7 +89,9 @@ TEST_CASE("[ARGS][Terminator]") {
     parser_t<> parser("test", "");
 
     for (std::size_t i = 0; i < args_count; ++i) {
-        parser.add_argument(argument_t<>("arg", "", [&](auto value, result_base_t& _) { arguments.push_back(value); }));
+        parser.add_argument(argument_t<>("arg", "", [&](auto value, [[maybe_unused]] result_base_t& _) {
+            arguments.push_back(value);
+        }));
     }
 
     const auto result = parser.parse(all_args);
@@ -115,7 +119,9 @@ TEST_CASE("[ARGS][OPTION][SHORT]") {
 
     for (std::size_t i = 0; i < options_count; ++i) {
         REQUIRE(parser.add_option(
-            option_builder_t<>('a' + i).handle([&flags, i](auto _, result_base_t&) { flags.set(i); }).build()
+            option_builder_t<>('a' + i).handle(
+                                           [&flags, i]([[maybe_unused]] auto _, result_base_t&) { flags.set(i); }
+            ).build()
         ));
     }
 
@@ -148,7 +154,9 @@ TEST_CASE("[ARGS][OPTION][LONG]") {
         name.remove_prefix(2);
 
         REQUIRE(parser.add_option(
-            option_builder_t<>(name).handle([&flags, i](auto _, result_base_t&) { flags.set(i); }).build()
+            option_builder_t<>(name).handle(
+                                        [&flags, i]([[maybe_unused]] auto _, result_base_t&) { flags.set(i); }
+            ).build()
         ));
     }
 
@@ -189,7 +197,7 @@ TEST_CASE("[ARGS][OPTION][LONG AND SHORT]") {
 
         REQUIRE(parser.add_option(
             option_builder_t<>(short_name, long_name)
-                .handle([&flags, i](auto _, result_base_t&) { flags.set(i); })
+                .handle([&flags, i]([[maybe_unused]] auto _, result_base_t&) { flags.set(i); })
                 .build()
         ));
     }
@@ -206,8 +214,12 @@ TEST_CASE("[ARGS][OPTION][VALUE]") {
 
     parser_t<> parser("test", "");
 
-    parser.add_option(option_builder_t<>("width").has_value().build([&](auto value, auto& _) { width = *value; }));
-    parser.add_option(option_builder_t<>("height").has_value().build([&](auto value, auto& _) { height = *value; }));
+    parser.add_option(option_builder_t<>("width").has_value().build([&](auto value, [[maybe_unused]] auto& _) {
+        width = *value;
+    }));
+    parser.add_option(option_builder_t<>("height").has_value().build([&](auto value, [[maybe_unused]] auto& _) {
+        height = *value;
+    }));
 
     {
         constexpr auto args = std::to_array<const char*>({ "--width=5", "--height", "10" });
@@ -246,9 +258,13 @@ TEST_CASE("[ARGS][OPTION][REQUIRED]") {
     parser_t<> parser("test", "");
 
     auto width_option
-        = option_builder_t<>("width").has_value().required().build([&](auto value, auto& _) { width = *value; });
+        = option_builder_t<>("width").has_value().required().build([&](auto value, [[maybe_unused]] auto& _) {
+              width = *value;
+          });
 
-    auto height_option = option_builder_t<>("height").has_value().build([&](auto value, auto& _) { height = *value; });
+    auto height_option = option_builder_t<>("height").has_value().build([&](auto value, [[maybe_unused]] auto& _) {
+        height = *value;
+    });
 
     parser.add_option(width_option);
     parser.add_option(height_option);

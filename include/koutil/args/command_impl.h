@@ -38,7 +38,7 @@ template <extends_result Result> bool command_t<Result>::add_command(command_t&&
     return true;
 }
 
-template <extends_result Result> bool command_t<Result>::add_option(const option_t& option) {
+template <extends_result Result> bool command_t<Result>::add_option(const option_type& option) {
     const auto long_name  = option.long_name();
     const auto short_name = option.short_name();
 
@@ -62,7 +62,7 @@ template <extends_result Result> bool command_t<Result>::add_option(const option
     return true;
 }
 
-template <extends_result Result> void command_t<Result>::add_argument(const argument_t& argument) {
+template <extends_result Result> void command_t<Result>::add_argument(const argument_type& argument) {
     m_arguments.push_back(argument);
 }
 

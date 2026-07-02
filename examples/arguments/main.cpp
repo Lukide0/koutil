@@ -77,7 +77,7 @@ int main(int argc, char** argv) {
     parser.add_option(
         args::option_builder_t<my_result_t>("help")
             .description("Show this text")
-            .build([&](auto _, my_result_t& res) -> void {
+            .build([&]([[maybe_unused]] auto _, my_result_t& res) -> void {
                 parser.show_help(std::cout, dims.width);
                 res.exit(); // Signal that program should exit after showing help
             })

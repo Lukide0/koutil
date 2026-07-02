@@ -34,12 +34,11 @@ function(create_test name)
     set_target_properties("${name}" PROPERTIES
         CXX_EXTENSIONS OFF
         COMPILE_WARNING_AS_ERROR OFF
+        CXX_CLANG_TIDY ""
     )
 
-    target_include_directories("${name}"
-        PRIVATE "${ARG_INCLUDE}"
-        PRIVATE  ${DOCTEST_INCLUDE_DIR}
-    )
+    target_include_directories("${name}" PRIVATE "${ARG_INCLUDE}")
+    target_include_directories("${name}" SYSTEM PRIVATE ${DOCTEST_INCLUDE_DIR})
 
     target_link_libraries("${name}" PRIVATE ${ARG_LIBS})
 
