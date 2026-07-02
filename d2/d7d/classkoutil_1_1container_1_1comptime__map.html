@@ -147,6 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f27eceaf358d18ae4651699c3817ffd" id="r_a8f27eceaf358d18ae4651699c3817ffd"><td class="memItemLeft" align="right" valign="top">constexpr const Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f27eceaf358d18ae4651699c3817ffd">safe_at</a> (const Key &amp;key, const Value &amp;default_value) const</td></tr>
 <tr class="memdesc:a8f27eceaf358d18ae4651699c3817ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value associated with a key or a default value if not found.  <br /></td></tr>
 <tr class="separator:a8f27eceaf358d18ae4651699c3817ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e67c15cd10724cfda45e1cd183f54f8" id="r_a3e67c15cd10724cfda45e1cd183f54f8"><td class="memItemLeft" align="right" valign="top">constexpr Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e67c15cd10724cfda45e1cd183f54f8">safe_at</a> (const Key &amp;key, Value &amp;&amp;default_value) const</td></tr>
+<tr class="separator:a3e67c15cd10724cfda45e1cd183f54f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6306d0611fad496ab1f4407d3c0e7dd" id="r_ad6306d0611fad496ab1f4407d3c0e7dd"><td class="memItemLeft" align="right" valign="top">constexpr const Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6306d0611fad496ab1f4407d3c0e7dd">unsafe_get</a> (std::size_t index) const</td></tr>
 <tr class="memdesc:ad6306d0611fad496ab1f4407d3c0e7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value at a specific index.  <br /></td></tr>
 <tr class="separator:ad6306d0611fad496ab1f4407d3c0e7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -550,7 +552,7 @@ template&lt;typename Key , typename Value , std::size_t Size&gt; </div>
 </div>
 </div>
 <a id="a8f27eceaf358d18ae4651699c3817ffd" name="a8f27eceaf358d18ae4651699c3817ffd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f27eceaf358d18ae4651699c3817ffd">&#9670;&#160;</a></span>safe_at()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f27eceaf358d18ae4651699c3817ffd">&#9670;&#160;</a></span>safe_at() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -587,6 +589,37 @@ template&lt;typename Key , typename Value , std::size_t Size&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value associated with the key if found, default_value otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a3e67c15cd10724cfda45e1cd183f54f8" name="a3e67c15cd10724cfda45e1cd183f54f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e67c15cd10724cfda45e1cd183f54f8">&#9670;&#160;</a></span>safe_at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Value , std::size_t Size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Value <a class="el" href="../../d2/d7d/classkoutil_1_1container_1_1comptime__map.html">koutil::container::comptime_map</a>&lt; Key, Value, Size &gt;::safe_at </td>
+          <td>(</td>
+          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Value &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>default_value</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

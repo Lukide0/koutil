@@ -122,10 +122,10 @@ Classes</h2></td></tr>
 Public Types</h2></td></tr>
 <tr class="memitem:a254f7edb7697c4df5dc77f1bbcce13ce" id="r_a254f7edb7697c4df5dc77f1bbcce13ce"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a> = Result</td></tr>
 <tr class="separator:a254f7edb7697c4df5dc77f1bbcce13ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d0c4157c5574defc8edb8af5a4972b2" id="r_a1d0c4157c5574defc8edb8af5a4972b2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d0c4157c5574defc8edb8af5a4972b2">option_t</a> = <a class="el" href="#a1d0c4157c5574defc8edb8af5a4972b2">option_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td></tr>
-<tr class="separator:a1d0c4157c5574defc8edb8af5a4972b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77c7b402b74618ac94d8abf799db9dbf" id="r_a77c7b402b74618ac94d8abf799db9dbf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77c7b402b74618ac94d8abf799db9dbf">argument_t</a> = <a class="el" href="#a77c7b402b74618ac94d8abf799db9dbf">argument_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td></tr>
-<tr class="separator:a77c7b402b74618ac94d8abf799db9dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfae54d0eb4f03a3aa492f341030874f" id="r_adfae54d0eb4f03a3aa492f341030874f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfae54d0eb4f03a3aa492f341030874f">option_type</a> = <a class="el" href="../../d3/d31/classkoutil_1_1args_1_1option__t.html">option_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td></tr>
+<tr class="separator:adfae54d0eb4f03a3aa492f341030874f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa712931bd583bfafd62b08b14ab15049" id="r_aa712931bd583bfafd62b08b14ab15049"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa712931bd583bfafd62b08b14ab15049">argument_type</a> = <a class="el" href="../../d6/dc4/classkoutil_1_1args_1_1argument__t.html">argument_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td></tr>
+<tr class="separator:aa712931bd583bfafd62b08b14ab15049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bcb316c9fe20893b19d9d1fb3ae24f8" id="r_a1bcb316c9fe20893b19d9d1fb3ae24f8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bcb316c9fe20893b19d9d1fb3ae24f8">handle_t</a> = std::function&lt;void(std::span&lt;const char* const&gt;, <a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&amp;)&gt;</td></tr>
 <tr class="memdesc:a1bcb316c9fe20893b19d9d1fb3ae24f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function handle type for command execution.  <br /></td></tr>
 <tr class="separator:a1bcb316c9fe20893b19d9d1fb3ae24f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,12 +160,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89e84484ff1df0faa3f9a76b4b0b1c63" id="r_a89e84484ff1df0faa3f9a76b4b0b1c63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89e84484ff1df0faa3f9a76b4b0b1c63">add_command</a> (<a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">command_t</a> &amp;&amp;command)</td></tr>
 <tr class="memdesc:a89e84484ff1df0faa3f9a76b4b0b1c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a subcommand.  <br /></td></tr>
 <tr class="separator:a89e84484ff1df0faa3f9a76b4b0b1c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dff3aead357834c862b3fe8139757a3" id="r_a2dff3aead357834c862b3fe8139757a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dff3aead357834c862b3fe8139757a3">add_option</a> (const <a class="el" href="#a1d0c4157c5574defc8edb8af5a4972b2">option_t</a> &amp;option)</td></tr>
-<tr class="memdesc:a2dff3aead357834c862b3fe8139757a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an option to the command.  <br /></td></tr>
-<tr class="separator:a2dff3aead357834c862b3fe8139757a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73f70ea17c98035c210d01b7b842f96e" id="r_a73f70ea17c98035c210d01b7b842f96e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f70ea17c98035c210d01b7b842f96e">add_argument</a> (const <a class="el" href="#a77c7b402b74618ac94d8abf799db9dbf">argument_t</a> &amp;argument)</td></tr>
-<tr class="memdesc:a73f70ea17c98035c210d01b7b842f96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a positional argument.  <br /></td></tr>
-<tr class="separator:a73f70ea17c98035c210d01b7b842f96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedaf0a9cabc49a91a7a3cd8a77d2874" id="r_aaedaf0a9cabc49a91a7a3cd8a77d2874"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaedaf0a9cabc49a91a7a3cd8a77d2874">add_option</a> (const <a class="el" href="#adfae54d0eb4f03a3aa492f341030874f">option_type</a> &amp;option)</td></tr>
+<tr class="memdesc:aaedaf0a9cabc49a91a7a3cd8a77d2874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an option to the command.  <br /></td></tr>
+<tr class="separator:aaedaf0a9cabc49a91a7a3cd8a77d2874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f18d302b7dd8a3e59276c7078187653" id="r_a5f18d302b7dd8a3e59276c7078187653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f18d302b7dd8a3e59276c7078187653">add_argument</a> (const <a class="el" href="#aa712931bd583bfafd62b08b14ab15049">argument_type</a> &amp;argument)</td></tr>
+<tr class="memdesc:a5f18d302b7dd8a3e59276c7078187653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a positional argument.  <br /></td></tr>
+<tr class="separator:a5f18d302b7dd8a3e59276c7078187653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ebee87a183663c48ac1671d78337711" id="r_a8ebee87a183663c48ac1671d78337711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ebee87a183663c48ac1671d78337711">process</a> (const char *const *args, std::uint32_t argc, <a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a> &amp;result)</td></tr>
 <tr class="memdesc:a8ebee87a183663c48ac1671d78337711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes command-line arguments.  <br /></td></tr>
 <tr class="separator:a8ebee87a183663c48ac1671d78337711"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,10 +196,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:abad280a9ddf7cdb50f51d82edcb37899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5bad27c75eca7efe0e8ac07865b3036" id="r_af5bad27c75eca7efe0e8ac07865b3036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1bcb316c9fe20893b19d9d1fb3ae24f8">handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5bad27c75eca7efe0e8ac07865b3036">m_handle</a></td></tr>
 <tr class="separator:af5bad27c75eca7efe0e8ac07865b3036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3861fb79a76b75f395e9b6c7ba905e26" id="r_a3861fb79a76b75f395e9b6c7ba905e26"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="#a77c7b402b74618ac94d8abf799db9dbf">argument_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3861fb79a76b75f395e9b6c7ba905e26">m_arguments</a></td></tr>
-<tr class="separator:a3861fb79a76b75f395e9b6c7ba905e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77f6d2e69184bc556597bb3ebe7b57f5" id="r_a77f6d2e69184bc556597bb3ebe7b57f5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="#a1d0c4157c5574defc8edb8af5a4972b2">option_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77f6d2e69184bc556597bb3ebe7b57f5">m_options</a></td></tr>
-<tr class="separator:a77f6d2e69184bc556597bb3ebe7b57f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7988110a95e60df07a7824c1793b9795" id="r_a7988110a95e60df07a7824c1793b9795"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="#aa712931bd583bfafd62b08b14ab15049">argument_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7988110a95e60df07a7824c1793b9795">m_arguments</a></td></tr>
+<tr class="separator:a7988110a95e60df07a7824c1793b9795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7dff82be2210140f5fe6da0788a4e8d" id="r_ae7dff82be2210140f5fe6da0788a4e8d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="#adfae54d0eb4f03a3aa492f341030874f">option_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7dff82be2210140f5fe6da0788a4e8d">m_options</a></td></tr>
+<tr class="separator:ae7dff82be2210140f5fe6da0788a4e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a392df7b656ee6bae5197950077fb5d24" id="r_a392df7b656ee6bae5197950077fb5d24"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">command_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a392df7b656ee6bae5197950077fb5d24">m_commands</a></td></tr>
 <tr class="separator:a392df7b656ee6bae5197950077fb5d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a182879d362600e6e194f36c1fd783e9b" id="r_a182879d362600e6e194f36c1fd783e9b"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string_view, std::uint32_t, <a class="el" href="../../db/d4f/structkoutil_1_1args_1_1command__t_1_1string__hash.html">string_hash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182879d362600e6e194f36c1fd783e9b">m_cmd_map</a></td></tr>
@@ -215,8 +215,8 @@ class koutil::args::command_t&lt; extends_result &gt;</div><p>Represents a comma
 <p>A command can contain subcommands, options, and arguments.</p>
 <p>The order in which options, arguments, and subcommands are added determines their order in the help text. The order of arguments also defines the order in which they are expected on the command line. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a77c7b402b74618ac94d8abf799db9dbf" name="a77c7b402b74618ac94d8abf799db9dbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77c7b402b74618ac94d8abf799db9dbf">&#9670;&#160;</a></span>argument_t</h2>
+<a id="aa712931bd583bfafd62b08b14ab15049" name="aa712931bd583bfafd62b08b14ab15049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa712931bd583bfafd62b08b14ab15049">&#9670;&#160;</a></span>argument_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +224,7 @@ class koutil::args::command_t&lt; extends_result &gt;</div><p>Represents a comma
 template&lt;extends_result &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::argument_t = <a class="el" href="#a77c7b402b74618ac94d8abf799db9dbf">argument_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::argument_type = <a class="el" href="../../d6/dc4/classkoutil_1_1args_1_1argument__t.html">argument_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -250,8 +250,8 @@ template&lt;extends_result &gt; </div>
 
 </div>
 </div>
-<a id="a1d0c4157c5574defc8edb8af5a4972b2" name="a1d0c4157c5574defc8edb8af5a4972b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d0c4157c5574defc8edb8af5a4972b2">&#9670;&#160;</a></span>option_t</h2>
+<a id="adfae54d0eb4f03a3aa492f341030874f" name="adfae54d0eb4f03a3aa492f341030874f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfae54d0eb4f03a3aa492f341030874f">&#9670;&#160;</a></span>option_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +259,7 @@ template&lt;extends_result &gt; </div>
 template&lt;extends_result &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::option_t = <a class="el" href="#a1d0c4157c5574defc8edb8af5a4972b2">option_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::option_type = <a class="el" href="../../d3/d31/classkoutil_1_1args_1_1option__t.html">option_t</a>&lt;<a class="el" href="#a254f7edb7697c4df5dc77f1bbcce13ce">result_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -378,8 +378,8 @@ template&lt;extends_result &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a73f70ea17c98035c210d01b7b842f96e" name="a73f70ea17c98035c210d01b7b842f96e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73f70ea17c98035c210d01b7b842f96e">&#9670;&#160;</a></span>add_argument()</h2>
+<a id="a5f18d302b7dd8a3e59276c7078187653" name="a5f18d302b7dd8a3e59276c7078187653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f18d302b7dd8a3e59276c7078187653">&#9670;&#160;</a></span>add_argument()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +389,7 @@ template&lt;extends_result Result&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; Result &gt;::add_argument </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a77c7b402b74618ac94d8abf799db9dbf">argument_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>argument</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#aa712931bd583bfafd62b08b14ab15049">argument_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>argument</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -435,8 +435,8 @@ template&lt;extends_result Result&gt; </div>
 
 </div>
 </div>
-<a id="a2dff3aead357834c862b3fe8139757a3" name="a2dff3aead357834c862b3fe8139757a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dff3aead357834c862b3fe8139757a3">&#9670;&#160;</a></span>add_option()</h2>
+<a id="aaedaf0a9cabc49a91a7a3cd8a77d2874" name="aaedaf0a9cabc49a91a7a3cd8a77d2874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaedaf0a9cabc49a91a7a3cd8a77d2874">&#9670;&#160;</a></span>add_option()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,7 +446,7 @@ template&lt;extends_result Result&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; Result &gt;::add_option </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a1d0c4157c5574defc8edb8af5a4972b2">option_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>option</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#adfae54d0eb4f03a3aa492f341030874f">option_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>option</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -839,8 +839,8 @@ template&lt;extends_result Result&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a3861fb79a76b75f395e9b6c7ba905e26" name="a3861fb79a76b75f395e9b6c7ba905e26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3861fb79a76b75f395e9b6c7ba905e26">&#9670;&#160;</a></span>m_arguments</h2>
+<a id="a7988110a95e60df07a7824c1793b9795" name="a7988110a95e60df07a7824c1793b9795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7988110a95e60df07a7824c1793b9795">&#9670;&#160;</a></span>m_arguments</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -851,7 +851,7 @@ template&lt;extends_result &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="#a77c7b402b74618ac94d8abf799db9dbf">argument_t</a>&gt; <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::m_arguments</td>
+          <td class="memname">std::vector&lt;<a class="el" href="#aa712931bd583bfafd62b08b14ab15049">argument_type</a>&gt; <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::m_arguments</td>
         </tr>
       </table>
   </td>
@@ -1007,8 +1007,8 @@ template&lt;extends_result &gt; </div>
 
 </div>
 </div>
-<a id="a77f6d2e69184bc556597bb3ebe7b57f5" name="a77f6d2e69184bc556597bb3ebe7b57f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77f6d2e69184bc556597bb3ebe7b57f5">&#9670;&#160;</a></span>m_options</h2>
+<a id="ae7dff82be2210140f5fe6da0788a4e8d" name="ae7dff82be2210140f5fe6da0788a4e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7dff82be2210140f5fe6da0788a4e8d">&#9670;&#160;</a></span>m_options</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1019,7 +1019,7 @@ template&lt;extends_result &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="#a1d0c4157c5574defc8edb8af5a4972b2">option_t</a>&gt; <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::m_options</td>
+          <td class="memname">std::vector&lt;<a class="el" href="#adfae54d0eb4f03a3aa492f341030874f">option_type</a>&gt; <a class="el" href="../../d9/d8c/classkoutil_1_1args_1_1command__t.html">koutil::args::command_t</a>&lt; extends_result &gt;::m_options</td>
         </tr>
       </table>
   </td>

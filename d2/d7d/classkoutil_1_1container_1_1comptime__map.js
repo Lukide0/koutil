@@ -13,6 +13,7 @@ var classkoutil_1_1container_1_1comptime__map =
     [ "get_pair", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html#aeef451ef9b6fbba0153c8d8849ffb7db", null ],
     [ "operator[]", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a85627c67931a1c325fb89d5a5d249c1c", null ],
     [ "safe_at", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a8f27eceaf358d18ae4651699c3817ffd", null ],
+    [ "safe_at", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html#a3e67c15cd10724cfda45e1cd183f54f8", null ],
     [ "test_no_value", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html#acc94be9d5e180679d95623900201f903", null ],
     [ "test_value", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html#aea1cb457845e8d85fa7ae4694f57a4c3", null ],
     [ "unsafe_get", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html#ad6306d0611fad496ab1f4407d3c0e7dd", null ],
