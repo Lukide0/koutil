@@ -23,7 +23,7 @@ template <typename T, typename Key, typename ComptimeData>
 concept is_template_hash = requires(T hash, const Key& key) {
     requires std::is_trivially_constructible_v<T>;
 
-    { hash.template hash<ComptimeData {}>(key) } -> std::same_as<std::size_t>;
+    { hash.template hash<ComptimeData { }>(key) } -> std::same_as<std::size_t>;
 };
 
 /**
@@ -57,19 +57,7 @@ concept is_bucket = requires(Bucket& bucket, std::size_t v) {
 template <typename T, typename Key, typename KeyID, typename ComptimeData>
 concept is_template_key_adapter = requires(const Key& key, T adapter, const KeyID& index) {
     requires std::move_constructible<T> && std::is_trivially_copy_constructible_v<T>;
-    { adapter.template eql<ComptimeData {}>(key, index) } -> std::same_as<bool>;
-};
-
-/**
- * @brief Concept to check if a type is a valid allocator for a given bucket type.
- * @tparam T The allocator type.
- * @tparam Bucket The bucket type.
- */
-template <typename T, typename Bucket>
-concept is_allocator = requires(T alloc, std::size_t n, Bucket* buckets) {
-    requires std::is_constructible_v<T>;
-    { alloc.allocate(n) } -> std::same_as<Bucket*>;
-    { alloc.deallocate(buckets, n) };
+    { adapter.template eql<ComptimeData { }>(key, index) } -> std::same_as<bool>;
 };
 
 template <
@@ -78,8 +66,7 @@ template <
     typename ComptimeData,
     is_template_key_adapter<Key, KeyID, ComptimeData> KeyAdapter,
     is_template_hash<Key, ComptimeData> Hash,
-    is_bucket<KeyID> Bucket        = std::vector<std::pair<std::size_t, KeyID>>,
-    is_allocator<Bucket> Allocator = std::allocator<Bucket>>
+    is_bucket<KeyID> Bucket = std::vector<std::pair<std::size_t, KeyID>>>
 class template_hash_array {
 private:
     using key_t             = Key;
@@ -90,7 +77,7 @@ private:
     using bucket_iter       = bucket_t::iterator;
     using bucket_const_iter = bucket_t::const_iterator;
     using adapter_t         = KeyAdapter;
-    using allocator_t       = Allocator;
+    using allocator_t       = std::allocator<Bucket>;
     using comptime_t        = ComptimeData;
 
     /**
@@ -198,7 +185,7 @@ public:
      */
     template_hash_array()
         : m_buckets_count(1) {
-        m_buckets = new (allocator_t().allocate(1)) bucket_t[1];
+        m_buckets = new (m_alloc.allocate(1)) bucket_t[1];
     }
 
     /**
@@ -208,7 +195,7 @@ public:
      */
     template_hash_array(std::size_t bucket_count)
         : m_buckets_count(bucket_count) {
-        m_buckets = new (allocator_t().allocate(bucket_count)) bucket_t[bucket_count];
+        m_buckets = new (m_alloc.allocate(bucket_count)) bucket_t[bucket_count];
     }
 
     /**
@@ -221,7 +208,7 @@ public:
         , m_size(other.m_size)
         , m_max_load_factor(other.m_max_load_factor) {
 
-        m_buckets = allocator_t().allocate(other.m_buckets_count);
+        m_buckets = m_alloc.allocate(other.m_buckets_count);
 
         std::uninitialized_copy_n(other.m_buckets, other.m_buckets_count, m_buckets);
     }
@@ -232,7 +219,8 @@ public:
      * @param other Another hash_array to move from.
      */
     template_hash_array(template_hash_array&& other)
-        : m_buckets(other.m_buckets)
+        : m_alloc(std::move(other.m_alloc))
+        , m_buckets(other.m_buckets)
         , m_buckets_count(other.m_buckets_count)
         , m_size(other.m_size)
         , m_max_load_factor(other.m_max_load_factor) {
@@ -264,7 +252,7 @@ public:
         m_size            = other.m_size;
         m_max_load_factor = other.m_max_load_factor;
 
-        m_buckets = allocator_t().allocate(other.m_buckets_count);
+        m_buckets = m_alloc.allocate(other.m_buckets_count);
 
         std::uninitialized_copy_n(other.m_buckets, other.m_buckets_count, m_buckets);
 
@@ -447,6 +435,7 @@ public:
     }
 
 private:
+    [[no_unique_address]] allocator_t m_alloc;
     bucket_t* m_buckets;
     std::size_t m_buckets_count;
     std::size_t m_size      = 0;
@@ -534,8 +523,7 @@ private:
 
         std::size_t new_buckets_count = m_buckets_count * 2;
 
-        auto alloc           = allocator_t();
-        auto new_buckets_mem = alloc.allocate(new_buckets_count);
+        auto new_buckets_mem = m_alloc.allocate(new_buckets_count);
         auto new_buckets     = new (new_buckets_mem) bucket_t[new_buckets_count];
 
         for (std::size_t i = 0; i < m_buckets_count; ++i) {
@@ -545,7 +533,7 @@ private:
         }
 
         std::destroy_n(m_buckets, m_buckets_count);
-        alloc.deallocate(m_buckets, m_buckets_count);
+        m_alloc.deallocate(m_buckets, m_buckets_count);
 
         m_buckets_count = new_buckets_count;
         m_buckets       = new_buckets;
@@ -561,9 +549,8 @@ private:
     void destroy() {
 
         if (m_buckets_count > 0) {
-            auto alloc = allocator_t();
             std::destroy_n(m_buckets, m_buckets_count);
-            alloc.deallocate(m_buckets, m_buckets_count);
+            m_alloc.deallocate(m_buckets, m_buckets_count);
         }
     }
 };

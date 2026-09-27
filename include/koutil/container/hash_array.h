@@ -44,15 +44,13 @@ concept is_key_adapter = requires(const Key& key, T adapter, const KeyID& index)
  * @tparam KeyAdapter The key adapter type.
  * @tparam Hash The hash function type.
  * @tparam Bucket The bucket type.
- * @tparam Allocator The allocator type.
  */
 template <
     typename Key,
     typename KeyID,
     is_key_adapter<Key, KeyID> KeyAdapter,
-    is_hash<Key> Hash              = std::hash<Key>,
-    is_bucket<KeyID> Bucket        = std::vector<std::pair<std::size_t, KeyID>>,
-    is_allocator<Bucket> Allocator = std::allocator<Bucket>>
+    is_hash<Key> Hash       = std::hash<Key>,
+    is_bucket<KeyID> Bucket = std::vector<std::pair<std::size_t, KeyID>>>
 class hash_array {
 private:
     using key_t       = Key;
@@ -62,7 +60,6 @@ private:
     using hash_t      = Hash;
     using bucket_iter = bucket_t::iterator;
     using adapter_t   = KeyAdapter;
-    using allocator_t = Allocator;
 
     struct adapter_wrapper {
         template <bool> bool eql(const key_t& key, const key_id_t& id) const { return adapter.eql(key, id); }
@@ -78,8 +75,7 @@ private:
 
     constexpr static bool comptime_value = true;
 
-    using template_hash_array_t
-        = template_hash_array<key_t, key_id_t, bool, adapter_wrapper, hash_wrapper, bucket_t, allocator_t>;
+    using template_hash_array_t = template_hash_array<key_t, key_id_t, bool, adapter_wrapper, hash_wrapper, bucket_t>;
 
 public:
     using iterator_t       = template_hash_array_t::iterator_t;
