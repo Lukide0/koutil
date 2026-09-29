@@ -157,7 +157,7 @@ using index_tagged_t = index_t<ValueType, index_tag<decltype(TagValue), TagValue
  * @endcode
  */
 #define KOUTIL_ALLOW_INDEX_TAG_CONV(FROM, TO) \
-    template <> struct ::koutil::container::allow_index_tag_conversion<FROM, TO> : std::true_type { }
+    template <> struct koutil::container::allow_index_tag_conversion<FROM, TO> : std::true_type { }
 
 /**
  * @def KOUTIL_ALLOW_INDEX_CONV
@@ -172,7 +172,7 @@ using index_tagged_t = index_t<ValueType, index_tag<decltype(TagValue), TagValue
  * @endcode
  */
 #define KOUTIL_ALLOW_INDEX_CONV(FROM, TO) \
-    template <> struct ::koutil::container::allow_index_conversion<FROM, TO> : std::true_type { }
+    template <> struct koutil::container::allow_index_conversion<FROM, TO> : std::true_type { }
 
 /**
  * @def KOUTIL_ALLOW_INDEX_TO_TAG_CONV
@@ -186,9 +186,9 @@ using index_tagged_t = index_t<ValueType, index_tag<decltype(TagValue), TagValue
  * KOUTIL_ALLOW_INDEX_TO_TAG_CONV(float, IndexKind::Meta);
  * @endcode
  */
-#define KOUTIL_ALLOW_INDEX_TO_TAG_CONV(FROM, TO)                                                               \
-    template <>                                                                                                \
-    struct ::koutil::container::allow_index_conversion<FROM, ::koutil::container::index_tag<decltype(TO), TO>> \
+#define KOUTIL_ALLOW_INDEX_TO_TAG_CONV(FROM, TO)                                                             \
+    template <>                                                                                              \
+    struct koutil::container::allow_index_conversion<FROM, ::koutil::container::index_tag<decltype(TO), TO>> \
         : std::true_type { }
 
 /**
@@ -203,9 +203,9 @@ using index_tagged_t = index_t<ValueType, index_tag<decltype(TagValue), TagValue
  * KOUTIL_ALLOW_INDEX_FROM_TAG_CONV(IndexKind::Meta, float);
  * @endcode
  */
-#define KOUTIL_ALLOW_INDEX_FROM_TAG_CONV(FROM, TO)                                                               \
-    template <>                                                                                                  \
-    struct ::koutil::container::allow_index_conversion<::koutil::container::index_tag<decltype(FROM), FROM>, TO> \
+#define KOUTIL_ALLOW_INDEX_FROM_TAG_CONV(FROM, TO)                                                             \
+    template <>                                                                                                \
+    struct koutil::container::allow_index_conversion<::koutil::container::index_tag<decltype(FROM), FROM>, TO> \
         : std::true_type { }
 
 }
