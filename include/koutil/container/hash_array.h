@@ -181,6 +181,17 @@ public:
     }
 
     /**
+     * @brief Try to insert a key and key ID into the hash_array.
+     * @param key The key to insert.
+     * @param key_id The key ID to insert.
+     * @param key_hash The key hash.
+     * @return bool True if the key is not inside hash_array, false otherwise.
+     */
+    bool try_insert(const key_t& key, const key_id_t& key_id, std::size_t key_hash, adapter_t adapter) {
+        return m_storage.template try_insert<comptime_value>(key, key_id, key_hash, adapter_wrapper { adapter });
+    }
+
+    /**
      * @brief Try to set new key ID.
      * @param key The key.
      * @param new_key_id The new key ID.
@@ -217,11 +228,35 @@ public:
      * @brief Finds an element in the hash table.
      *
      * @param key Key of the element to find.
+     * @param key_hash The key hash.
+     * @param adapter Key adapter for comparison.
+     * @return iterator_t The iterator with found element, if not found end() is returned.
+     */
+    iterator_t find(const key_t& key, std::size_t key_hash, adapter_t adapter) {
+        return m_storage.template find<comptime_value>(key, key_hash, adapter_wrapper { adapter });
+    }
+
+    /**
+     * @brief Finds an element in the hash table.
+     *
+     * @param key Key of the element to find.
      * @param adapter Key adapter for comparison.
      * @return const_iterator_t The iterator with found element, if not found end() is returned.
      */
     const_iterator_t find(const key_t& key, adapter_t adapter) const {
         return m_storage.template find<comptime_value>(key, adapter_wrapper { adapter });
+    }
+
+    /**
+     * @brief Finds an element in the hash table.
+     *
+     * @param key Key of the element to find.
+     * @param key_hash The key hash.
+     * @param adapter Key adapter for comparison.
+     * @return const_iterator_t The iterator with found element, if not found end() is returned.
+     */
+    const_iterator_t find(const key_t& key, std::size_t key_hash, adapter_t adapter) const {
+        return m_storage.template find<comptime_value>(key, key_hash, adapter_wrapper { adapter });
     }
 
     /**

@@ -211,10 +211,15 @@ TEST_CASE("[HASH_ARRAY][FIND]") {
     CHECK(array.try_insert(b, b_index, adapter));
     CHECK(array.try_insert(c, c_index, adapter));
 
-    auto it = array.find(b, adapter);
+    auto key_hash = HashKey { }(b);
+    auto it       = array.find(b, adapter);
+    auto it_hash  = array.find(b, key_hash, adapter);
 
     CHECK_NE(it, array.end());
     CHECK_EQ(*it, b_index);
+    CHECK_EQ(*it_hash, b_index);
+
+    CHECK_EQ(it_hash, it);
 
     it = array.find({ 850, 80 }, adapter);
     CHECK_EQ(it, array.end());
