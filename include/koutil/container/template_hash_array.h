@@ -1,6 +1,7 @@
 #ifndef KOUTIL_CONTAINER_TEMPLATE_HASH_ARRAY_H
 #define KOUTIL_CONTAINER_TEMPLATE_HASH_ARRAY_H
 
+#include <algorithm>
 #include <cassert>
 #include <concepts>
 #include <cstddef>
@@ -69,6 +70,7 @@ template <
     is_bucket<KeyID> Bucket = std::vector<std::pair<std::size_t, KeyID>>>
 class template_hash_array {
 private:
+    using pair_t            = std::pair<std::size_t, KeyID>;
     using key_t             = Key;
     using key_id_t          = KeyID;
     using value_t           = std::size_t;
@@ -130,14 +132,14 @@ private:
         operator iterator<true>() const
             requires(!is_const)
         {
-            return { m_ref, m_item };
+            return { m_ref, m_item, m_bucket_end };
         }
 
         bool operator==(const iterator& other) const { return m_ref == other.m_ref && m_item == other.m_item; }
 
         reference operator*() { return m_ref->at(m_item).second; }
 
-        constant_reference operator*() const { return m_ref->at(m_item); }
+        constant_reference operator*() const { return m_ref->at(m_item).second; }
 
         iterator& operator++() {
             increment();
@@ -153,7 +155,7 @@ private:
 
     private:
         ref_t m_ref;
-        std::size_t m_item;
+        std::size_t m_item = 0;
         ref_t m_bucket_end = nullptr;
 
         /**
@@ -183,10 +185,7 @@ public:
     /**
      * @brief Default constructor.
      */
-    template_hash_array()
-        : m_buckets_count(1) {
-        m_buckets = new (m_alloc.allocate(1)) bucket_t[1];
-    }
+    template_hash_array() = default;
 
     /**
      * @brief Constructor with bucket count.
@@ -194,9 +193,8 @@ public:
      * @param bucket_count Number of buckets.
      */
     template_hash_array(std::size_t bucket_count)
-        : m_buckets_count(bucket_count) {
-        m_buckets = new (m_alloc.allocate(bucket_count)) bucket_t[bucket_count];
-    }
+        : m_buckets(create_buckets(bucket_count))
+        , m_buckets_count(bucket_count) { }
 
     /**
      * @brief Copy constructor.
@@ -204,31 +202,21 @@ public:
      * @param other Another hash_array to copy from.
      */
     template_hash_array(const template_hash_array& other)
-        : m_buckets_count(other.m_buckets_count)
+        : m_buckets(copy_buckets(other.m_buckets, other.m_buckets_count))
+        , m_buckets_count(other.m_buckets_count)
         , m_size(other.m_size)
-        , m_max_load_factor(other.m_max_load_factor) {
-
-        m_buckets = m_alloc.allocate(other.m_buckets_count);
-
-        std::uninitialized_copy_n(other.m_buckets, other.m_buckets_count, m_buckets);
-    }
+        , m_max_load_factor(other.m_max_load_factor) { }
 
     /**
      * @brief Move constructor.
      *
      * @param other Another hash_array to move from.
      */
-    template_hash_array(template_hash_array&& other)
-        : m_alloc(std::move(other.m_alloc))
-        , m_buckets(other.m_buckets)
-        , m_buckets_count(other.m_buckets_count)
-        , m_size(other.m_size)
-        , m_max_load_factor(other.m_max_load_factor) {
-
-        other.m_buckets       = nullptr;
-        other.m_size          = 0;
-        other.m_buckets_count = 0;
-    }
+    template_hash_array(template_hash_array&& other) noexcept
+        : m_buckets(std::exchange(other.m_buckets, nullptr))
+        , m_buckets_count(std::exchange(other.m_buckets_count, 0))
+        , m_size(std::exchange(other.m_size, 0))
+        , m_max_load_factor(other.m_max_load_factor) { }
 
     /**
      * @brief Destructor.
@@ -252,10 +240,7 @@ public:
         m_size            = other.m_size;
         m_max_load_factor = other.m_max_load_factor;
 
-        m_buckets = m_alloc.allocate(other.m_buckets_count);
-
-        std::uninitialized_copy_n(other.m_buckets, other.m_buckets_count, m_buckets);
-
+        m_buckets = copy_buckets(other.m_buckets, other.m_buckets_count);
         return *this;
     }
 
@@ -265,21 +250,17 @@ public:
      * @param other Another hash_array to move from.
      * @return hash_array& Reference to the assigned hash_array.
      */
-    template_hash_array& operator=(template_hash_array&& other) {
+    template_hash_array& operator=(template_hash_array&& other) noexcept {
         if (&other == this) {
             return *this;
         }
 
         destroy();
 
-        m_buckets         = other.m_buckets;
-        m_buckets_count   = other.m_buckets_count;
-        m_size            = other.m_size;
+        m_buckets         = std::exchange(other.m_buckets, nullptr);
+        m_buckets_count   = std::exchange(other.m_buckets_count, 0);
+        m_size            = std::exchange(other.m_size, 0);
         m_max_load_factor = other.m_max_load_factor;
-
-        other.m_buckets       = nullptr;
-        other.m_size          = 0;
-        other.m_buckets_count = 0;
 
         return *this;
     }
@@ -334,6 +315,20 @@ public:
     }
 
     /**
+     * @brief Try to insert a key and key ID into the hash_array with already computed hash.
+     * @tparam Data The comptime data.
+     * @param key The key to insert.
+     * @param key_id The key ID to insert.
+     * @param key_hash The key hash.
+     * @return bool True if the key is not inside hash_array, false otherwise.
+     */
+    template <comptime_t Data>
+    bool try_insert(const key_t& key, const key_id_t& key_id, std::size_t key_hash, adapter_t adapter) {
+        assert(hash_of<Data>(key) == key_hash);
+        return insert<Data>(key, key_id, key_hash, adapter);
+    }
+
+    /**
      * @brief Try to set new key ID.
      * @tparam Data The comptime data.
      * @param key The key.
@@ -352,7 +347,7 @@ public:
      * @return true If the element was successfully erased.
      * @return false If the element was not found.
      */
-    template <comptime_t Data> void erase(const key_t& key, adapter_t adapter) { remove<Data>(key, adapter); }
+    template <comptime_t Data> bool erase(const key_t& key, adapter_t adapter) { return remove<Data>(key, adapter); }
 
     /**
      * @brief Finds an element in the hash table.
@@ -362,16 +357,20 @@ public:
      * @return iterator_t The iterator with found element, if not found end() is returned.
      */
     template <comptime_t Data> iterator_t find(const key_t& key, adapter_t adapter) {
-        auto& bucket = get_bucket<Data>(key);
-        auto it      = find_bucket_item<Data>(key, bucket, adapter);
+        return find_impl<Data>(key, hash_of<Data>(key), adapter);
+    }
 
-        if (it != bucket.end()) {
-            return iterator_t { &bucket,
-                                static_cast<std::size_t>(std::distance(bucket.begin(), it)),
-                                m_buckets + m_buckets_count };
-        }
-
-        return end();
+    /**
+     * @brief Finds an element in the hash table.
+     * @tparam Data The comptime data.
+     * @param key Key of the element to find.
+     * @param key_hash The hash of key.
+     * @param adapter Key adapter for comparison.
+     * @return iterator_t The iterator with found element, if not found end() is returned.
+     */
+    template <comptime_t Data> iterator_t find(const key_t& key, std::size_t key_hash, adapter_t adapter) {
+        assert(hash_of<Data>(key) == key_hash);
+        return find_impl<Data>(key, key_hash, adapter);
     }
 
     /**
@@ -382,16 +381,20 @@ public:
      * @return const_iterator_t The iterator with found element, if not found end() is returned.
      */
     template <comptime_t Data> const_iterator_t find(const key_t& key, adapter_t adapter) const {
-        auto& bucket = get_bucket<Data>(key);
-        auto it      = find_bucket_item<Data>(key, bucket, adapter);
+        return find_impl<Data>(key, hash_of<Data>(key), adapter);
+    }
 
-        if (it != bucket.end()) {
-            return const_iterator_t { &bucket,
-                                      static_cast<std::size_t>(std::distance(bucket.begin(), it)),
-                                      m_buckets + m_buckets_count };
-        }
-
-        return cend();
+    /**
+     * @brief Finds an element in the hash table.
+     * @tparam Data The comptime data.
+     * @param key Key of the element to find.
+     * @param key_hash The hash of key.
+     * @param adapter Key adapter for comparison.
+     * @return const_iterator_t The iterator with found element, if not found end() is returned.
+     */
+    template <comptime_t Data> const_iterator_t find(const key_t& key, std::size_t key_hash, adapter_t adapter) const {
+        assert(hash_of<Data>(key) == key_hash);
+        return find_impl<Data>(key, key_hash, adapter);
     }
 
     /**
@@ -436,78 +439,119 @@ public:
 
 private:
     [[no_unique_address]] allocator_t m_alloc;
-    bucket_t* m_buckets;
-    std::size_t m_buckets_count;
-    std::size_t m_size      = 0;
-    float m_max_load_factor = 1.0F;
+    bucket_t* m_buckets         = nullptr;
+    std::size_t m_buckets_count = 0;
+    std::size_t m_size          = 0;
+    float m_max_load_factor     = 1.0F;
 
-    template <comptime_t Data> value_t hash_key(const Key& key) const {
-        value_t hash = hash_t().template hash<Data>(key);
-        return hash % m_buckets_count;
+    [[nodiscard]] value_t index_of_hash(value_t hash) const { return hash % m_buckets_count; }
+
+    template <comptime_t Data> value_t hash_of(const Key& key) const { return hash_t().template hash<Data>(key); }
+
+    template <comptime_t Data, typename B>
+    static auto find_bucket_item(const key_t& key, std::size_t hash, B& bucket, adapter_t adapter) {
+        return std::find_if(bucket.begin(), bucket.end(), [&](const auto& entry) {
+            return entry.first == hash && adapter.template eql<Data>(key, entry.second);
+        });
     }
 
-    template <comptime_t Data> bucket_t& get_bucket(const key_t& key) { return m_buckets[hash_key<Data>(key)]; }
-
-    template <comptime_t Data> const bucket_t& get_bucket(const key_t& key) const {
-        return m_buckets[hash_key<Data>(key)];
-    }
-
-    template <comptime_t Data> bucket_iter find_bucket_item(const key_t& key, bucket_t& bucket, adapter_t adapter) {
-        auto bucket_end   = bucket.end();
-        auto bucket_start = bucket.begin();
-
-        for (auto start = bucket_start; start != bucket_end; ++start) {
-            if (adapter.template eql<Data>(key, start->second)) {
-                return start;
-            }
+    template <comptime_t Data> iterator_t find_impl(const key_t& key, std::size_t key_hash, adapter_t adapter) {
+        if (m_buckets_count == 0) {
+            return end();
         }
 
-        return bucket_end;
+        auto& bucket = m_buckets[index_of_hash(key_hash)];
+        auto it      = find_bucket_item<Data>(key, key_hash, bucket, adapter);
+
+        if (it != bucket.end()) {
+            return iterator_t { &bucket,
+                                static_cast<std::size_t>(std::distance(bucket.begin(), it)),
+                                m_buckets + m_buckets_count };
+        }
+
+        return end();
     }
 
     template <comptime_t Data>
-    bucket_const_iter find_bucket_item(const key_t& key, const bucket_t& bucket, adapter_t adapter) const {
-        auto bucket_end   = bucket.end();
-        auto bucket_start = bucket.begin();
-
-        for (auto start = bucket_start; start != bucket_end; ++start) {
-            if (adapter.template eql<Data>(key, start->second)) {
-                return start;
-            }
+    const_iterator_t find_impl(const key_t& key, std::size_t key_hash, adapter_t adapter) const {
+        if (m_buckets_count == 0) {
+            return end();
         }
 
-        return bucket_end;
+        const auto& bucket = m_buckets[index_of_hash(key_hash)];
+        auto it            = find_bucket_item<Data>(key, key_hash, bucket, adapter);
+
+        if (it != bucket.end()) {
+            return const_iterator_t { &bucket,
+                                      static_cast<std::size_t>(std::distance(bucket.begin(), it)),
+                                      m_buckets + m_buckets_count };
+        }
+
+        return end();
     }
 
     template <comptime_t Data> bool insert(const key_t& key, const key_id_t& key_id, adapter_t adapter) {
-        value_t hash = hash_t().template hash<Data>(key);
-        auto& bucket = m_buckets[hash % m_buckets_count];
+        return insert<Data>(key, key_id, hash_of<Data>(key), adapter);
+    }
 
-        auto it = find_bucket_item<Data>(key, bucket, adapter);
+    template <comptime_t Data>
+    bool insert(const key_t& key, const key_id_t& key_id, std::size_t key_hash, adapter_t adapter) {
+        if (m_buckets_count == 0) {
+            rehash(1);
+        }
+
+        auto& bucket = m_buckets[index_of_hash(key_hash)];
+
+        auto it = find_bucket_item<Data>(key, key_hash, bucket, adapter);
 
         if (it != bucket.end()) {
             return false;
         }
 
-        bucket.emplace_back(hash, key_id);
+        bucket.emplace_back(key_hash, key_id);
         m_size += 1;
         rehash_if_needed();
         return true;
     }
 
-    template <comptime_t Data> void remove(const key_t& key, adapter_t adapter) {
-        auto& bucket = get_bucket<Data>(key);
-        auto it      = find_bucket_item<Data>(key, bucket, adapter);
-
-        if (it != bucket.end()) {
-            bucket.erase(it);
-            m_size -= 1;
+    template <comptime_t Data> bool remove(const key_t& key, adapter_t adapter) {
+        if (m_buckets_count == 0) {
+            return false;
         }
+
+        auto hash    = hash_of<Data>(key);
+        auto& bucket = m_buckets[index_of_hash(hash)];
+        auto it      = find_bucket_item<Data>(key, hash, bucket, adapter);
+
+        if (it == bucket.end()) {
+            return false;
+        }
+
+        // special case
+        if constexpr (std::is_same_v<bucket_t, std::vector<pair_t>>) {
+            auto& it_val = *it;
+            if (&it_val != &bucket.back()) {
+                // replace removed element with last
+                it_val = std::move(bucket.back());
+            }
+
+            // remove last element
+            bucket.pop_back();
+        } else {
+            bucket.erase(it);
+        }
+        m_size -= 1;
+        return true;
     }
 
     template <comptime_t Data> bool set(const key_t& key, const key_id_t& new_key_id, adapter_t adapter) {
-        auto& bucket = get_bucket<Data>(key);
-        auto it      = find_bucket_item<Data>(key, bucket, adapter);
+        if (m_buckets_count == 0) {
+            return false;
+        }
+
+        auto hash    = hash_of<Data>(key);
+        auto& bucket = m_buckets[index_of_hash(hash)];
+        auto it      = find_bucket_item<Data>(key, hash, bucket, adapter);
 
         if (it != bucket.end()) {
             it->second = new_key_id;
@@ -516,27 +560,53 @@ private:
         return false;
     }
 
+    bucket_t* create_buckets(std::size_t count) {
+        if (count == 0) {
+            return nullptr;
+        }
+
+        bucket_t* buckets = m_alloc.allocate(count);
+        std::uninitialized_value_construct_n(buckets, count);
+
+        return buckets;
+    }
+
+    bucket_t* copy_buckets(const bucket_t* src, std::size_t count) {
+        if (count == 0) {
+            return nullptr;
+        }
+
+        bucket_t* buckets = m_alloc.allocate(count);
+        std::uninitialized_copy_n(src, count, buckets);
+
+        return buckets;
+    }
+
     void rehash_if_needed() {
-        if (static_cast<float>(m_size) / m_buckets_count <= m_max_load_factor) {
+        if (static_cast<float>(m_size) <= static_cast<float>(m_buckets_count) * m_max_load_factor) {
             return;
         }
 
         std::size_t new_buckets_count = m_buckets_count * 2;
+        rehash(new_buckets_count);
+    }
 
-        auto new_buckets_mem = m_alloc.allocate(new_buckets_count);
-        auto new_buckets     = new (new_buckets_mem) bucket_t[new_buckets_count];
+    void rehash(std::size_t count) {
+        auto* buckets = create_buckets(count);
 
         for (std::size_t i = 0; i < m_buckets_count; ++i) {
             for (auto&& [hash, key_index] : m_buckets[i]) {
-                new_buckets[hash % new_buckets_count].emplace_back(hash, key_index);
+                buckets[hash % count].emplace_back(hash, key_index);
             }
         }
 
-        std::destroy_n(m_buckets, m_buckets_count);
-        m_alloc.deallocate(m_buckets, m_buckets_count);
+        if (m_buckets != nullptr) {
+            std::destroy_n(m_buckets, m_buckets_count);
+            m_alloc.deallocate(m_buckets, m_buckets_count);
+        }
 
-        m_buckets_count = new_buckets_count;
-        m_buckets       = new_buckets;
+        m_buckets_count = count;
+        m_buckets       = buckets;
     }
 
     void clear_all_buckets() {
@@ -552,6 +622,10 @@ private:
             std::destroy_n(m_buckets, m_buckets_count);
             m_alloc.deallocate(m_buckets, m_buckets_count);
         }
+
+        m_buckets       = nullptr;
+        m_buckets_count = 0;
+        m_size          = 0;
     }
 };
 
