@@ -62,7 +62,7 @@ public:
     }
 
     /** @brief Constructs a vector by moving another vector. */
-    small_vector(small_vector&& other)
+    small_vector(small_vector&& other) noexcept
         : m_alloc(std::move(other.m_alloc))
         , m_size(0)
         , m_capacity(m_stack.size())
@@ -136,7 +136,7 @@ public:
         return *this;
     }
 
-    small_vector& operator=(small_vector&& other) {
+    small_vector& operator=(small_vector&& other) noexcept {
         if (this == &other) {
             return *this;
         }
