@@ -7,6 +7,40 @@
 namespace koutil::container {
 
 /**
+ * @brief Wrapper around the index tag
+ */
+template <typename T> struct type_tag {
+    using type = T;
+};
+
+/**
+ * @brief Represents a compile-time index value in an index conversion rule.
+ *
+ * @tparam Value The compile-time value represented by this rule operand.
+ *
+ * @code
+ * koutil::container::index_value<IndexTag::A>
+ * @endcode
+ */
+template <auto Value> struct index_value {
+    using type                  = decltype(Value);
+    static constexpr type value = Value;
+};
+
+/**
+ * @brief Represents a type in an index conversion rule.
+ *
+ * @tparam T The type represented by this rule operand.
+ *
+ * @code
+ * koutil::container::index_type<float>
+ * @endcode
+ */
+template <typename T> struct index_type {
+    using type = T;
+};
+
+/**
  * @brief Compile-time tag identified by a type and value.
  *
  * @tparam TagType Type of the tag value.
@@ -22,42 +56,93 @@ template <typename TagType, TagType Value> struct index_tag {
     static constexpr tag_t value = Value;
 };
 
+namespace detail {
+
+    // default rule
+    constexpr bool allow_index_conversion(...) { return false; }
+
+    template <typename From, typename To> consteval bool check_index_conversion() {
+        return allow_index_conversion(type_tag<From> { }, type_tag<To> { });
+    }
+
+    template <typename T> struct is_index_tag : std::false_type { };
+
+    template <typename TagType, TagType Value> struct is_index_tag<index_tag<TagType, Value>> : std::true_type { };
+
+    //-- Rules -----------------------------------------------------------------
+
+    template <typename T, typename Arg> struct rule_match : std::false_type { };
+
+    // types
+    template <typename T, typename Expected>
+    struct rule_match<T, index_type<Expected>> : std::bool_constant<std::is_same_v<T, Expected>> { };
+
+    // values
+    template <typename T, auto Expected>
+        requires(is_index_tag<T>::value)
+    struct rule_match<T, index_value<Expected>>
+        : std::bool_constant<std::is_same_v<decltype(Expected), typename T::tag_t> && Expected == T::value> { };
+
+    template <typename T, typename Rule> inline constexpr bool rule_match_v = rule_match<T, Rule>::value;
+
+}
+
 /**
- * @brief Customization point for conversions between index tags.
+ * @brief Defines a single allowed index conversion rule.
  *
- * @tparam From Source tag value.
- * @tparam To   Destination tag value.
+ * The rule can describe conversions between types, compile-time values,
+ * or a combination of both.
  *
- * @par Example
+ * @tparam From The source of the conversion rule.
+ * @tparam To The destination of the conversion rule.
+ *
  * @code
- * template <>
- * struct allow_index_tag_conversion<IndexKind::Meta, IndexKind::Data>
- *     : std::true_type {};
+ * using rule_a = index_rule<
+ *     index_value<IndexTag::A>,
+ *     index_value<IndexTag::B>
+ * >;
+ *
+ * using rule_b = index_rule<
+ *     index_value<IndexTag::C>,
+ *     index_type<float>
+ * >;
  * @endcode
  */
-template <auto From, auto To> struct allow_index_tag_conversion : std::false_type { };
+template <typename From, typename To> struct index_rule {
+    template <typename F, typename T> static consteval bool matches() {
+        return detail::rule_match_v<F, From> && detail::rule_match_v<T, To>;
+    }
+};
 
 /**
- * @brief Customization point for conversions between index types.
+ * @brief Collection of index conversion rules.
  *
- * Conversions are disabled by default.
+ * A conversion is allowed when at least one of the contained rules matches
+ * the source and destination.
  *
- * @tparam From Source index tag.
- * @tparam To   Destination index tag.
+ * @tparam Rules The conversion rules.
+ *
+ * @code
+ * using conversion_rules = index_rules<
+ *     KOUTIL_INDEX_RULE_VALUE(IndexTag::A, IndexTag::B),
+ *     KOUTIL_INDEX_RULE_VALUE(IndexTag::B, IndexTag::C),
+ *     KOUTIL_INDEX_RULE_VALUE_TYPE(IndexTag::C, float),
+ *     KOUTIL_INDEX_RULE_TYPE_VALUE(float, IndexTag::A)
+ * >;
+ * @endcode
  */
-template <typename From, typename To> struct allow_index_conversion : std::false_type { };
+template <typename... Rules> struct index_rules {
+    template <typename From, typename To> static consteval bool allows() {
+        return (Rules::template matches<From, To>() || ...);
+    }
+};
 
 /**
- * @brief Enables conversions between @ref index_tag types.
- *
- * @tparam FromType Type of the source tag.
- * @tparam FromTag  Source tag value.
- * @tparam ToType   Type of the destination tag.
- * @tparam ToTag    Destination tag value.
+ * @brief Concept identifying an index tag type.
+ * @tparam T The type to check.
  */
-template <typename FromType, FromType FromTag, typename ToType, ToType ToTag>
-struct allow_index_conversion<index_tag<FromType, FromTag>, index_tag<ToType, ToTag>>
-    : allow_index_tag_conversion<FromTag, ToTag> { };
+template <typename T>
+concept index_tag_type = detail::is_index_tag<T>::value;
 
 /**
  * @brief Convenience variable for @ref allow_index_conversion.
@@ -66,7 +151,7 @@ struct allow_index_conversion<index_tag<FromType, FromTag>, index_tag<ToType, To
  * @tparam To   Destination index tag.
  */
 template <typename From, typename To>
-inline constexpr bool allow_index_conversion_v = allow_index_conversion<From, To>::value;
+inline constexpr bool allow_index_conversion_v = detail::check_index_conversion<From, To>();
 
 /**
  * @brief Strongly typed index value.
@@ -145,68 +230,78 @@ template <typename ValueType, auto TagValue>
 using index_tagged_t = index_t<ValueType, index_tag<decltype(TagValue), TagValue>>;
 
 /**
- * @def KOUTIL_ALLOW_INDEX_TAG_CONV
- * @brief Allows conversion between two tagged index values.
+ * @brief Creates an index conversion rule between two compile-time values.
  *
- * @param FROM Source tag value.
- * @param TO   Destination tag value.
+ * This macro creates a rule allowing conversion from one index value to
+ * another index value.
  *
- * @par Example
+ * @param FROM The source index value.
+ * @param TO The destination index value.
+ *
  * @code
- * KOUTIL_ALLOW_INDEX_TAG_CONVERSION(IndexKind::Meta, IndexKind::Data);
+ * using rules = koutil::container::index_rules<
+ *     KOUTIL_INDEX_RULE_VALUE(IndexTag::A, IndexTag::B),
+ *     KOUTIL_INDEX_RULE_VALUE(IndexTag::B, IndexTag::C)
+ * >;
  * @endcode
  */
-#define KOUTIL_ALLOW_INDEX_TAG_CONV(FROM, TO) \
-    template <> struct koutil::container::allow_index_tag_conversion<FROM, TO> : std::true_type { }
+#define KOUTIL_INDEX_RULE_VALUE(FROM, TO) \
+    ::koutil::container::index_rule<::koutil::container::index_value<FROM>, ::koutil::container::index_value<TO>>
 
 /**
- * @def KOUTIL_ALLOW_INDEX_CONV
- * @brief Allows conversion between two index tag types.
+ * @brief Creates an index conversion rule between two types.
  *
- * @param FROM Source index tag type.
- * @param TO   Destination index tag type.
+ * This macro creates a rule allowing conversion from one index type to
+ * another index type.
  *
- * @par Example
+ * @param FROM The source index type.
+ * @param TO The destination index type.
+ *
  * @code
- * KOUTIL_ALLOW_INDEX_CONVERSION(FooTag, BarTag);
+ * using rules = koutil::container::index_rules<
+ *     KOUTIL_INDEX_RULE_TYPE(MyIndex, float),
+ *     KOUTIL_INDEX_RULE_TYPE(float, MyIndex)
+ * >;
  * @endcode
  */
-#define KOUTIL_ALLOW_INDEX_CONV(FROM, TO) \
-    template <> struct koutil::container::allow_index_conversion<FROM, TO> : std::true_type { }
+#define KOUTIL_INDEX_RULE_TYPE(FROM, TO) \
+    ::koutil::container::index_rule<::koutil::container::index_type<FROM>, ::koutil::container::index_type<TO>>
 
 /**
- * @def KOUTIL_ALLOW_INDEX_TO_TAG_CONV
- * @brief Allows conversion from an untagged index to a tagged index.
+ * @brief Creates an index conversion rule from a type to a compile-time value.
  *
- * @param FROM Source index tag type.
- * @param TO   Destination tag value.
+ * This macro creates a rule allowing conversion from an index type to an
+ * index value.
  *
- * @par Example
+ * @param FROM The source index type.
+ * @param TO The destination index value.
+ *
  * @code
- * KOUTIL_ALLOW_INDEX_TO_TAG_CONV(float, IndexKind::Meta);
+ * using rules = koutil::container::index_rules<
+ *     KOUTIL_INDEX_RULE_TYPE_VALUE(float, IndexTag::A)
+ * >;
  * @endcode
  */
-#define KOUTIL_ALLOW_INDEX_TO_TAG_CONV(FROM, TO)                                                             \
-    template <>                                                                                              \
-    struct koutil::container::allow_index_conversion<FROM, ::koutil::container::index_tag<decltype(TO), TO>> \
-        : std::true_type { }
+#define KOUTIL_INDEX_RULE_TYPE_VALUE(FROM, TO) \
+    ::koutil::container::index_rule<::koutil::container::index_type<FROM>, ::koutil::container::index_value<TO>>
 
 /**
- * @def KOUTIL_ALLOW_INDEX_FROM_TAG_CONV
- * @brief Allows conversion from a tagged index to an untagged index.
+ * @brief Creates an index conversion rule from a compile-time value to a type.
  *
- * @param FROM Source tag value.
- * @param TO   Destination index tag type.
+ * This macro creates a rule allowing conversion from an index value to an
+ * index type.
  *
- * @par Example
+ * @param FROM The source index value.
+ * @param TO The destination index type.
+ *
  * @code
- * KOUTIL_ALLOW_INDEX_FROM_TAG_CONV(IndexKind::Meta, float);
+ * using rules = koutil::container::index_rules<
+ *     KOUTIL_INDEX_RULE_VALUE_TYPE(IndexTag::C, float)
+ * >;
  * @endcode
  */
-#define KOUTIL_ALLOW_INDEX_FROM_TAG_CONV(FROM, TO)                                                             \
-    template <>                                                                                                \
-    struct koutil::container::allow_index_conversion<::koutil::container::index_tag<decltype(FROM), FROM>, TO> \
-        : std::true_type { }
+#define KOUTIL_INDEX_RULE_VALUE_TYPE(FROM, TO) \
+    ::koutil::container::index_rule<::koutil::container::index_value<FROM>, ::koutil::container::index_type<TO>>
 
 }
 

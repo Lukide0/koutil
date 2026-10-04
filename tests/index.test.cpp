@@ -20,10 +20,16 @@ C -> D
 D -> A
 */
 
-KOUTIL_ALLOW_INDEX_TAG_CONV(IndexTag::A, IndexTag::B);
-KOUTIL_ALLOW_INDEX_TAG_CONV(IndexTag::B, IndexTag::C);
-KOUTIL_ALLOW_INDEX_FROM_TAG_CONV(IndexTag::C, float);
-KOUTIL_ALLOW_INDEX_TO_TAG_CONV(float, IndexTag::A);
+using conversion_rules = index_rules<
+    KOUTIL_INDEX_RULE_VALUE(IndexTag::A, IndexTag::B),
+    KOUTIL_INDEX_RULE_VALUE(IndexTag::B, IndexTag::C),
+    KOUTIL_INDEX_RULE_VALUE_TYPE(IndexTag::C, float),
+    KOUTIL_INDEX_RULE_TYPE_VALUE(float, IndexTag::A)>;
+
+template <typename From, typename To>
+consteval bool allow_index_conversion(type_tag<From> /*unused*/, type_tag<To> /*unused*/) {
+    return conversion_rules::template allows<From, To>();
+}
 
 using A = index_tagged_t<std::uint32_t, IndexTag::A>;
 using B = index_tagged_t<std::uint32_t, IndexTag::B>;
