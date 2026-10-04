@@ -51,7 +51,11 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
@@ -59,11 +63,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d4e/classkoutil_1_1container_1_1template__hash__array_1_1iterator.html#aba84cb99130565ad11332d6b02eccb22",
-"d6/d7c/namespacekoutil_1_1term.html#a684c4c92712b322da0d9bf3ee86cfd83a2909dd0e0336f10b6da9735b859a3d19",
-"db/d4f/structkoutil_1_1args_1_1command__t_1_1string__hash.html#a7801f4af86af9c84677f520e262e2c78",
-"dc/da1/classkoutil_1_1container_1_1multi__vector.html#abf921e94637be1eefef38c08f3bef2b2",
-"dir_4ad071642eec2dadafafe5aa1b3d57a9.html"
+"d2/d4e/classkoutil_1_1container_1_1template__hash__array_1_1iterator.html#aad1fae8798315a2d29be00797ff13681",
+"d6/d44/conceptkoutil_1_1container_1_1is__key__adapter.html",
+"d9/d49/types_8h.html#a78b24dfdaa6405619205334ef0e97a1d",
+"db/d9f/classkoutil_1_1container_1_1template__hash__array.html#ad81e848c22f7576512660b348134ff18",
+"dd/da7/structkoutil_1_1term_1_1dimensions__t.html#a0b2682eca807386cbb6b619d72cbc256",
+"namespacemembers_vars.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

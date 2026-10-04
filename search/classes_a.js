@@ -1,7 +1,7 @@
 var searchData=
 [
   ['template_5fhash_5farray_0',['template_hash_array',['../db/d9f/classkoutil_1_1container_1_1template__hash__array.html',1,'koutil::container']]],
-  ['template_5fhash_5farray_3c_20key_5ft_2c_20key_5fid_5ft_2c_20bool_2c_20adapter_5fwrapper_2c_20hash_5fwrapper_2c_20bucket_5ft_2c_20allocator_5ft_20_3e_1',['template_hash_array&lt; key_t, key_id_t, bool, adapter_wrapper, hash_wrapper, bucket_t, allocator_t &gt;',['../db/d9f/classkoutil_1_1container_1_1template__hash__array.html',1,'koutil::container']]],
+  ['template_5fhash_5farray_3c_20key_5ft_2c_20key_5fid_5ft_2c_20bool_2c_20adapter_5fwrapper_2c_20hash_5fwrapper_2c_20bucket_5ft_20_3e_1',['template_hash_array&lt; key_t, key_id_t, bool, adapter_wrapper, hash_wrapper, bucket_t &gt;',['../db/d9f/classkoutil_1_1container_1_1template__hash__array.html',1,'koutil::container']]],
   ['terminal_2',['terminal',['../d8/d3d/classkoutil_1_1term_1_1terminal.html',1,'koutil::term']]],
   ['tuple_3',['tuple',['../dc/d2d/structkoutil_1_1type_1_1types__transforms_1_1tuple.html',1,'koutil::type::types_transforms']]],
   ['types_4',['types',['../dd/d52/structkoutil_1_1type_1_1types.html',1,'koutil::type']]],

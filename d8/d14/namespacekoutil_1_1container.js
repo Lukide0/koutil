@@ -1,8 +1,16 @@
 var namespacekoutil_1_1container =
 [
+    [ "allow_index_conversion", "d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html", null ],
+    [ "allow_index_conversion< index_tag< FromType, FromTag >, index_tag< ToType, ToTag > >", "d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.html", null ],
+    [ "allow_index_tag_conversion", "d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html", null ],
     [ "comptime_map", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html", "d2/d7d/classkoutil_1_1container_1_1comptime__map" ],
     [ "hash_array", "d2/dd7/classkoutil_1_1container_1_1hash__array.html", "d2/dd7/classkoutil_1_1container_1_1hash__array" ],
+    [ "index_t", "db/d63/classkoutil_1_1container_1_1index__t.html", "db/d63/classkoutil_1_1container_1_1index__t" ],
+    [ "index_tag", "d7/d3c/structkoutil_1_1container_1_1index__tag.html", "d7/d3c/structkoutil_1_1container_1_1index__tag" ],
     [ "multi_vector", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", "dc/da1/classkoutil_1_1container_1_1multi__vector" ],
+    [ "small_vector", "d7/d14/classkoutil_1_1container_1_1small__vector.html", "d7/d14/classkoutil_1_1container_1_1small__vector" ],
+    [ "stack_buffer_t", "dd/dc0/classkoutil_1_1container_1_1stack__buffer__t.html", "dd/dc0/classkoutil_1_1container_1_1stack__buffer__t" ],
+    [ "stack_buffer_t< T, 0 >", "dc/dcf/classkoutil_1_1container_1_1stack__buffer__t_3_01T_00_010_01_4.html", "dc/dcf/classkoutil_1_1container_1_1stack__buffer__t_3_01T_00_010_01_4" ],
     [ "template_hash_array", "db/d9f/classkoutil_1_1container_1_1template__hash__array.html", "db/d9f/classkoutil_1_1container_1_1template__hash__array" ],
     [ "is_hash", "da/d53/conceptkoutil_1_1container_1_1is__hash.html", null ],
     [ "is_key_adapter", "d6/d44/conceptkoutil_1_1container_1_1is__key__adapter.html", null ],
@@ -10,7 +18,8 @@ var namespacekoutil_1_1container =
     [ "is_template_hash", "df/d9d/conceptkoutil_1_1container_1_1is__template__hash.html", null ],
     [ "is_bucket", "dc/df8/conceptkoutil_1_1container_1_1is__bucket.html", null ],
     [ "is_template_key_adapter", "d0/de6/conceptkoutil_1_1container_1_1is__template__key__adapter.html", null ],
-    [ "is_allocator", "d3/d42/conceptkoutil_1_1container_1_1is__allocator.html", null ],
+    [ "index_tagged_t", "d8/d14/namespacekoutil_1_1container.html#a030d8480368f5a3ab37b23df2340735e", null ],
     [ "to_map", "d8/d14/namespacekoutil_1_1container.html#a46226ca25c0b2d968dfde4635baf4d69", null ],
-    [ "to_map", "d8/d14/namespacekoutil_1_1container.html#a77f220f828d3529551377610fa018f58", null ]
+    [ "to_map", "d8/d14/namespacekoutil_1_1container.html#a77f220f828d3529551377610fa018f58", null ],
+    [ "allow_index_conversion_v", "d8/d14/namespacekoutil_1_1container.html#a60bc89d847782e72b40b589076cad216", null ]
 ];
