@@ -13,18 +13,20 @@ var annotated_dup =
         [ "result_base_t", "df/dfb/classkoutil_1_1args_1_1result__base__t.html", "df/dfb/classkoutil_1_1args_1_1result__base__t" ]
       ] ],
       [ "container", "d8/d14/namespacekoutil_1_1container.html", [
-        [ "allow_index_conversion", "d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html", null ],
-        [ "allow_index_conversion< index_tag< FromType, FromTag >, index_tag< ToType, ToTag > >", "d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.html", null ],
-        [ "allow_index_tag_conversion", "d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html", null ],
         [ "comptime_map", "d2/d7d/classkoutil_1_1container_1_1comptime__map.html", "d2/d7d/classkoutil_1_1container_1_1comptime__map" ],
         [ "hash_array", "d2/dd7/classkoutil_1_1container_1_1hash__array.html", "d2/dd7/classkoutil_1_1container_1_1hash__array" ],
+        [ "index_rule", "dc/da5/structkoutil_1_1container_1_1index__rule.html", "dc/da5/structkoutil_1_1container_1_1index__rule" ],
+        [ "index_rules", "de/d90/structkoutil_1_1container_1_1index__rules.html", "de/d90/structkoutil_1_1container_1_1index__rules" ],
         [ "index_t", "db/d63/classkoutil_1_1container_1_1index__t.html", "db/d63/classkoutil_1_1container_1_1index__t" ],
         [ "index_tag", "d7/d3c/structkoutil_1_1container_1_1index__tag.html", "d7/d3c/structkoutil_1_1container_1_1index__tag" ],
+        [ "index_type", "d8/d1b/structkoutil_1_1container_1_1index__type.html", "d8/d1b/structkoutil_1_1container_1_1index__type" ],
+        [ "index_value", "d7/d42/structkoutil_1_1container_1_1index__value.html", "d7/d42/structkoutil_1_1container_1_1index__value" ],
         [ "multi_vector", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", "dc/da1/classkoutil_1_1container_1_1multi__vector" ],
         [ "small_vector", "d7/d14/classkoutil_1_1container_1_1small__vector.html", "d7/d14/classkoutil_1_1container_1_1small__vector" ],
         [ "stack_buffer_t", "dd/dc0/classkoutil_1_1container_1_1stack__buffer__t.html", "dd/dc0/classkoutil_1_1container_1_1stack__buffer__t" ],
         [ "stack_buffer_t< T, 0 >", "dc/dcf/classkoutil_1_1container_1_1stack__buffer__t_3_01T_00_010_01_4.html", "dc/dcf/classkoutil_1_1container_1_1stack__buffer__t_3_01T_00_010_01_4" ],
-        [ "template_hash_array", "db/d9f/classkoutil_1_1container_1_1template__hash__array.html", "db/d9f/classkoutil_1_1container_1_1template__hash__array" ]
+        [ "template_hash_array", "db/d9f/classkoutil_1_1container_1_1template__hash__array.html", "db/d9f/classkoutil_1_1container_1_1template__hash__array" ],
+        [ "type_tag", "d6/d6b/structkoutil_1_1container_1_1type__tag.html", "d6/d6b/structkoutil_1_1container_1_1type__tag" ]
       ] ],
       [ "term", "d6/d7c/namespacekoutil_1_1term.html", [
         [ "color_bg_t", "de/df5/structkoutil_1_1term_1_1color__bg__t.html", "de/df5/structkoutil_1_1term_1_1color__bg__t" ],

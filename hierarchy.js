@@ -15,18 +15,17 @@ var hierarchy =
     [ "koutil::term::cursor_pos", "dd/d70/structkoutil_1_1term_1_1cursor__pos.html", null ],
     [ "koutil::term::dimensions_t", "dd/da7/structkoutil_1_1term_1_1dimensions__t.html", null ],
     [ "std::false_type", null, [
-      [ "koutil::container::allow_index_tag_conversion< FromTag, ToTag >", "d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html", [
-        [ "koutil::container::allow_index_conversion< index_tag< FromType, FromTag >, index_tag< ToType, ToTag > >", "d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.html", null ]
-      ] ],
-      [ "koutil::container::allow_index_conversion< From, To >", "d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html", null ],
-      [ "koutil::container::allow_index_tag_conversion< From, To >", "d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html", null ],
       [ "koutil::type::are_types< T >", "dd/de2/structkoutil_1_1type_1_1are__types.html", null ]
     ] ],
     [ "koutil::container::hash_array< Key, KeyID, KeyAdapter, Hash, Bucket >", "d2/dd7/classkoutil_1_1container_1_1hash__array.html", null ],
     [ "koutil::container::hash_array< Key, KeyID, KeyAdapter, Hash, Bucket >::hash_wrapper", "d5/daa/structkoutil_1_1container_1_1hash__array_1_1hash__wrapper.html", null ],
     [ "koutil::args::help_printer_t< Result >", "d1/d44/classkoutil_1_1args_1_1help__printer__t.html", null ],
+    [ "koutil::container::index_rule< From, To >", "dc/da5/structkoutil_1_1container_1_1index__rule.html", null ],
+    [ "koutil::container::index_rules< Rules >", "de/d90/structkoutil_1_1container_1_1index__rules.html", null ],
     [ "koutil::container::index_t< ValueType, Tag >", "db/d63/classkoutil_1_1container_1_1index__t.html", null ],
     [ "koutil::container::index_tag< TagType, Value >", "d7/d3c/structkoutil_1_1container_1_1index__tag.html", null ],
+    [ "koutil::container::index_type< T >", "d8/d1b/structkoutil_1_1container_1_1index__type.html", null ],
+    [ "koutil::container::index_value< Value >", "d7/d42/structkoutil_1_1container_1_1index__value.html", null ],
     [ "koutil::container::multi_vector< Types >::iterator< is_const >", "d1/daa/classkoutil_1_1container_1_1multi__vector_1_1iterator.html", null ],
     [ "koutil::container::template_hash_array< Key, KeyID, ComptimeData, KeyAdapter, Hash, Bucket >::iterator< is_const >", "d2/d4e/classkoutil_1_1container_1_1template__hash__array_1_1iterator.html", null ],
     [ "koutil::container::multi_vector< Types >", "dc/da1/classkoutil_1_1container_1_1multi__vector.html", null ],
@@ -48,6 +47,7 @@ var hierarchy =
       [ "koutil::type::are_types< types< Types... > >", "d1/d68/structkoutil_1_1type_1_1are__types_3_01types_3_01Types_8_8_8_01_4_01_4.html", null ]
     ] ],
     [ "koutil::type::types_transforms::tuple", "dc/d2d/structkoutil_1_1type_1_1types__transforms_1_1tuple.html", null ],
+    [ "koutil::container::type_tag< T >", "d6/d6b/structkoutil_1_1container_1_1type__tag.html", null ],
     [ "koutil::type::types< T >", "dd/d52/structkoutil_1_1type_1_1types.html", null ],
     [ "koutil::type::types_cat< T, U >", "d0/de2/structkoutil_1_1type_1_1types__cat.html", null ],
     [ "koutil::type::types_cat< types< T... >, types< U... > >", "dd/ddb/structkoutil_1_1type_1_1types__cat_3_01types_3_01T_8_8_8_01_4_00_01types_3_01U_8_8_8_01_4_01_4.html", null ],

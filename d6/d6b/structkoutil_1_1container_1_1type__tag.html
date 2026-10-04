@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>koutil: koutil::container::allow_index_conversion&lt; index_tag&lt; FromType, FromTag &gt;, index_tag&lt; ToType, ToTag &gt; &gt; Struct Template Reference</title>
+<title>koutil: koutil::container::type_tag&lt; T &gt; Struct Template Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.html','../../'); initResizable(true); });
+$(function(){initNavTree('d6/d6b/structkoutil_1_1container_1_1type__tag.html','../../'); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,36 +97,44 @@ $(function(){initNavTree('d9/d19/structkoutil_1_1container_1_1allow__index__conv
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">koutil::container::allow_index_conversion&lt; index_tag&lt; FromType, FromTag &gt;, index_tag&lt; ToType, ToTag &gt; &gt; Struct Template Reference</div></div>
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="../../d1/d56/structkoutil_1_1container_1_1type__tag-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">koutil::container::type_tag&lt; T &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Enables conversions between <a class="el" href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">index_tag</a> types.  
+<p>Wrapper around the index tag.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/db5/index_8h_source.html">index.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for koutil::container::allow_index_conversion&lt; index_tag&lt; FromType, FromTag &gt;, index_tag&lt; ToType, ToTag &gt; &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="../../d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.png" usemap="#koutil::container::allow_5Findex_5Fconversion_3C_20index_5Ftag_3C_20FromType_2C_20FromTag_20_3E_2C_20index_5Ftag_3C_20ToType_2C_20ToTag_20_3E_20_3E_map" alt=""/>
-  <map id="koutil::container::allow_5Findex_5Fconversion_3C_20index_5Ftag_3C_20FromType_2C_20FromTag_20_3E_2C_20index_5Ftag_3C_20ToType_2C_20ToTag_20_3E_20_3E_map" name="koutil::container::allow_5Findex_5Fconversion_3C_20index_5Ftag_3C_20FromType_2C_20FromTag_20_3E_2C_20index_5Ftag_3C_20ToType_2C_20ToTag_20_3E_20_3E_map">
-<area href="../../d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html" alt="koutil::container::allow_index_tag_conversion&lt; FromTag, ToTag &gt;" shape="rect" coords="0,56,633,80"/>
-  </map>
-</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a82a025a8657995032d97dedb16e839d1" id="r_a82a025a8657995032d97dedb16e839d1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a025a8657995032d97dedb16e839d1">type</a> = T</td></tr>
+<tr class="separator:a82a025a8657995032d97dedb16e839d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename FromType, FromType FromTag, typename ToType, ToType ToTag&gt;<br />
-struct koutil::container::allow_index_conversion&lt; index_tag&lt; FromType, FromTag &gt;, index_tag&lt; ToType, ToTag &gt; &gt;</div><p>Enables conversions between <a class="el" href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">index_tag</a> types. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">FromType</td><td>Type of the source tag. </td></tr>
-    <tr><td class="paramname">FromTag</td><td>Source tag value. </td></tr>
-    <tr><td class="paramname">ToType</td><td>Type of the destination tag. </td></tr>
-    <tr><td class="paramname">ToTag</td><td>Destination tag value. </td></tr>
-  </table>
-  </dd>
-</dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct koutil::container::type_tag&lt; T &gt;</div><p>Wrapper around the index tag. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a82a025a8657995032d97dedb16e839d1" name="a82a025a8657995032d97dedb16e839d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82a025a8657995032d97dedb16e839d1">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d6b/structkoutil_1_1container_1_1type__tag.html">koutil::container::type_tag</a>&lt; T &gt;::type = T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/koutil/container/<a class="el" href="../../d1/db5/index_8h_source.html">index.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -134,7 +142,7 @@ struct koutil::container::allow_index_conversion&lt; index_tag&lt; FromType, Fro
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dd/dcf/namespacekoutil.html">koutil</a></li><li class="navelem"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html">container</a></li><li class="navelem"><a class="el" href="../../d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.html">allow_index_conversion&lt; index_tag&lt; FromType, FromTag &gt;, index_tag&lt; ToType, ToTag &gt; &gt;</a></li>
+    <li class="navelem"><a class="el" href="../../dd/dcf/namespacekoutil.html">koutil</a></li><li class="navelem"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html">container</a></li><li class="navelem"><a class="el" href="../../d6/d6b/structkoutil_1_1container_1_1type__tag.html">type_tag</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

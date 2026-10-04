@@ -100,8 +100,10 @@ $(function(){initNavTree('d1/db5/index_8h.html','../../'); initResizable(true); 
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#concepts">Concepts</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">index.h File Reference</div></div>
 </div><!--header-->
@@ -113,17 +115,23 @@ $(function(){initNavTree('d1/db5/index_8h.html','../../'); initResizable(true); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6b/structkoutil_1_1container_1_1type__tag.html">koutil::container::type_tag&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper around the index tag.  <a href="../../d6/d6b/structkoutil_1_1container_1_1type__tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">koutil::container::index_value&lt; Value &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a compile-time index value in an index conversion rule.  <a href="../../d7/d42/structkoutil_1_1container_1_1index__value.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">koutil::container::index_type&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a type in an index conversion rule.  <a href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">koutil::container::index_tag&lt; TagType, Value &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time tag identified by a type and value.  <a href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html">koutil::container::allow_index_tag_conversion&lt; From, To &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Customization point for conversions between index tags.  <a href="../../d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">koutil::container::index_rule&lt; From, To &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a single allowed index conversion rule.  <a href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">koutil::container::allow_index_conversion&lt; From, To &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Customization point for conversions between index types.  <a href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.html">koutil::container::allow_index_conversion&lt; index_tag&lt; FromType, FromTag &gt;, index_tag&lt; ToType, ToTag &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables conversions between <a class="el" href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">index_tag</a> types.  <a href="../../d9/d19/structkoutil_1_1container_1_1allow__index__conversion_3_01index__tag_3_01FromType_00_01FromTag_01f6c7391d8ec359e7db219e97d8fdddd.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d90/structkoutil_1_1container_1_1index__rules.html">koutil::container::index_rules&lt; Rules &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of index conversion rules.  <a href="../../de/d90/structkoutil_1_1container_1_1index__rules.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d63/classkoutil_1_1container_1_1index__t.html">koutil::container::index_t&lt; ValueType, Tag &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strongly typed index value.  <a href="../../db/d63/classkoutil_1_1container_1_1index__t.html#details">More...</a><br /></td></tr>
@@ -135,21 +143,29 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html">koutil::container</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1e/namespacekoutil_1_1container_1_1detail.html">koutil::container::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="concepts" name="concepts"></a>
+Concepts</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/conceptkoutil_1_1container_1_1index__tag__type.html">koutil::container::index_tag_type</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concept identifying an index tag type. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8ab6155b46d74a171a6e79d27170fadd" id="r_a8ab6155b46d74a171a6e79d27170fadd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ab6155b46d74a171a6e79d27170fadd">KOUTIL_ALLOW_INDEX_TAG_CONV</a>(FROM,  TO)&#160;&#160;&#160;    template &lt;&gt; struct <a class="el" href="../../d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html">koutil::container::allow_index_tag_conversion</a>&lt;FROM, TO&gt; : std::true_type { }</td></tr>
-<tr class="memdesc:a8ab6155b46d74a171a6e79d27170fadd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows conversion between two tagged index values.  <br /></td></tr>
-<tr class="separator:a8ab6155b46d74a171a6e79d27170fadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf110aefa036d521cf25510ca18d18fd" id="r_acf110aefa036d521cf25510ca18d18fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf110aefa036d521cf25510ca18d18fd">KOUTIL_ALLOW_INDEX_CONV</a>(FROM,  TO)&#160;&#160;&#160;    template &lt;&gt; struct <a class="el" href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">koutil::container::allow_index_conversion</a>&lt;FROM, TO&gt; : std::true_type { }</td></tr>
-<tr class="memdesc:acf110aefa036d521cf25510ca18d18fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows conversion between two index tag types.  <br /></td></tr>
-<tr class="separator:acf110aefa036d521cf25510ca18d18fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6033f08c156e96265b3e5e1aa3b667ed" id="r_a6033f08c156e96265b3e5e1aa3b667ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6033f08c156e96265b3e5e1aa3b667ed">KOUTIL_ALLOW_INDEX_TO_TAG_CONV</a>(FROM,  TO)</td></tr>
-<tr class="memdesc:a6033f08c156e96265b3e5e1aa3b667ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows conversion from an untagged index to a tagged index.  <br /></td></tr>
-<tr class="separator:a6033f08c156e96265b3e5e1aa3b667ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a832ac6be52f501157a79015a98f012a3" id="r_a832ac6be52f501157a79015a98f012a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a832ac6be52f501157a79015a98f012a3">KOUTIL_ALLOW_INDEX_FROM_TAG_CONV</a>(FROM,  TO)</td></tr>
-<tr class="memdesc:a832ac6be52f501157a79015a98f012a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows conversion from a tagged index to an untagged index.  <br /></td></tr>
-<tr class="separator:a832ac6be52f501157a79015a98f012a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7cdbc2fd3561856de583cb5107e60f" id="r_adb7cdbc2fd3561856de583cb5107e60f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb7cdbc2fd3561856de583cb5107e60f">KOUTIL_INDEX_RULE_VALUE</a>(FROM,  TO)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;FROM&gt;, <a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;TO&gt;&gt;</td></tr>
+<tr class="memdesc:adb7cdbc2fd3561856de583cb5107e60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an index conversion rule between two compile-time values.  <br /></td></tr>
+<tr class="separator:adb7cdbc2fd3561856de583cb5107e60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5884d149f6c8744d4a8890caf64f60d" id="r_ae5884d149f6c8744d4a8890caf64f60d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5884d149f6c8744d4a8890caf64f60d">KOUTIL_INDEX_RULE_TYPE</a>(FROM,  TO)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;FROM&gt;, <a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;TO&gt;&gt;</td></tr>
+<tr class="memdesc:ae5884d149f6c8744d4a8890caf64f60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an index conversion rule between two types.  <br /></td></tr>
+<tr class="separator:ae5884d149f6c8744d4a8890caf64f60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fbf43f2443b08972211797049eaecf" id="r_a55fbf43f2443b08972211797049eaecf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55fbf43f2443b08972211797049eaecf">KOUTIL_INDEX_RULE_TYPE_VALUE</a>(FROM,  TO)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;FROM&gt;, <a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;TO&gt;&gt;</td></tr>
+<tr class="memdesc:a55fbf43f2443b08972211797049eaecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an index conversion rule from a type to a compile-time value.  <br /></td></tr>
+<tr class="separator:a55fbf43f2443b08972211797049eaecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf8b52fd556597d062623c0472d0b3e" id="r_a3bf8b52fd556597d062623c0472d0b3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bf8b52fd556597d062623c0472d0b3e">KOUTIL_INDEX_RULE_VALUE_TYPE</a>(FROM,  TO)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;FROM&gt;, <a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;TO&gt;&gt;</td></tr>
+<tr class="memdesc:a3bf8b52fd556597d062623c0472d0b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an index conversion rule from a compile-time value to a type.  <br /></td></tr>
+<tr class="separator:a3bf8b52fd556597d062623c0472d0b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -158,150 +174,166 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a030d8480368f5a3ab37b23df2340735e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="../../db/d63/classkoutil_1_1container_1_1index__t.html">index_t</a> using an <a class="el" href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">index_tag</a>.  <br /></td></tr>
 <tr class="separator:a030d8480368f5a3ab37b23df2340735e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a55b479e84d582c06cda6e926678e7c7a" id="r_a55b479e84d582c06cda6e926678e7c7a"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1e/namespacekoutil_1_1container_1_1detail.html#a55b479e84d582c06cda6e926678e7c7a">koutil::container::detail::allow_index_conversion</a> (...)</td></tr>
+<tr class="separator:a55b479e84d582c06cda6e926678e7c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad959789486d49eb1f8c70c6706eaecb2" id="r_ad959789486d49eb1f8c70c6706eaecb2"><td class="memTemplParams" colspan="2">template&lt;typename From , typename To &gt; </td></tr>
+<tr class="memitem:ad959789486d49eb1f8c70c6706eaecb2"><td class="memTemplItemLeft" align="right" valign="top">consteval bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d1e/namespacekoutil_1_1container_1_1detail.html#ad959789486d49eb1f8c70c6706eaecb2">koutil::container::detail::check_index_conversion</a> ()</td></tr>
+<tr class="separator:ad959789486d49eb1f8c70c6706eaecb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a8dfd01661792da2ce020ba37b96178f8" id="r_a8dfd01661792da2ce020ba37b96178f8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Rule &gt; </td></tr>
+<tr class="memitem:a8dfd01661792da2ce020ba37b96178f8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d1e/namespacekoutil_1_1container_1_1detail.html#a8dfd01661792da2ce020ba37b96178f8">koutil::container::detail::rule_match_v</a> = rule_match&lt;T, Rule&gt;::value</td></tr>
+<tr class="separator:a8dfd01661792da2ce020ba37b96178f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60bc89d847782e72b40b589076cad216" id="r_a60bc89d847782e72b40b589076cad216"><td class="memTemplParams" colspan="2">template&lt;typename From , typename To &gt; </td></tr>
-<tr class="memitem:a60bc89d847782e72b40b589076cad216"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html#a60bc89d847782e72b40b589076cad216">koutil::container::allow_index_conversion_v</a> = <a class="el" href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">allow_index_conversion</a>&lt;From, To&gt;::value</td></tr>
-<tr class="memdesc:a60bc89d847782e72b40b589076cad216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience variable for <a class="el" href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">allow_index_conversion</a>.  <br /></td></tr>
+<tr class="memitem:a60bc89d847782e72b40b589076cad216"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d14/namespacekoutil_1_1container.html#a60bc89d847782e72b40b589076cad216">koutil::container::allow_index_conversion_v</a> = <a class="el" href="../../d3/d1e/namespacekoutil_1_1container_1_1detail.html#ad959789486d49eb1f8c70c6706eaecb2">detail::check_index_conversion</a>&lt;From, To&gt;()</td></tr>
+<tr class="memdesc:a60bc89d847782e72b40b589076cad216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience variable for allow_index_conversion.  <br /></td></tr>
 <tr class="separator:a60bc89d847782e72b40b589076cad216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="acf110aefa036d521cf25510ca18d18fd" name="acf110aefa036d521cf25510ca18d18fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf110aefa036d521cf25510ca18d18fd">&#9670;&#160;</a></span>KOUTIL_ALLOW_INDEX_CONV</h2>
+<a id="ae5884d149f6c8744d4a8890caf64f60d" name="ae5884d149f6c8744d4a8890caf64f60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5884d149f6c8744d4a8890caf64f60d">&#9670;&#160;</a></span>KOUTIL_INDEX_RULE_TYPE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KOUTIL_ALLOW_INDEX_CONV</td>
+          <td class="memname">#define KOUTIL_INDEX_RULE_TYPE</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>FROM</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)&#160;&#160;&#160;    template &lt;&gt; struct <a class="el" href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">koutil::container::allow_index_conversion</a>&lt;FROM, TO&gt; : std::true_type { }</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;FROM&gt;, <a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;TO&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allows conversion between two index tag types. </p>
+<p>Creates an index conversion rule between two types. </p>
+<p>This macro creates a rule allowing conversion from one index type to another index type.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">FROM</td><td>Source index tag type. </td></tr>
-    <tr><td class="paramname">TO</td><td>Destination index tag type.</td></tr>
+    <tr><td class="paramname">FROM</td><td>The source index type. </td></tr>
+    <tr><td class="paramname">TO</td><td>The destination index type.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line">KOUTIL_ALLOW_INDEX_CONVERSION(FooTag, BarTag);</div>
-</div><!-- fragment --> </dd></dl>
-
+<div class="fragment"><div class="line"><span class="keyword">using </span>rules = <a class="code hl_struct" href="../../de/d90/structkoutil_1_1container_1_1index__rules.html">koutil::container::index_rules</a>&lt;</div>
+<div class="line">    <a class="code hl_define" href="#ae5884d149f6c8744d4a8890caf64f60d">KOUTIL_INDEX_RULE_TYPE</a>(MyIndex, <span class="keywordtype">float</span>),</div>
+<div class="line">    <a class="code hl_define" href="#ae5884d149f6c8744d4a8890caf64f60d">KOUTIL_INDEX_RULE_TYPE</a>(<span class="keywordtype">float</span>, MyIndex)</div>
+<div class="line">&gt;;</div>
+<div class="ttc" id="aindex_8h_html_ae5884d149f6c8744d4a8890caf64f60d"><div class="ttname"><a href="#ae5884d149f6c8744d4a8890caf64f60d">KOUTIL_INDEX_RULE_TYPE</a></div><div class="ttdeci">#define KOUTIL_INDEX_RULE_TYPE(FROM, TO)</div><div class="ttdoc">Creates an index conversion rule between two types.</div><div class="ttdef"><b>Definition</b> index.h:267</div></div>
+<div class="ttc" id="astructkoutil_1_1container_1_1index__rules_html"><div class="ttname"><a href="../../de/d90/structkoutil_1_1container_1_1index__rules.html">koutil::container::index_rules</a></div><div class="ttdoc">Collection of index conversion rules.</div><div class="ttdef"><b>Definition</b> index.h:134</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="a832ac6be52f501157a79015a98f012a3" name="a832ac6be52f501157a79015a98f012a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a832ac6be52f501157a79015a98f012a3">&#9670;&#160;</a></span>KOUTIL_ALLOW_INDEX_FROM_TAG_CONV</h2>
+<a id="a55fbf43f2443b08972211797049eaecf" name="a55fbf43f2443b08972211797049eaecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fbf43f2443b08972211797049eaecf">&#9670;&#160;</a></span>KOUTIL_INDEX_RULE_TYPE_VALUE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KOUTIL_ALLOW_INDEX_FROM_TAG_CONV</td>
+          <td class="memname">#define KOUTIL_INDEX_RULE_TYPE_VALUE</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>FROM</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;FROM&gt;, <a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;TO&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">template</span> &lt;&gt;                                                                                                \</div>
-<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">koutil::container::allow_index_conversion</a>&lt;::<a class="code hl_struct" href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">koutil::container::index_tag</a>&lt;decltype(FROM), FROM&gt;, TO&gt; \</div>
-<div class="line">        : std::true_type { }</div>
-<div class="ttc" id="astructkoutil_1_1container_1_1allow__index__conversion_html"><div class="ttname"><a href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">koutil::container::allow_index_conversion</a></div><div class="ttdoc">Customization point for conversions between index types.</div><div class="ttdef"><b>Definition</b> index.h:48</div></div>
-<div class="ttc" id="astructkoutil_1_1container_1_1index__tag_html"><div class="ttname"><a href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">koutil::container::index_tag</a></div><div class="ttdoc">Compile-time tag identified by a type and value.</div><div class="ttdef"><b>Definition</b> index.h:20</div></div>
-</div><!-- fragment -->
-<p>Allows conversion from a tagged index to an untagged index. </p>
+
+<p>Creates an index conversion rule from a type to a compile-time value. </p>
+<p>This macro creates a rule allowing conversion from an index type to an index value.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">FROM</td><td>Source tag value. </td></tr>
-    <tr><td class="paramname">TO</td><td>Destination index tag type.</td></tr>
+    <tr><td class="paramname">FROM</td><td>The source index type. </td></tr>
+    <tr><td class="paramname">TO</td><td>The destination index value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><a class="code hl_define" href="#a832ac6be52f501157a79015a98f012a3">KOUTIL_ALLOW_INDEX_FROM_TAG_CONV</a>(IndexKind::Meta, <span class="keywordtype">float</span>);</div>
-<div class="ttc" id="aindex_8h_html_a832ac6be52f501157a79015a98f012a3"><div class="ttname"><a href="#a832ac6be52f501157a79015a98f012a3">KOUTIL_ALLOW_INDEX_FROM_TAG_CONV</a></div><div class="ttdeci">#define KOUTIL_ALLOW_INDEX_FROM_TAG_CONV(FROM, TO)</div><div class="ttdoc">Allows conversion from a tagged index to an untagged index.</div><div class="ttdef"><b>Definition</b> index.h:206</div></div>
-</div><!-- fragment --> </dd></dl>
-
+<div class="fragment"><div class="line"><span class="keyword">using </span>rules = <a class="code hl_struct" href="../../de/d90/structkoutil_1_1container_1_1index__rules.html">koutil::container::index_rules</a>&lt;</div>
+<div class="line">    <a class="code hl_define" href="#a55fbf43f2443b08972211797049eaecf">KOUTIL_INDEX_RULE_TYPE_VALUE</a>(<span class="keywordtype">float</span>, IndexTag::A)</div>
+<div class="line">&gt;;</div>
+<div class="ttc" id="aindex_8h_html_a55fbf43f2443b08972211797049eaecf"><div class="ttname"><a href="#a55fbf43f2443b08972211797049eaecf">KOUTIL_INDEX_RULE_TYPE_VALUE</a></div><div class="ttdeci">#define KOUTIL_INDEX_RULE_TYPE_VALUE(FROM, TO)</div><div class="ttdoc">Creates an index conversion rule from a type to a compile-time value.</div><div class="ttdef"><b>Definition</b> index.h:285</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="a8ab6155b46d74a171a6e79d27170fadd" name="a8ab6155b46d74a171a6e79d27170fadd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ab6155b46d74a171a6e79d27170fadd">&#9670;&#160;</a></span>KOUTIL_ALLOW_INDEX_TAG_CONV</h2>
+<a id="adb7cdbc2fd3561856de583cb5107e60f" name="adb7cdbc2fd3561856de583cb5107e60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7cdbc2fd3561856de583cb5107e60f">&#9670;&#160;</a></span>KOUTIL_INDEX_RULE_VALUE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KOUTIL_ALLOW_INDEX_TAG_CONV</td>
+          <td class="memname">#define KOUTIL_INDEX_RULE_VALUE</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>FROM</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)&#160;&#160;&#160;    template &lt;&gt; struct <a class="el" href="../../d9/dad/structkoutil_1_1container_1_1allow__index__tag__conversion.html">koutil::container::allow_index_tag_conversion</a>&lt;FROM, TO&gt; : std::true_type { }</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;FROM&gt;, <a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;TO&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allows conversion between two tagged index values. </p>
+<p>Creates an index conversion rule between two compile-time values. </p>
+<p>This macro creates a rule allowing conversion from one index value to another index value.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">FROM</td><td>Source tag value. </td></tr>
-    <tr><td class="paramname">TO</td><td>Destination tag value.</td></tr>
+    <tr><td class="paramname">FROM</td><td>The source index value. </td></tr>
+    <tr><td class="paramname">TO</td><td>The destination index value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line">KOUTIL_ALLOW_INDEX_TAG_CONVERSION(IndexKind::Meta, IndexKind::Data);</div>
-</div><!-- fragment --> </dd></dl>
-
+<div class="fragment"><div class="line"><span class="keyword">using </span>rules = <a class="code hl_struct" href="../../de/d90/structkoutil_1_1container_1_1index__rules.html">koutil::container::index_rules</a>&lt;</div>
+<div class="line">    <a class="code hl_define" href="#adb7cdbc2fd3561856de583cb5107e60f">KOUTIL_INDEX_RULE_VALUE</a>(IndexTag::A, IndexTag::B),</div>
+<div class="line">    <a class="code hl_define" href="#adb7cdbc2fd3561856de583cb5107e60f">KOUTIL_INDEX_RULE_VALUE</a>(IndexTag::B, IndexTag::C)</div>
+<div class="line">&gt;;</div>
+<div class="ttc" id="aindex_8h_html_adb7cdbc2fd3561856de583cb5107e60f"><div class="ttname"><a href="#adb7cdbc2fd3561856de583cb5107e60f">KOUTIL_INDEX_RULE_VALUE</a></div><div class="ttdeci">#define KOUTIL_INDEX_RULE_VALUE(FROM, TO)</div><div class="ttdoc">Creates an index conversion rule between two compile-time values.</div><div class="ttdef"><b>Definition</b> index.h:248</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="a6033f08c156e96265b3e5e1aa3b667ed" name="a6033f08c156e96265b3e5e1aa3b667ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6033f08c156e96265b3e5e1aa3b667ed">&#9670;&#160;</a></span>KOUTIL_ALLOW_INDEX_TO_TAG_CONV</h2>
+<a id="a3bf8b52fd556597d062623c0472d0b3e" name="a3bf8b52fd556597d062623c0472d0b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf8b52fd556597d062623c0472d0b3e">&#9670;&#160;</a></span>KOUTIL_INDEX_RULE_VALUE_TYPE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KOUTIL_ALLOW_INDEX_TO_TAG_CONV</td>
+          <td class="memname">#define KOUTIL_INDEX_RULE_VALUE_TYPE</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>FROM</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>TO</em></span>&#160;)&#160;&#160;&#160;    <a class="el" href="../../dc/da5/structkoutil_1_1container_1_1index__rule.html">::koutil::container::index_rule</a>&lt;<a class="el" href="../../d7/d42/structkoutil_1_1container_1_1index__value.html">::koutil::container::index_value</a>&lt;FROM&gt;, <a class="el" href="../../d8/d1b/structkoutil_1_1container_1_1index__type.html">::koutil::container::index_type</a>&lt;TO&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">template</span> &lt;&gt;                                                                                              \</div>
-<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="../../d5/d84/structkoutil_1_1container_1_1allow__index__conversion.html">koutil::container::allow_index_conversion</a>&lt;FROM, ::<a class="code hl_struct" href="../../d7/d3c/structkoutil_1_1container_1_1index__tag.html">koutil::container::index_tag</a>&lt;decltype(TO), TO&gt;&gt; \</div>
-<div class="line">        : std::true_type { }</div>
-</div><!-- fragment -->
-<p>Allows conversion from an untagged index to a tagged index. </p>
+
+<p>Creates an index conversion rule from a compile-time value to a type. </p>
+<p>This macro creates a rule allowing conversion from an index value to an index type.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">FROM</td><td>Source index tag type. </td></tr>
-    <tr><td class="paramname">TO</td><td>Destination tag value.</td></tr>
+    <tr><td class="paramname">FROM</td><td>The source index value. </td></tr>
+    <tr><td class="paramname">TO</td><td>The destination index type.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><a class="code hl_define" href="#a6033f08c156e96265b3e5e1aa3b667ed">KOUTIL_ALLOW_INDEX_TO_TAG_CONV</a>(<span class="keywordtype">float</span>, IndexKind::Meta);</div>
-<div class="ttc" id="aindex_8h_html_a6033f08c156e96265b3e5e1aa3b667ed"><div class="ttname"><a href="#a6033f08c156e96265b3e5e1aa3b667ed">KOUTIL_ALLOW_INDEX_TO_TAG_CONV</a></div><div class="ttdeci">#define KOUTIL_ALLOW_INDEX_TO_TAG_CONV(FROM, TO)</div><div class="ttdoc">Allows conversion from an untagged index to a tagged index.</div><div class="ttdef"><b>Definition</b> index.h:189</div></div>
-</div><!-- fragment --> </dd></dl>
-
+<div class="fragment"><div class="line"><span class="keyword">using </span>rules = <a class="code hl_struct" href="../../de/d90/structkoutil_1_1container_1_1index__rules.html">koutil::container::index_rules</a>&lt;</div>
+<div class="line">    <a class="code hl_define" href="#a3bf8b52fd556597d062623c0472d0b3e">KOUTIL_INDEX_RULE_VALUE_TYPE</a>(IndexTag::C, <span class="keywordtype">float</span>)</div>
+<div class="line">&gt;;</div>
+<div class="ttc" id="aindex_8h_html_a3bf8b52fd556597d062623c0472d0b3e"><div class="ttname"><a href="#a3bf8b52fd556597d062623c0472d0b3e">KOUTIL_INDEX_RULE_VALUE_TYPE</a></div><div class="ttdeci">#define KOUTIL_INDEX_RULE_VALUE_TYPE(FROM, TO)</div><div class="ttdoc">Creates an index conversion rule from a compile-time value to a type.</div><div class="ttdef"><b>Definition</b> index.h:303</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
