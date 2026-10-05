@@ -49,7 +49,7 @@ namespace color_literals {
 
 }
 
-std::ostream& operator<<(std::ostream& stream, color_bg_t bg) {
+inline std::ostream& operator<<(std::ostream& stream, color_bg_t bg) {
 
     switch (bg.color.tag) {
     case color_t::Tag::RGB:
@@ -63,7 +63,7 @@ std::ostream& operator<<(std::ostream& stream, color_bg_t bg) {
     return stream;
 }
 
-std::ostream& operator<<(std::ostream& stream, color_fg_t fg) {
+inline std::ostream& operator<<(std::ostream& stream, color_fg_t fg) {
 
     switch (fg.color.tag) {
     case color_t::Tag::RGB:
@@ -82,7 +82,7 @@ std::ostream& operator<<(std::ostream& stream, color_fg_t fg) {
  * @param stream The output stream.
  * @return The modified output stream.
  */
-std::ostream& reset_bg(std::ostream& stream) {
+inline std::ostream& reset_bg(std::ostream& stream) {
     stream << util::ESC << "[49m";
     return stream;
 }
@@ -92,7 +92,7 @@ std::ostream& reset_bg(std::ostream& stream) {
  * @param stream The output stream.
  * @return The modified output stream.
  */
-std::ostream& reset_fg(std::ostream& stream) {
+inline std::ostream& reset_fg(std::ostream& stream) {
     stream << util::ESC << "[39m";
     return stream;
 }
@@ -102,7 +102,7 @@ std::ostream& reset_fg(std::ostream& stream) {
  * @param stream The output stream.
  * @return The modified output stream.
  */
-std::ostream& reset_color(std::ostream& stream) {
+inline std::ostream& reset_color(std::ostream& stream) {
     stream << util::ESC << "[39;49m";
     return stream;
 }

@@ -65,17 +65,17 @@ enum class EraseCommand {
     ERASE_LINE_CURSOR_BEGIN, /**< Erase from the cursor to the beginning of the line. */
 };
 
-std::ostream& operator<<(std::ostream& stream, cursor_pos pos) {
+inline std::ostream& operator<<(std::ostream& stream, cursor_pos pos) {
     stream << util::ESC << '[' << pos.line << ';' << pos.column << 'H';
     return stream;
 }
 
-std::ostream& operator<<(std::ostream& stream, cursor_move move) {
+inline std::ostream& operator<<(std::ostream& stream, cursor_move move) {
     stream << util::ESC << '[' << move.move << static_cast<char>(move.type);
     return stream;
 }
 
-std::ostream& operator<<(std::ostream& stream, CursorCommand cmd) {
+inline std::ostream& operator<<(std::ostream& stream, CursorCommand cmd) {
     stream << util::ESC;
 
     switch (cmd) {
@@ -99,12 +99,12 @@ std::ostream& operator<<(std::ostream& stream, CursorCommand cmd) {
     return stream;
 }
 
-std::ostream& operator<<(std::ostream& stream, BufferCommand cmd) {
+inline std::ostream& operator<<(std::ostream& stream, BufferCommand cmd) {
     stream << util::ESC << "[?1049" << static_cast<char>(cmd);
     return stream;
 }
 
-std::ostream& operator<<(std::ostream& stream, EraseCommand cmd) {
+inline std::ostream& operator<<(std::ostream& stream, EraseCommand cmd) {
     stream << util::ESC << '[';
 
     switch (cmd) {

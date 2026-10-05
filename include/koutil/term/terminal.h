@@ -123,9 +123,9 @@ private:
     static std::unique_ptr<terminal> s_instance;
 };
 
-std::unique_ptr<terminal> terminal::s_instance = nullptr;
+inline std::unique_ptr<terminal> terminal::s_instance = nullptr;
 
-bool terminal::init() {
+inline bool terminal::init() {
     using namespace std::string_view_literals;
 
     if (s_instance != nullptr) {
@@ -194,7 +194,7 @@ bool terminal::init() {
     return true;
 }
 
-void terminal::register_signals() {
+inline void terminal::register_signals() {
     assert(s_instance != nullptr);
 
     if (s_instance->m_has_signals) {
@@ -217,24 +217,24 @@ void terminal::register_signals() {
 #endif
 }
 
-void terminal::rollback() { s_instance.reset(); }
+inline void terminal::rollback() { s_instance.reset(); }
 
-ColorSupport terminal::color_support() {
+inline ColorSupport terminal::color_support() {
     assert(s_instance != nullptr);
     return s_instance->m_color_support;
 }
 
-terminal::Error terminal::error() {
+inline terminal::Error terminal::error() {
     assert(s_instance != nullptr);
     return s_instance->m_error;
 }
 
-bool terminal::has_error() {
+inline bool terminal::has_error() {
     assert(s_instance != nullptr);
     return s_instance->m_error != Error::NONE;
 }
 
-dimensions_t terminal::query_dimensions() {
+inline dimensions_t terminal::query_dimensions() {
 #if defined(OS_LINUX)
 
     winsize ws;

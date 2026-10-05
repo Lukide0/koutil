@@ -46,7 +46,7 @@ constexpr Style operator&(Style a, Style b) {
  */
 constexpr bool style_contains(Style style, Style flags) { return (style & flags) == flags; }
 
-std::ostream& operator<<(std::ostream& stream, Style style) {
+inline std::ostream& operator<<(std::ostream& stream, Style style) {
     using namespace std::string_view_literals;
     if (style == Style::NONE) {
         return stream;
@@ -106,7 +106,7 @@ std::ostream& operator<<(std::ostream& stream, Style style) {
  * @param stream The output stream.
  * @return The modified output stream.
  */
-std::ostream& reset_all(std::ostream& stream) {
+inline std::ostream& reset_all(std::ostream& stream) {
     stream << util::ESC << "[0m";
     return stream;
 }
